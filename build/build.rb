@@ -13,7 +13,7 @@ def update_openlmis
 end
 
 def openlmis_setup
-  result1 = system("git clone git@github.com:OpenLMIS/open-lmis.git #{OPENLMIS_DIR}")
+  result1 = system("git clone https://github.com/OpenLMIS/open-lmis.git #{OPENLMIS_DIR}")
   return result1 if !result1
   result2 = system("cd #{OPENLMIS_DIR} && git checkout 2.0-moz && git submodule init && git submodule update")
   return result2 if !result2
