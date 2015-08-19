@@ -1,0 +1,9 @@
+\i data/sql/dev/programs.sql
+\i data/sql/dev/geographic_zones.sql
+\i data/sql/dev/facilities.sql
+\i data/sql/dev/users.sql
+\i data/sql/dev/products.sql
+\i data/sql/dev/rnr_template.sql
+\i data/sql/dev/processing_schedules.sql
+\i data/sql/dev/requisition_groups.sql
+\i data/sql/dev/regimens.sql

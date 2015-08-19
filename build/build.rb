@@ -36,7 +36,7 @@ def replace_files
 end
 
 def build_project
-  return system("cd #{OPENLMIS_DIR} && gradle clean setupdb setupExtensions seed build")
+  return system("cd #{OPENLMIS_DIR} && gradle clean setupdb setupExtensions build")
 end
 
 def copy_artifact
