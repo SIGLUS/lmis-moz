@@ -1,3 +1,7 @@
+DELETE FROM requisition_groups;
+DELETE FROM requisition_group_members;
+DELETE FROM requisition_group_program_schedules;
+
 INSERT INTO requisition_groups (code, name, supervisoryNodeId) VALUES
 ('RG1','Requistion Group 1', (SELECT id FROM supervisory_nodes WHERE code ='SN1')),
 ('RG2','Requistion Group 2', (SELECT id FROM supervisory_nodes WHERE code ='SN2'));
