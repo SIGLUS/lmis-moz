@@ -21,15 +21,22 @@ INSERT INTO users
   (SELECT id FROM facilities WHERE code = 'F10'), 'Super', 'User', 'superuser@mail.com',
   TRUE, TRUE, FALSE),
 ('professor_x', 'vFR3ULknlislVs2ESzJvdXN330IYhUdA6FnraiiZWqJKmtJGELNqaLwC2iiQUHuUWcK6hPtZGkJmkRT8zXLI5212gieie',
-  (SELECT id FROM facilities WHERE code = 'F20'), 'Charles', 'Xavier', 'professor_x@xmen.com',
+  (SELECT id FROM facilities WHERE code = 'D01'), 'Charles', 'Xavier', 'professor_x@xmen.com',
   TRUE, TRUE, FALSE),
 ('magneto', 'vFR3ULknlislVs2ESzJvdXN330IYhUdA6FnraiiZWqJKmtJGELNqaLwC2iiQUHuUWcK6hPtZGkJmkRT8zXLI5212gieie',
-  (SELECT id FROM facilities WHERE code = 'F30'), 'Eric', 'Lensherr', 'magneto@brotherhood.com',
+  (SELECT id FROM facilities WHERE code = 'D02'), 'Eric', 'Lensherr', 'magneto@brotherhood.com',
+  TRUE, TRUE, FALSE),
+('mystique', 'vFR3ULknlislVs2ESzJvdXN330IYhUdA6FnraiiZWqJKmtJGELNqaLwC2iiQUHuUWcK6hPtZGkJmkRT8zXLI5212gieie',
+  (SELECT id FROM facilities WHERE code = 'F20'), 'Raven', 'Darkhölme', 'mystique@brotherhood.com',
+  TRUE, TRUE, FALSE),
+('wolverine', 'vFR3ULknlislVs2ESzJvdXN330IYhUdA6FnraiiZWqJKmtJGELNqaLwC2iiQUHuUWcK6hPtZGkJmkRT8zXLI5212gieie',
+  (SELECT id FROM facilities WHERE code = 'F30'), 'Logan', 'H', 'wolverine@xmen.com',
   TRUE, TRUE, FALSE);
 
 INSERT INTO supervisory_nodes
 (facilityId, name, code, parentId) VALUES
-((SELECT id FROM facilities WHERE code = 'D01'), 'Node 1', 'SN1', NULL);
+((SELECT id FROM facilities WHERE code = 'D01'), 'Node 1', 'SN1', NULL),
+((SELECT id FROM facilities WHERE code = 'D02'), 'Node 2', 'SN2', NULL);
 
 INSERT INTO role_assignments
 (userId, roleId, programId, supervisoryNodeId) VALUES
@@ -56,4 +63,20 @@ INSERT INTO role_assignments
 ((SELECT ID FROM USERS WHERE username = 'magneto'),
   (SELECT id FROM roles WHERE name = 'Store In-Charge'), 2, NULL),
 ((SELECT ID FROM USERS WHERE username = 'magneto'),
+  (SELECT id FROM roles  WHERE name = 'FacilityHead'), 2, NULL),
+((SELECT ID FROM USERS WHERE username = 'mystique'),
+  (SELECT id FROM roles WHERE name = 'Store In-Charge'), 1, NULL),
+((SELECT ID FROM USERS WHERE username = 'mystique'),
+  (SELECT id FROM roles WHERE name = 'FacilityHead'), 1, NULL),
+((SELECT ID FROM USERS WHERE username = 'mystique'),
+  (SELECT id FROM roles WHERE name = 'Store In-Charge'), 2, NULL),
+((SELECT ID FROM USERS WHERE username = 'mystique'),
+  (SELECT id FROM roles  WHERE name = 'FacilityHead'), 2, NULL),
+((SELECT ID FROM USERS WHERE username = 'wolverine'),
+  (SELECT id FROM roles WHERE name = 'Store In-Charge'), 1, NULL),
+((SELECT ID FROM USERS WHERE username = 'wolverine'),
+  (SELECT id FROM roles WHERE name = 'FacilityHead'), 1, NULL),
+((SELECT ID FROM USERS WHERE username = 'wolverine'),
+  (SELECT id FROM roles WHERE name = 'Store In-Charge'), 2, NULL),
+((SELECT ID FROM USERS WHERE username = 'wolverine'),
   (SELECT id FROM roles  WHERE name = 'FacilityHead'), 2, NULL);

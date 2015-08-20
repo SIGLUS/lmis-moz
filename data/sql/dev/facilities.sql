@@ -19,6 +19,8 @@ INSERT INTO facilities
 ('F30', 'Health Facility 3', 'health facility 3', 1, 1,
   TRUE, TRUE, '11/11/12', TRUE, FALSE),
 ('D01', 'DDM 1', 'DDM1', 1, 2,
+  TRUE, TRUE, '11/11/12', TRUE, FALSE),
+('D02', 'DPS 1', 'DPS1', 1, 2,
   TRUE, TRUE, '11/11/12', TRUE, FALSE);
 
 INSERT INTO programs_supported (facilityId, programId, startDate, active, modifiedBy) VALUES
@@ -37,4 +39,8 @@ INSERT INTO programs_supported (facilityId, programId, startDate, active, modifi
 ((SELECT id FROM facilities WHERE code = 'D01'), (SELECT id FROM programs WHERE code = 'MMIA'),
   '11/11/12', TRUE, 1),
 ((SELECT id FROM facilities WHERE code = 'D01'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),
+  '11/11/12', TRUE, 1),
+((SELECT id FROM facilities WHERE code = 'D02'), (SELECT id FROM programs WHERE code = 'MMIA'),
+  '11/11/12', TRUE, 1),
+((SELECT id FROM facilities WHERE code = 'D02'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),
   '11/11/12', TRUE, 1);
