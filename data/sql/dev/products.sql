@@ -1,6 +1,11 @@
 DELETE FROM dosage_units;
-
+DELETE FROM product_categories;
+DELETE FROM facility_approved_products;
+DELETE FROM program_products;
+DELETE FROM products;
+DELETE FROM product_groups;
 INSERT INTO dosage_units
+
 (code, displayOrder) VALUES
 ('mg',1),
 ('ml',2),
@@ -10,7 +15,6 @@ INSERT INTO dosage_units
 ('mcg',6),
 ('IU',7);
 
-DELETE FROM product_categories;
 INSERT INTO product_categories
 (code, name , displayOrder) VALUES
 ('C1', 'Antibiotics', 1),
@@ -19,10 +23,7 @@ INSERT INTO product_categories
 ('C4', 'Analgesics', 2),
 ('C5', 'Vaccines', 2);
 
-DELETE FROM facility_approved_products;
-DELETE FROM program_products;
-DELETE FROM products;
-DELETE FROM product_groups;
+
 
 INSERT INTO products
 (code, primaryName, dispensingUnit, dosesPerDispensingUnit, packSize, active, fullSupply, tracer,
@@ -61,23 +62,43 @@ INSERT INTO program_products (programId, productId, fullSupply, active, dosesPer
   TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 10);
 
 INSERT INTO facility_approved_products (facilityTypeId, programProductId, maxMonthsOfStock) VALUES
-((SELECT id FROM facility_types WHERE code = 'health_facility'), 1, 3),
-((SELECT id FROM facility_types WHERE code = 'health_facility'), 2, 3),
-((SELECT id FROM facility_types WHERE code = 'health_facility'), 3, 3),
-((SELECT id FROM facility_types WHERE code = 'health_facility'), 4, 3),
-((SELECT id FROM facility_types WHERE code = 'health_facility'), 5, 3),
-((SELECT id FROM facility_types WHERE code = 'health_facility'), 6, 3),
-((SELECT id FROM facility_types WHERE code = 'health_facility'), 7, 3),
-((SELECT id FROM facility_types WHERE code = 'health_facility'), 8, 3),
-((SELECT id FROM facility_types WHERE code = 'health_facility'), 9, 3),
-((SELECT id FROM facility_types WHERE code = 'health_facility'), 10, 3),
-((SELECT id FROM facility_types WHERE code = 'ddm'), 1, 3),
-((SELECT id FROM facility_types WHERE code = 'ddm'), 2, 3),
-((SELECT id FROM facility_types WHERE code = 'ddm'), 3, 3),
-((SELECT id FROM facility_types WHERE code = 'ddm'), 4, 3),
-((SELECT id FROM facility_types WHERE code = 'ddm'), 5, 3),
-((SELECT id FROM facility_types WHERE code = 'dps'), 6, 3),
-((SELECT id FROM facility_types WHERE code = 'dps'), 7, 3),
-((SELECT id FROM facility_types WHERE code = 'dps'), 8, 3),
-((SELECT id FROM facility_types WHERE code = 'dps'), 9, 3),
-((SELECT id FROM facility_types WHERE code = 'dps'), 10, 3);
+((SELECT id FROM facility_types WHERE code = 'health_facility'),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P1')), 3),
+((SELECT id FROM facility_types WHERE code = 'health_facility'),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P2')), 3),
+((SELECT id FROM facility_types WHERE code = 'health_facility'),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P3')), 3),
+((SELECT id FROM facility_types WHERE code = 'health_facility'),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P4')), 3),
+((SELECT id FROM facility_types WHERE code = 'health_facility'),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P5')), 3),
+((SELECT id FROM facility_types WHERE code = 'health_facility'),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P6')), 3),
+((SELECT id FROM facility_types WHERE code = 'health_facility'),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P7')), 3),
+((SELECT id FROM facility_types WHERE code = 'health_facility'),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P8')), 3),
+((SELECT id FROM facility_types WHERE code = 'health_facility'),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P9')), 3),
+((SELECT id FROM facility_types WHERE code = 'health_facility'),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P10')), 3),
+((SELECT id FROM facility_types WHERE code = 'ddm'),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P1')), 3),
+((SELECT id FROM facility_types WHERE code = 'ddm'),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P2')), 3),
+((SELECT id FROM facility_types WHERE code = 'ddm'),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P3')), 3),
+((SELECT id FROM facility_types WHERE code = 'ddm'),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P4')), 3),
+((SELECT id FROM facility_types WHERE code = 'ddm'),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P5')), 3),
+((SELECT id FROM facility_types WHERE code = 'dps'),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P6')), 3),
+((SELECT id FROM facility_types WHERE code = 'dps'),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P7')), 3),
+((SELECT id FROM facility_types WHERE code = 'dps'),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P8')), 3),
+((SELECT id FROM facility_types WHERE code = 'dps'),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P9')), 3),
+((SELECT id FROM facility_types WHERE code = 'dps'),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P10')), 3);
