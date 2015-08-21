@@ -36,7 +36,7 @@ def replace_files
 end
 
 def build_project
-  return system("cd #{OPENLMIS_DIR} && gradle clean build")
+  return system("cd #{OPENLMIS_DIR} && export DISPLAY=:1 && gradle clean build")
 end
 
 puts "Updating openlmis code..."
