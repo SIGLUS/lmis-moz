@@ -39,10 +39,6 @@ def build_project
   return system("cd #{OPENLMIS_DIR} && gradle clean build")
 end
 
-def copy_artifact
-  return system("cp #{OPENLMIS_DIR}/modules/openlmis-web/build/libs/openlmis-web.war .")
-end
-
 puts "Updating openlmis code..."
 r1 = update_openlmis
 exit if !r1
@@ -57,8 +53,3 @@ puts "Running tests and building artifact..."
 r3 = build_project
 exit if !r3
 puts "Finished running tests and building artifact"
-
-puts "Copying artifact..."
-r4 = copy_artifact
-exit if !r4
-puts "Finished copying artifact"
