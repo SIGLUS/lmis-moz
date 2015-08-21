@@ -41,15 +41,15 @@ end
 
 puts "Updating openlmis code..."
 r1 = update_openlmis
-exit if !r1
+exit 1 if !r1
 puts "Finished updating openlmis code"
 
 r2 = puts "Replacing files..."
 r2 = replace_files
-exit if !r2
+exit 1 if !r2
 puts "Finished replacing files"
 
 puts "Running tests and building artifact..."
 r3 = build_project
-exit if !r3
+exit 1 if !r3
 puts "Finished running tests and building artifact"
