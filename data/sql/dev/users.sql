@@ -33,11 +33,6 @@ INSERT INTO users
   (SELECT id FROM facilities WHERE code = 'F30'), 'Logan', 'H', 'wolverine@xmen.com',
   TRUE, TRUE, FALSE);
 
-INSERT INTO supervisory_nodes
-(facilityId, name, code, parentId) VALUES
-((SELECT id FROM facilities WHERE code = 'D01'), 'Node 1', 'SN1', NULL),
-((SELECT id FROM facilities WHERE code = 'D02'), 'Node 2', 'SN2', NULL);
-
 INSERT INTO role_assignments
 (userId, roleId, programId, supervisoryNodeId) VALUES
 ((SELECT ID FROM USERS WHERE username = 'superuser'),

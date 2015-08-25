@@ -4,8 +4,8 @@ DELETE FROM facility_approved_products;
 DELETE FROM program_products;
 DELETE FROM products;
 DELETE FROM product_groups;
-INSERT INTO dosage_units
 
+INSERT INTO dosage_units
 (code, displayOrder) VALUES
 ('mg',1),
 ('ml',2),
@@ -33,11 +33,11 @@ INSERT INTO products
 ('P3', 'Aminophylline Injection 250mg/10ml', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
 ('P4', 'Amoxicillin (Trihydrate), Dry powder for suspension 125mg/5ml', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
 ('P5', 'Atenolol 50mg tab', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
-('P6', 'Penicillin benzathine benzyl, injection 2.4 MU', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
-('P7', 'Betamethasone eye drops  0.1%', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
-('P8', 'Benzylpenicillin Sodium, injection 5MU', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
-('P9', 'Carbamazepine, tablet 200mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
-('P10', 'Ceftriaxone Sodium, pwd for injection, 250mg vial', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S42', 'Penicillin benzathine benzyl, injection 2.4 MU', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
+('08S18Y', 'Betamethasone eye drops  0.1%', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
+('08S17', 'Benzylpenicillin Sodium, injection 5MU', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
+('08S36', 'Carbamazepine, tablet 200mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
+('08S40Z', 'Ceftriaxone Sodium, pwd for injection, 250mg vial', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
 
 INSERT INTO program_products (programId, productId, fullSupply, active, dosesPerMonth, productCategoryId, displayOrder) VALUES
 ((SELECT id FROM programs WHERE code = 'ESS_MEDS'), (SELECT id FROM products WHERE code = 'P1'),
@@ -50,15 +50,15 @@ INSERT INTO program_products (programId, productId, fullSupply, active, dosesPer
   TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 4),
 ((SELECT id FROM programs WHERE code = 'ESS_MEDS'), (SELECT id FROM products WHERE code = 'P5'),
   TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 5),
-((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = 'P6'),
+((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S42'),
   TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 6),
-((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = 'P7'),
+((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S18Y'),
   TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 7),
-((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = 'P8'),
+((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S17'),
   TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 8),
-((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = 'P9'),
+((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S36'),
   TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 9),
-((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = 'P10'),
+((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S40Z'),
   TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 10);
 
 INSERT INTO facility_approved_products (facilityTypeId, programProductId, maxMonthsOfStock) VALUES
@@ -73,15 +73,15 @@ INSERT INTO facility_approved_products (facilityTypeId, programProductId, maxMon
 ((SELECT id FROM facility_types WHERE code = 'health_facility'),
   (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P5')), 3),
 ((SELECT id FROM facility_types WHERE code = 'health_facility'),
-  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P6')), 3),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = '08S42')), 3),
 ((SELECT id FROM facility_types WHERE code = 'health_facility'),
-  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P7')), 3),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = '08S18Y')), 3),
 ((SELECT id FROM facility_types WHERE code = 'health_facility'),
-  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P8')), 3),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = '08S17')), 3),
 ((SELECT id FROM facility_types WHERE code = 'health_facility'),
-  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P9')), 3),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = '08S36')), 3),
 ((SELECT id FROM facility_types WHERE code = 'health_facility'),
-  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P10')), 3),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = '08S40Z')), 3),
 ((SELECT id FROM facility_types WHERE code = 'ddm'),
   (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P1')), 3),
 ((SELECT id FROM facility_types WHERE code = 'ddm'),
@@ -93,12 +93,12 @@ INSERT INTO facility_approved_products (facilityTypeId, programProductId, maxMon
 ((SELECT id FROM facility_types WHERE code = 'ddm'),
   (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P5')), 3),
 ((SELECT id FROM facility_types WHERE code = 'dps'),
-  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P6')), 3),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = '08S42')), 3),
 ((SELECT id FROM facility_types WHERE code = 'dps'),
-  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P7')), 3),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = '08S18Y')), 3),
 ((SELECT id FROM facility_types WHERE code = 'dps'),
-  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P8')), 3),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = '08S17')), 3),
 ((SELECT id FROM facility_types WHERE code = 'dps'),
-  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P9')), 3),
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = '08S36')), 3),
 ((SELECT id FROM facility_types WHERE code = 'dps'),
-  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'P10')), 3);
+  (SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = '08S40Z')), 3);
