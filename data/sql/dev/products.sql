@@ -33,11 +33,32 @@ INSERT INTO products
 ('P3', 'Aminophylline Injection 250mg/10ml', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
 ('P4', 'Amoxicillin (Trihydrate), Dry powder for suspension 125mg/5ml', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
 ('P5', 'Atenolol 50mg tab', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
-('08S42', 'Penicillin benzathine benzyl, injection 2.4 MU', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
-('08S18Y', 'Betamethasone eye drops  0.1%', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
-('08S17', 'Benzylpenicillin Sodium, injection 5MU', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
-('08S36', 'Carbamazepine, tablet 200mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
-('08S40Z', 'Ceftriaxone Sodium, pwd for injection, 250mg vial', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S42', 'Lamivudina 150mg/Zidovudina 300mg/Nevirapina 200mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
+('08S18Y', 'Tenofovir 300mg/Lamivudina 300mg/Efavirenze 600mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
+('08S40', 'Lamivudina 150mg/ Zidovudina 300mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
+('08S36', 'Lamivudina 150mg/Stavudina 30mg/Nevirapina 200mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
+('08S32', 'Lamivudina 150mg/Stavudina 30mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S18Z', 'Tenofovir 300mg/Lamivudina 300mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S39Z', 'Lopinavir/Ritonavir 200mg/50mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S21', 'Efavirenze (EFV) 600mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S01', 'Abacavir (ABC) 300 mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S22', 'Nevirapina (NVP) 200mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S13', 'Lamivudina (3TC) 150mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S15', 'Zidovudina (AZT) 300mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+
+('08S34b', 'Lamivudina 30mg/Stavudina 6mg/Nevirapina 50mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S32b', 'Lamivudina 30mg/Stavudina 6mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S42B', 'Lamivudina 30mg/Zidovudina 60mg/Nevirapina 50mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S40Z', 'Lamivudina 30mg/ Zidovudina 60mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S39B', 'Lopinavir/Ritonavir 100mg/25mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S39Y', 'Lopinavir/Ritonavir 80/20 ml Solução Oral', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S01Z', 'Abacavir 60mg/ Lamivudina 30mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S20', 'Efavirenze (EFV) 200mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S19', 'Efavirenze (EFV) 50mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S01', 'Abacavir (ABC) 60mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+
+('08S23', 'Nevirapina 50mg/5ml Sol Oral', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S17', 'Zidovudina 50mg/5ml Sol Oral', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
 
 INSERT INTO program_products (programId, productId, fullSupply, active, dosesPerMonth, productCategoryId, displayOrder) VALUES
 ((SELECT id FROM programs WHERE code = 'ESS_MEDS'), (SELECT id FROM products WHERE code = 'P1'),
