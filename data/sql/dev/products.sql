@@ -33,11 +33,32 @@ INSERT INTO products
 ('P3', 'Aminophylline Injection 250mg/10ml', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
 ('P4', 'Amoxicillin (Trihydrate), Dry powder for suspension 125mg/5ml', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
 ('P5', 'Atenolol 50mg tab', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
-('08S42', 'Penicillin benzathine benzyl, injection 2.4 MU', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
-('08S18Y', 'Betamethasone eye drops  0.1%', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
-('08S17', 'Benzylpenicillin Sodium, injection 5MU', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
-('08S36', 'Carbamazepine, tablet 200mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
-('08S40Z', 'Ceftriaxone Sodium, pwd for injection, 250mg vial', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S42', 'Lamivudina 150mg/Zidovudina 300mg/Nevirapina 200mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
+('08S18Y', 'Tenofovir 300mg/Lamivudina 300mg/Efavirenze 600mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
+('08S40', 'Lamivudina 150mg/ Zidovudina 300mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
+('08S36', 'Lamivudina 150mg/Stavudina 30mg/Nevirapina 200mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
+('08S32', 'Lamivudina 150mg/Stavudina 30mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S18Z', 'Tenofovir 300mg/Lamivudina 300mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S39Z', 'Lopinavir/Ritonavir 200mg/50mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S21', 'Efavirenze (EFV) 600mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S01', 'Abacavir (ABC) 300 mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S22', 'Nevirapina (NVP) 200mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S13', 'Lamivudina (3TC) 150mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S15', 'Zidovudina (AZT) 300mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+
+('08S34b', 'Lamivudina 30mg/Stavudina 6mg/Nevirapina 50mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S32Z', 'Estavudina/Lamivudina 6mg+30mg, 60 Comp (Baby) Embalagem', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S42B', 'Lamivudina 30mg/Zidovudina 60mg/Nevirapina 50mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S40Z', 'Lamivudina 30mg/ Zidovudina 60mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S39B', 'Lopinavir/Ritonavir 100mg/25mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S39Y', 'Lopinavir/Ritonavir 80/20 ml Solução Oral', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S01Z', 'Abacavir 60mg/ Lamivudina 30mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S20', 'Efavirenze (EFV) 200mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S19', 'Efavirenze (EFV) 50mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S01', 'Abacavir (ABC) 60mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+
+('08S23', 'Nevirapina 50mg/5ml Sol Oral', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
+('08S17', 'Zidovudina 50mg/5ml Sol Oral', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
 
 INSERT INTO program_products (programId, productId, fullSupply, active, dosesPerMonth, productCategoryId, displayOrder) VALUES
 ((SELECT id FROM programs WHERE code = 'ESS_MEDS'), (SELECT id FROM products WHERE code = 'P1'),
@@ -54,12 +75,51 @@ INSERT INTO program_products (programId, productId, fullSupply, active, dosesPer
   TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 6),
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S18Y'),
   TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 7),
-((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S17'),
+((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S40'),
   TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 8),
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S36'),
   TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 9),
+((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S32'),
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 10),
+((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S18Z'),
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 11);
+((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S39Z'),
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 12);
+((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S21'),
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 13);
+((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S01'),
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 14);
+((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S22'),
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 15);
+((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S13'),
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 16);
+((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S15'),
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 17);
+((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S34b'),
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 18);
+((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S32Z'),
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 19);
+((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S42B'),
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 20);
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S40Z'),
-  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 10);
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 21);
+((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S39B'),
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 22);
+((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S39Y'),
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 23);
+((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S01Z'),
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 24);
+((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S20'),
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 25);
+((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S19'),
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 26);
+((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S01'),
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 27);
+((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S23'),
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 28);
+((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S17'),
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 29);
+
 
 INSERT INTO facility_approved_products (facilityTypeId, programProductId, maxMonthsOfStock) VALUES
 ((SELECT id FROM facility_types WHERE code = 'health_facility'),
