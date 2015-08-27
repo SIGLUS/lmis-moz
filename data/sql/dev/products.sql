@@ -80,41 +80,41 @@ INSERT INTO program_products (programId, productId, fullSupply, active, dosesPer
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S32'),
   TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 10),
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S18Z'),
-  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 11);
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 11),
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S39Z'),
-  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 12);
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 12),
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S21'),
-  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 13);
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 13),
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S01'),
-  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 14);
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 14),
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S22'),
-  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 15);
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 15),
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S13'),
-  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 16);
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 16),
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S15'),
-  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 17);
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 17),
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S34b'),
-  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 18);
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 18),
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S32Z'),
-  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 19);
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 19),
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S42B'),
-  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 20);
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 20),
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S40Z'),
-  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 21);
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 21),
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S39B'),
-  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 22);
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 22),
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S39Y'),
-  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 23);
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 23),
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S01Z'),
-  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 24);
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 24),
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S20'),
-  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 25);
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 25),
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S19'),
-  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 26);
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 26),
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S01'),
-  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 27);
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 27),
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S23'),
-  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 28);
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 28),
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S17'),
   TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 29);
 
