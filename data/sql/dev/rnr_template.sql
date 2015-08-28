@@ -1,7 +1,7 @@
 DELETE FROM program_rnr_columns;
 INSERT INTO program_rnr_columns
 (masterColumnId, rnrOptionId, programId, visible, source, position, label) VALUES
-(1, null, (select id from programs where code = 'MMIA'),  FALSE,'U', 1,  'Skip'),
+(1, null, (select id from programs where code = 'MMIA'),  TRUE,'U', 1,  'Skip'),
 (2, null, (select id from programs where code = 'MMIA'),  TRUE, 'R', 2,  'Product Code'),
 (3, null, (select id from programs where code = 'MMIA'),  FALSE, 'R', 3,  'Product'),
 (4, null, (select id from programs where code = 'MMIA'),  FALSE, 'R', 4,  'Unit/Unit of Issue'),
@@ -10,8 +10,8 @@ INSERT INTO program_rnr_columns
 (7, null, (select id from programs where code = 'MMIA'),  FALSE, 'C', 7,  'Total'),
 (8, null, (select id from programs where code = 'MMIA'),  TRUE, 'U', 8,  'Total Consumed Quantity'),
 (9, null, (select id from programs where code = 'MMIA'),  TRUE, 'U', 9,  'Total Losses / Adjustments'),
-(10, null, (select id from programs where code = 'MMIA'),  FALSE, 'C', 10,  'Stock on Hand'),
-(11, 1   , (select id from programs where code = 'MMIA'),  FALSE, 'U', 11, 'New Patients'),
+(10, null, (select id from programs where code = 'MMIA'), FALSE, 'C', 10,  'Stock on Hand'),
+(11, 1   , (select id from programs where code = 'MMIA'), FALSE, 'U', 11, 'New Patients'),
 (12, null, (select id from programs where code = 'MMIA'), FALSE, 'U', 12, 'Total Stockout Days'),
 (13, null, (select id from programs where code = 'MMIA'), FALSE, 'C', 13, 'Monthly Normalized Consumption'),
 (25, null, (select id from programs where code = 'MMIA'), FALSE, 'C', 14, 'Period Normalized Consumption'),
@@ -24,7 +24,7 @@ INSERT INTO program_rnr_columns
 (20, null, (select id from programs where code = 'MMIA'), FALSE, 'C', 21, 'Packs to Ship'),
 (21, null, (select id from programs where code = 'MMIA'), FALSE, 'R', 22, 'Price per Pack'),
 (22, null, (select id from programs where code = 'MMIA'), FALSE, 'C', 23, 'Total Cost'),
-(23, null, (select id from programs where code = 'MMIA'), TRUE, 'U', 24, 'Expiration Date(MM/YYYY)'),
+(23, null, (select id from programs where code = 'MMIA'), FALSE, 'U', 24, 'Expiration Date(MM/YYYY)'),
 (24, null, (select id from programs where code = 'MMIA'), FALSE, 'U', 25, 'Remarks');
 
 UPDATE programs SET templateConfigured = TRUE WHERE id = (SELECT id FROM programs WHERE code = 'MMIA');

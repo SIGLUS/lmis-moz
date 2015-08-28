@@ -22,7 +22,9 @@ def openlmis_setup
 end
 
 def file_list
-  ['modules/openlmis-web/src/main/resources/messages.properties']
+  ['modules/openlmis-web/src/main/resources/messages.properties',
+   'modules/openlmis-web/src/main/resources/default.properties',
+   'modules/openlmis-web/src/main/resources/openlmis_logging.xml']
 end
 
 def replace_files
@@ -36,7 +38,11 @@ def replace_files
 end
 
 def build_project
-  return system("cd #{OPENLMIS_DIR} && export DISPLAY=:1 && gradle clean build")
+  return system("cd #{OPENLMIS_DIR} && export DISPLAY=:1 && gradle clean setupdb setupExtensions seed build")
+end
+
+def build_data
+  return system("cd #{OPENLMIS_DIR} && psql -U postgres --file data/sql/dev/seed.sql -w open_lmis")
 end
 
 puts "Updating openlmis code..."
@@ -53,3 +59,8 @@ puts "Running tests and building artifact..."
 r3 = build_project
 exit 1 if !r3
 puts "Finished running tests and building artifact"
+
+puts "Building data"
+r4 = build_data
+exit 1 if !r4
+puts "Finished setting up data"
