@@ -1,10 +1,4 @@
-DELETE FROM regimen_categories;
-DELETE FROM regimens;
-DELETE FROM program_regimen_columns;
 
-INSERT INTO regimen_categories (code, name, displayOrder) VALUES
-('ADULTS', 'Adults', 1),
-('PAEDIATRICS', 'Paediatrics', 2);
 
 INSERT INTO regimens (programid, categoryid, code, name, active, displayorder) VALUES
 ((SELECT id FROM programs where code = 'MMIA'), (SELECT id FROM regimen_categories WHERE code = 'ADULTS'), '001', 'AZT+3TC+NVP', TRUE, 1),

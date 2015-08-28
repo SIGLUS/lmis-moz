@@ -1,7 +1,3 @@
-DELETE FROM facility_types;
-DELETE FROM programs_supported;
-DELETE FROM refrigerators;
-DELETE FROM facilities;
 
 INSERT INTO facility_types (code, name, description, levelId, nominalMaxMonth, nominalEop,
   displayOrder, active) VALUES
@@ -23,24 +19,3 @@ INSERT INTO facilities
 ('D02', 'DPS 1', 'DPS1', (SELECT id FROM geographic_zones WHERE code = 'Mozambique'),
   (SELECT id FROM facility_types WHERE code = 'dps'), TRUE, TRUE, '11/11/12', TRUE, FALSE);
 
-INSERT INTO programs_supported (facilityId, programId, startDate, active) VALUES
-((SELECT id FROM facilities WHERE code = 'F10'), (SELECT id FROM programs WHERE code = 'MMIA'),
-  '11/11/12', TRUE),
-((SELECT id FROM facilities WHERE code = 'F10'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),
-  '11/11/12', TRUE),
-((SELECT id FROM facilities WHERE code = 'F20'), (SELECT id FROM programs WHERE code = 'MMIA'),
-  '11/11/12', TRUE),
-((SELECT id FROM facilities WHERE code = 'F20'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),
-  '11/11/12', TRUE),
-((SELECT id FROM facilities WHERE code = 'F30'), (SELECT id FROM programs WHERE code = 'MMIA'),
-  '11/11/12', TRUE),
-((SELECT id FROM facilities WHERE code = 'F30'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),
-  '11/11/12', TRUE),
-((SELECT id FROM facilities WHERE code = 'D01'), (SELECT id FROM programs WHERE code = 'MMIA'),
-  '11/11/12', TRUE),
-((SELECT id FROM facilities WHERE code = 'D01'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),
-  '11/11/12', TRUE),
-((SELECT id FROM facilities WHERE code = 'D02'), (SELECT id FROM programs WHERE code = 'MMIA'),
-  '11/11/12', TRUE),
-((SELECT id FROM facilities WHERE code = 'D02'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),
-  '11/11/12', TRUE);

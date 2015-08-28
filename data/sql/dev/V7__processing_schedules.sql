@@ -1,5 +1,3 @@
-DELETE FROM processing_schedules;
-DELETE FROM processing_periods;
 
 INSERT INTO processing_schedules (code, name, description) VALUES ('M', 'Monthly', 'Month');
 
