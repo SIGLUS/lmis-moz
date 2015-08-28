@@ -54,7 +54,6 @@ INSERT INTO products
 ('08S01Z', 'Abacavir 60mg/ Lamivudina 30mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
 ('08S20', 'Efavirenze (EFV) 200mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
 ('08S19', 'Efavirenze (EFV) 50mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
-('08S01', 'Abacavir (ABC) 60mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
 ('08S23', 'Nevirapina 50mg/5ml Sol Oral', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE),
 ('08S17', 'Zidovudina 50mg/5ml Sol Oral', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE);
 
@@ -111,13 +110,10 @@ INSERT INTO program_products (programId, productId, fullSupply, active, dosesPer
   TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 25),
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S19'),
   TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 26),
-((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S01'),
-  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 27),
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S23'),
-  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 28),
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 27),
 ((SELECT id FROM programs WHERE code = 'MMIA'), (SELECT id FROM products WHERE code = '08S17'),
-  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 29);
-
+  TRUE, TRUE, 12.5, (SELECT id FROM product_categories where code = 'C1'), 28);
 
 INSERT INTO facility_approved_products (facilityTypeId, programProductId, maxMonthsOfStock) VALUES
 ((SELECT id FROM facility_types WHERE code = 'health_facility'),
