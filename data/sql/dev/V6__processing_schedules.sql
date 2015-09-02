@@ -1,4 +1,3 @@
-
 INSERT INTO processing_schedules (code, name, description) VALUES ('M', 'Monthly', 'Month');
 
 INSERT INTO processing_periods

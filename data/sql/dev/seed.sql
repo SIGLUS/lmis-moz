@@ -1,9 +1,9 @@
 \i data/sql/dev/cleandata.sql
+\i data/sql/dev/V1__programs.sql
 \i data/sql/dev/V2__facilities.sql
 \i data/sql/dev/V3__products.sql
-\i data/sql/dev/V4__programs.sql
-\i data/sql/dev/V5__users.sql
-\i data/sql/dev/V6__rnr_template.sql
-\i data/sql/dev/V7__processing_schedules.sql
-\i data/sql/dev/V8__requisition_groups.sql
-\i data/sql/dev/V9__regimens.sql
+\i data/sql/dev/V4__users.sql
+\i data/sql/dev/V5__rnr_template.sql
+\i data/sql/dev/V6__processing_schedules.sql
+\i data/sql/dev/V7__requisition_groups.sql
+\i data/sql/dev/V8__regimens.sql

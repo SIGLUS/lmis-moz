@@ -1,4 +1,3 @@
-
 INSERT INTO program_rnr_columns
 (masterColumnId, rnrOptionId, programId, visible, source, position, label) VALUES
 (1, null, (select id from programs where code = 'MMIA'),  TRUE,'U', 1,  'Skip'),
