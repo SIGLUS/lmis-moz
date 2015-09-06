@@ -1,3 +1,10 @@
+DELETE FROM patient_quantification_line_items;
+DELETE FROM regimen_line_items;
+DELETE FROM regimens;
+DELETE FROM requisition_line_items;
+DELETE FROM requisition_status_changes;
+DELETE FROM requisitions;
+
 DELETE FROM program_regimen_columns;
 DELETE FROM regimens;
 
