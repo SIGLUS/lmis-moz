@@ -1,1 +1,1 @@
-psql -U postgres --file data/sql/dev/seed.sql -w open_lmis
+psql -U jenkins --file data/sql/dev/seed.sql -w open_lmis
