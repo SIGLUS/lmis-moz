@@ -52,8 +52,8 @@ task jsHint(type: GruntTask) {
 }
 
 task karmaRun(type: Exec) {
-    description = 'SKIP KARMA RUN TESTS IN CI BECAUSE FIREFOX DOES NOT WORK'
-    // commandLine 'karma', 'start', 'karma.config.js', '--singleRun'
+    description = 'Runs jasmine specs and publishes js tests coverage report'
+    commandLine 'karma', 'start', 'karma.config.js', '--singleRun'
 }
 
 task lesslint(type: GruntTask) {
@@ -145,7 +145,7 @@ task cleanWorkspace(type: Delete) {
 }
 
 build.doLast {
-    karmaRun.execute()
+    //karmaRun.execute()
     jsHint.execute()
     cleanWorkspace.execute()
 }
