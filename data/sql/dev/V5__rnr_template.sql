@@ -37,7 +37,7 @@ INSERT INTO program_rnr_columns
 (6, null, (select id from programs where code = 'ESS_MEDS'),  TRUE, 'U', 6,  'Total Received Quantity'),
 (7, null, (select id from programs where code = 'ESS_MEDS'),  FALSE, 'C', 7,  'Total'),
 (8, null, (select id from programs where code = 'ESS_MEDS'),  TRUE, 'U', 8,  'Total Consumed Quantity'),
-(9, null, (select id from programs where code = 'ESS_MEDS'),  FALSE, 'U', 9,  'Total Losses / Adjustments'),
+(9, null, (select id from programs where code = 'ESS_MEDS'),  TRUE, 'U', 9,  'Total Losses / Adjustments'),
 (10, null, (select id from programs where code = 'ESS_MEDS'), TRUE, 'U', 10,  'Stock on Hand'),
 (11, 1   , (select id from programs where code = 'ESS_MEDS'), FALSE, 'U', 11, 'New Patients'),
 (12, null, (select id from programs where code = 'ESS_MEDS'), FALSE, 'U', 12, 'Total Stockout Days'),
