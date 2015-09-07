@@ -1,4 +1,5 @@
-sudo /etc/init.d/tomcat stop
-sudo rm -rf /var/lib/tomcat/webapps/ROOT
-mv /tmp/openlmis-web.war /var/lib/tomcat/webapps/ROOT.war
-sudo /etc/init.d/tomcat restart
+/usr/share/tomcat/bin/shutdown.sh
+rm -rf /var/lib/tomcat/webapps/ROOT
+mv /var/lib/tomcat/webapps/openlmis-web.war /var/lib/tomcat/webapps/ROOT.war
+rm /var/lib/tomcat/webapps/ROOT.war
+/usr/share/tomcat/bin/startup.sh
