@@ -37,7 +37,7 @@ INSERT INTO products
 ('08S13', 'Lamivudina (3TC) 150mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE, '10mg'),
 ('08S15', 'Zidovudina (AZT) 300mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE, '10mg'),
 ('08S34b', 'Lamivudina 30mg/Stavudina 6mg/Nevirapina 50mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE, '10mg'),
-('08S32B', 'Estavudina/Lamivudina 6mg+30mg, 60 Comp (Baby) Embalagem', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE, '10mg'),
+('08S32Z', 'Estavudina/Lamivudina 6mg+30mg, 60 Comp (Baby) Embalagem', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE, '10mg'),
 ('08S42B', 'Lamivudina 30mg/Zidovudina 60mg/Nevirapina 50mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE, '10mg'),
 ('08S40Z', 'Lamivudina 30mg/ Zidovudina 60mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE, '10mg'),
 ('08S39B', 'Lopinavir/Ritonavir 100mg/25mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE, '10mg'),
