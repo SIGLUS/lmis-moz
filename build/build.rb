@@ -43,7 +43,7 @@ def build_project
 end
 
 def build_data
-  return system("cd #{OPENLMIS_DIR} && psql -U postgres --file data/sql/dev/seed.sql -w open_lmis")
+  return system("cd #{OPENLMIS_DIR}/.. && ./ci/setup-dev-data.sh")
 end
 
 puts "Updating openlmis code..."
