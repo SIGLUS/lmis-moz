@@ -21,19 +21,63 @@ def openlmis_setup
   return result3 if !result3
 end
 
-def file_list
+def replace_file_list
   ['modules/openlmis-web/src/main/resources/messages.properties',
    'modules/openlmis-web/src/main/resources/default.properties',
    'modules/openlmis-web/src/main/resources/openlmis_logging.xml',
-   'modules/openlmis-web/build.gradle']
+   'modules/openlmis-web/src/main/resources/applicationContext.xml',
+   'modules/openlmis-web/build.gradle',
+   'modules/rest-api/build.gradle',
+   'settings.gradle']
+end
+
+def properties_files
+  ['modules/openlmis-web/src/main/resources/atomfeed.properties',
+   'modules/openlmis-web/src/main/resources/bserver/app.properties',
+   'modules/openlmis-web/src/main/resources/bserver/mailing.properties',
+   'modules/openlmis-web/src/main/resources/ci/app.properties',
+   'modules/openlmis-web/src/main/resources/default.properties',
+   'modules/openlmis-web/src/main/resources/demo1/app.properties',
+   'modules/openlmis-web/src/main/resources/local/app.properties',
+   'modules/openlmis-web/src/main/resources/perf/app.properties',
+   'modules/openlmis-web/src/main/resources/qa/app.properties',
+   'modules/openlmis-web/src/main/resources/uat/app.properties']
+end
+
+def tz_specific_modules
+  ['modules/report',
+   'modules/rest-api/src/main/java/org/openlmis/restapi/controller/LookupController.java',
+   'modules/rest-api/src/main/java/org/openlmis/restapi/controller/StockStatusController.java',
+   'modules/rest-api/src/test/java/org/openlmis/restapi/controller/LookupControllerTest.java'
+  ]
+end
+
+def remove_tz_modules
+ result = false
+  tz_specific_modules.each do |file_path|
+    result = system("rm -rf #{OPENLMIS_DIR}/#{file_path}")
+    break if !result
+    puts "removed #{file_path}"
+  end
+  result
 end
 
 def replace_files
   result = false
-  file_list.each do |file_path|
+  replace_file_list.each do |file_path|
     result = system("rm #{OPENLMIS_DIR}/#{file_path} && cp #{MOZ_DIR}/#{file_path} #{OPENLMIS_DIR}/#{file_path}")
     break if !result
     puts "replaced #{file_path}"
+  end
+  result
+end
+
+def remove_openlmis_properties_files
+  result = false
+  properties_files.each do |file_path|
+    result = system("rm #{OPENLMIS_DIR}/#{file_path}")
+    break if !result
+    puts "removed #{file_path}"
   end
   result
 end
@@ -51,17 +95,27 @@ r1 = update_openlmis
 exit 1 if !r1
 puts "Finished updating openlmis code"
 
-r2 = puts "Replacing files..."
+puts "Replacing files..."
 r2 = replace_files
 exit 1 if !r2
 puts "Finished replacing files"
 
-puts "Running tests and building artifact..."
-r3 = build_project
+puts "Removing properties files..."
+r3 = remove_openlmis_properties_files
 exit 1 if !r3
+puts "Finished removing properties files"
+
+puts "Removing tz report module"
+r6 = remove_tz_modules
+exit 1 if !r6
+puts "Finished removing tz report module"
+
+puts "Running tests and building artifact..."
+r4 = build_project
+exit 1 if !r4
 puts "Finished running tests and building artifact"
 
 puts "Building data"
-r4 = build_data
-exit 1 if !r4
+r5 = build_data
+exit 1 if !r5
 puts "Finished setting up data"
