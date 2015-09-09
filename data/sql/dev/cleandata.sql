@@ -1,7 +1,11 @@
 DELETE FROM patient_quantification_line_items;
 DELETE FROM requisition_line_item_losses_adjustments;
+
 DELETE FROM regimen_line_items;
 DELETE FROM regimens;
+DELETE FROM regimen_categories;
+DELETE FROM program_regimen_columns;
+
 DELETE FROM requisition_line_items;
 DELETE FROM requisition_status_changes;
 DELETE FROM requisitions;
