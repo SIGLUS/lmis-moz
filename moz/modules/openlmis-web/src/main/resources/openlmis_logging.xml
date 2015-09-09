@@ -55,18 +55,24 @@
     <!--<appender-ref ref="consoleAppender"/>-->
   <!--</logger>-->
 
-  <logger name="org.openlmis.web">
-    <level value="ERROR"/>
+  <logger name="org.springframework.mail">
+    <level value="DEBUG"/>
     <appender-ref ref="logFileAppender"/>
   </logger>
 
-  <!--<logger name="org.springframework.integration">-->
-    <!--<level value="INFO"/>-->
-    <!--<appender-ref ref="consoleAppender"/>-->
-  <!--</logger>-->
+
+  <logger name="org.openlmis">
+    <level value="INFO"/>
+    <appender-ref ref="logFileAppender"/>
+  </logger>
+
+  <logger name="org.springframework.integration">
+    <level value="INFO"/>
+    <appender-ref ref="logFileAppender"/>
+  </logger>
 
   <root>
-    <level value="ERROR"/>
+    <level value="INFO"/>
     <appender-ref ref="logFileAppender"/>
   </root>
 </log4j:configuration>
