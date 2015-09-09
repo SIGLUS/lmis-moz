@@ -1,4 +1,5 @@
 DELETE FROM patient_quantification_line_items;
+DELETE FROM requisition_line_item_losses_adjustments;
 DELETE FROM regimen_line_items;
 DELETE FROM regimens;
 DELETE FROM requisition_line_items;
@@ -36,6 +37,9 @@ DELETE FROM programs_supported;
 DELETE FROM facilities;
 DELETE FROM refrigerators;
 DELETE FROM facility_types;
+
+DELETE FROM geographic_zones;
+DELETE FROM geographic_levels;
 
 DELETE FROM programs;
 
