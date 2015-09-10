@@ -87,7 +87,7 @@ def build_project
 end
 
 def build_data
-  return system("cd #{OPENLMIS_DIR}/.. && ./ci/setup-dev-data.sh")
+  return system("cd #{OPENLMIS_DIR}/.. && ./build/setup-data.sh")
 end
 
 puts "Updating openlmis code..."
