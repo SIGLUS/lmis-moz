@@ -1,0 +1,1 @@
+psql -U openlmis --file data/sql/dev/seed.sql -w open_lmis -h localhost

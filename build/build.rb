@@ -26,7 +26,6 @@ def replace_file_list
    'modules/openlmis-web/src/main/resources/default.properties',
    'modules/openlmis-web/src/main/resources/openlmis_logging.xml',
    'modules/openlmis-web/src/main/resources/applicationContext.xml',
-   'modules/core/src/main/java/org/openlmis/core/service/StaticReferenceDataService.java',
    'modules/openlmis-web/build.gradle',
    'modules/rest-api/build.gradle',
    'settings.gradle']
