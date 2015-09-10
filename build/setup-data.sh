@@ -1,1 +1,1 @@
-psql -U openlmis --file data/sql/dev/seed.sql -w open_lmis -h localhost
+psql -U postgres --file data/sql/dev/seed.sql -w open_lmis -h localhost
