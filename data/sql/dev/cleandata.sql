@@ -24,6 +24,7 @@ DELETE FROM processing_schedules;
 DELETE FROM program_rnr_columns;
 
 DELETE FROM role_assignments WHERE roleid IN (SELECT id FROM roles WHERE name IN ('FacilityHead','Store In-Charge'));
+DELETE FROM user_password_reset_tokens;
 DELETE FROM users WHERE username != 'Admin123';
 DELETE FROM role_rights WHERE roleid IN (SELECT id FROM roles WHERE name IN ('FacilityHead', 'Store In-Charge')) ;
 DELETE FROM role_rights WHERE roleid= (SELECT id FROM roles WHERE name = 'Admin')
