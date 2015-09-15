@@ -59,7 +59,7 @@ INSERT INTO product_forms
 ('Gel oral',57),
 ('Colírio',58),
 ('Pomada oftálmica',59),
-('Solução Oftálmica ',60),
+('Solução Oftálmica',60),
 ('Papel',61),
 ('Gás',62),
 ('Spray',63),
