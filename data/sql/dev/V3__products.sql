@@ -16,6 +16,25 @@ INSERT INTO product_categories
 ('C4', 'Analgesics', 2),
 ('C5', 'Vaccines', 2);
 
+INSERT INTO product_forms
+(code, displayOrder) VALUES
+('Tablet', 1),
+('Capsule', 2),
+('Bottle', 3),
+('Vial', 4),
+('Ampule', 5),
+('Drops', 6),
+('Each', 7),
+('Injectable', 8),
+('Tube', 9),
+('Solution', 10),
+('Inhaler', 11),
+('Patch', 12),
+('Implant', 13),
+('Sachet', 14),
+('Device', 15),
+('Other', 16);
+
 INSERT INTO products
 (code, primaryName, dispensingUnit, dosesPerDispensingUnit, packSize, active, fullSupply, tracer,
   packRoundingThreshold, roundToZero, strength) values

@@ -36,6 +36,7 @@ DELETE FROM program_products;
 DELETE FROM products;
 DELETE FROM product_groups;
 DELETE FROM product_categories;
+DELETE FROM product_forms;
 DELETE FROM dosage_units;
 
 DELETE FROM programs_supported;
