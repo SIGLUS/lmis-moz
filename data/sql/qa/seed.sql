@@ -4,3 +4,4 @@
 \i V4__facility_types.sql
 \i V5__dosage_units.sql
 \i V6__product_forms.sql
+\i V7__add_admin_rights.sql
