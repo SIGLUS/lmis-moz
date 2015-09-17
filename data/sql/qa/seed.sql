@@ -5,3 +5,5 @@
 \i V5__dosage_units.sql
 \i V6__product_forms.sql
 \i V7__add_admin_rights.sql
+\i V8__set_up_rnr_template.sql
+\i V9__set_up_regimens_template.sql
