@@ -145,7 +145,7 @@ task cleanWorkspace(type: Delete) {
 }
 
 build.doLast {
-    //karmaRun.execute()
+    karmaRun.execute()
     jsHint.execute()
     cleanWorkspace.execute()
 }
@@ -185,7 +185,6 @@ jettyRun {
     contextPath = ''
     daemon = true;
     jettyRun.scanIntervalSeconds = 1
-    System.properties.get('environmentName', 'local')
     System.properties.get('defaultLocale', 'en')
 }
 
