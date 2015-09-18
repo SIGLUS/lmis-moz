@@ -34,7 +34,9 @@ INSERT INTO product_forms
 ('Sachet', 14),
 ('Device', 15),
 ('Suspension', 16),
-('Other', 17);
+('Embalagem', 17),
+('Suspension', 18),
+('Other', 19);
 
 INSERT INTO products
 (code, primaryName, dispensingUnit, dosesPerDispensingUnit, packSize, active, fullSupply, tracer,
