@@ -16,12 +16,6 @@ DELETE FROM regimens;
 DELETE FROM requisition_group_program_schedules;
 DELETE FROM requisition_group_members;
 DELETE FROM requisition_groups;
-DELETE FROM supervisory_nodes;
-
-DELETE FROM processing_periods;
-DELETE FROM processing_schedules;
-
-DELETE FROM program_rnr_columns;
 
 DELETE FROM role_assignments WHERE roleid != 1;
 DELETE FROM user_password_reset_tokens;
@@ -30,6 +24,13 @@ DELETE FROM role_rights WHERE roleid= (SELECT id FROM roles WHERE name = 'Admin'
    AND rightName IN ('MANAGE_GEOGRAPHIC_ZONE','MANAGE_SUPERVISORY_NODE','MANAGE_REQUISITION_GROUP','MANAGE_FACILITY_APPROVED_PRODUCT','MANAGE_PRODUCT');
 DELETE FROM role_rights WHERE roleid IN (SELECT id FROM roles WHERE name IN ('FacilityHead', 'Store In-Charge')) ;
 DELETE FROM roles WHERE name IN ('FacilityHead', 'Store In-Charge');
+
+DELETE FROM supervisory_nodes;
+
+DELETE FROM processing_periods;
+DELETE FROM processing_schedules;
+
+DELETE FROM program_rnr_columns;
 
 DELETE FROM facility_approved_products;
 DELETE FROM program_products;
