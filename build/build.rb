@@ -23,13 +23,12 @@ end
 
 def replace_file_list
   ['modules/openlmis-web/src/main/resources/openlmis_logging.xml',
-   'modules/openlmis-web/src/main/resources/applicationContext.xml',
-   'modules/core/src/main/resources/applicationContext-core.xml',
-   'modules/shipment/src/main/resources/applicationContext-shipment.xml',
+   #'modules/openlmis-web/src/main/resources/applicationContext.xml',
+   #'modules/core/src/main/resources/applicationContext-core.xml',
+   #'modules/shipment/src/main/resources/applicationContext-shipment.xml',
    'modules/openlmis-web/build.gradle',
    'modules/rest-api/build.gradle',
-   'modules/db/src/main/resources/db/migration/V5_2__create_product_forms.sql',
-   'settings.gradle']
+   'modules/db/src/main/resources/db/migration/V5_2__create_product_forms.sql']
 end
 
 def properties_files
@@ -46,7 +45,7 @@ def properties_files
 end
 
 def tz_specific_modules
-  ['modules/report',
+  [
    'modules/rest-api/src/main/java/org/openlmis/restapi/controller/LookupController.java',
    'modules/rest-api/src/main/java/org/openlmis/restapi/controller/StockStatusController.java',
    'modules/rest-api/src/test/java/org/openlmis/restapi/controller/LookupControllerTest.java'
