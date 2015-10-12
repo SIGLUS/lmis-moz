@@ -18,7 +18,7 @@ DELETE FROM requisition_group_program_schedules;
 DELETE FROM requisition_group_members;
 DELETE FROM requisition_groups;
 
-DELETE FROM role_assignments WHERE roleid != 1;
+DELETE FROM role_assignments WHERE userid != 1;
 DELETE FROM user_password_reset_tokens;
 DELETE FROM users WHERE username != 'Admin123';
 DELETE FROM role_rights WHERE roleid= (SELECT id FROM roles WHERE name = 'Admin')
