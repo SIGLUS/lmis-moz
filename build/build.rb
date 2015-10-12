@@ -41,6 +41,8 @@ def properties_files
    'modules/openlmis-web/src/main/resources/local/app.properties',
    'modules/openlmis-web/src/main/resources/perf/app.properties',
    'modules/openlmis-web/src/main/resources/qa/app.properties',
+   'modules/report/src/main/resources/app.properties',
+   'modules/report/src/main/resources/local/app.properties',
    'modules/openlmis-web/src/main/resources/uat/app.properties']
 end
 
