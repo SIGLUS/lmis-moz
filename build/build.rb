@@ -8,7 +8,7 @@ def update_openlmis
   if !Dir.exists?(OPENLMIS_DIR)
     return openlmis_setup
   else
-    return system("cd #{OPENLMIS_DIR} && git checkout . && git pull origin 2.0-moz")
+    return system("cd #{OPENLMIS_DIR} && git checkout . && git pull -f origin 2.0-moz")
   end
 end
 
@@ -23,45 +23,16 @@ end
 
 def replace_file_list
   ['modules/openlmis-web/src/main/resources/openlmis_logging.xml',
-   #'modules/openlmis-web/src/main/resources/applicationContext.xml',
-   #'modules/core/src/main/resources/applicationContext-core.xml',
-   #'modules/shipment/src/main/resources/applicationContext-shipment.xml',
    'modules/openlmis-web/build.gradle',
-   'modules/rest-api/build.gradle',
    'modules/db/src/main/resources/db/migration/V5_2__create_product_forms.sql']
 end
 
 def properties_files
   ['modules/openlmis-web/src/main/resources/atomfeed.properties',
-   'modules/openlmis-web/src/main/resources/bserver/app.properties',
-   'modules/openlmis-web/src/main/resources/bserver/mailing.properties',
-   'modules/openlmis-web/src/main/resources/ci/app.properties',
    'modules/openlmis-web/src/main/resources/default.properties',
-   'modules/openlmis-web/src/main/resources/demo1/app.properties',
    'modules/openlmis-web/src/main/resources/local/app.properties',
-   'modules/openlmis-web/src/main/resources/perf/app.properties',
-   'modules/openlmis-web/src/main/resources/qa/app.properties',
-   'modules/report/src/main/resources/app.properties',
    'modules/report/src/main/resources/local/app.properties',
    'modules/openlmis-web/src/main/resources/uat/app.properties']
-end
-
-def tz_specific_modules
-  [
-   'modules/rest-api/src/main/java/org/openlmis/restapi/controller/LookupController.java',
-   'modules/rest-api/src/main/java/org/openlmis/restapi/controller/StockStatusController.java',
-   'modules/rest-api/src/test/java/org/openlmis/restapi/controller/LookupControllerTest.java'
-  ]
-end
-
-def remove_tz_modules
- result = false
-  tz_specific_modules.each do |file_path|
-    result = system("rm -rf #{OPENLMIS_DIR}/#{file_path}")
-    break if !result
-    puts "removed #{file_path}"
-  end
-  result
 end
 
 def replace_files
@@ -106,11 +77,6 @@ puts "Removing properties files..."
 r3 = remove_openlmis_properties_files
 exit 1 if !r3
 puts "Finished removing properties files"
-
-puts "Removing tz report module"
-r6 = remove_tz_modules
-exit 1 if !r6
-puts "Finished removing tz report module"
 
 puts "Running tests and building artifact..."
 r4 = build_project
