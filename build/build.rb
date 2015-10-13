@@ -23,7 +23,6 @@ end
 
 def replace_file_list
   ['modules/openlmis-web/src/main/resources/openlmis_logging.xml',
-   'modules/openlmis-web/src/main/resources/applicationContext.xml',
    'modules/core/src/main/resources/applicationContext-core.xml',
    'modules/shipment/src/main/resources/applicationContext-shipment.xml',
    'modules/openlmis-web/build.gradle',
