@@ -4,8 +4,10 @@ INSERT INTO geographic_levels (code, name, levelNumber) VALUES
 
 INSERT INTO geographic_zones
 (code, name, levelId, parentId) VALUES
-('Root', 'Root', (SELECT id FROM geographic_levels WHERE code = 'country'), NULL),
-('Mozambique', 'Mozambique', (SELECT id FROM geographic_levels WHERE code = 'country'), NULL);
+('Root', 'Root', (SELECT id FROM geographic_levels WHERE code = 'country'), NULL);
+INSERT INTO geographic_zones
+(code, name, levelId, parentId) VALUES
+('Mozambique', 'Mozambique', (SELECT id FROM geographic_levels WHERE code = 'country'), (select id from geographic_zones where code ='Root'));
 
 
 INSERT INTO facility_types (code, name, description, levelId, nominalMaxMonth, nominalEop,
