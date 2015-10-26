@@ -1,3 +1,11 @@
+DELETE FROM stock_card_entries;
+DELETE FROM stock_movement_line_items;
+DELETE FROM stock_movement_lots;
+DELETE FROM stock_movements;
+DELETE FROM stock_adjustment_reasons_programs;
+DELETE FROM stock_adjustment_reasons;
+DELETE FROM stock_cards;
+
 DELETE FROM patient_quantification_line_items;
 DELETE FROM requisition_line_item_losses_adjustments;
 
