@@ -1,1 +1,2 @@
-Geographic Zone Code,Geographic Zone Name,Geographic level CodeMOZ,Mozambique,NationalMAPUTO_PROVINCIA,Maputo Província,ProvinceMARRACUENE,Marracuene,District
+Geographic Zone Code,Geographic Zone Name,Geographic level Code, Geographic Zone Parent CodeMOZ,Mozambique,national,MAPUTO_PROVINCIA,Maputo Província,province, MOZMARRACUENE,Marracuene,district,MAPUTO_PROVINCIA
+MATOLA,Matola,district,MAPUTO_PROVINCIA
