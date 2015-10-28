@@ -1,14 +1,14 @@
 INSERT INTO geographic_levels (code, name, levelNumber) VALUES
-('country', 'Country', 1);
-
+('national', 'National', 1),
+('province', 'Province', 2),
+('district', 'District', 3);
 
 INSERT INTO geographic_zones
 (code, name, levelId, parentId) VALUES
-('Root', 'Root', (SELECT id FROM geographic_levels WHERE code = 'country'), NULL);
-INSERT INTO geographic_zones
-(code, name, levelId, parentId) VALUES
-('Mozambique', 'Mozambique', (SELECT id FROM geographic_levels WHERE code = 'country'), (select id from geographic_zones where code ='Root'));
-
+('MOZ', 'Mozambique', (select id from geographic_levels where code = 'national'), null),
+('MAPUTO_PROVINCIA', 'Maputo Província', (select id from geographic_levels where code = 'province'), (select id from geographic_zones where code = 'MOZ')),
+('MARRACUENE', 'Marracuene', (select id from geographic_levels where code = 'district'), (select id from geographic_zones where code = 'MAPUTO_PROVINCIA')),
+('MATOLA', 'Matola', (select id from geographic_levels where code = 'district'), (select id from geographic_zones where code = 'MAPUTO_PROVINCIA'));
 
 INSERT INTO facility_types (code, name, description, levelId, nominalMaxMonth, nominalEop,
   displayOrder, active) VALUES
@@ -19,15 +19,15 @@ INSERT INTO facility_types (code, name, description, levelId, nominalMaxMonth, n
 INSERT INTO facilities
 (code, name, description, geographiczoneid, typeId,
   sdp, active, goLiveDate, enabled, virtualFacility) VALUES
-('F10', 'Health Facility 1', 'health facility 1', (SELECT id FROM geographic_zones WHERE code = 'Mozambique'),
+('F10', 'Health Facility 1', 'health facility 1', (SELECT id FROM geographic_zones WHERE code = 'MARRACUENE'),
   (SELECT id FROM facility_types WHERE code = 'health_facility'), TRUE, TRUE, '11/11/12', TRUE, FALSE),
-('F20', 'Health Facility 2', 'health facility 2', (SELECT id FROM geographic_zones WHERE code = 'Mozambique'),
+('F20', 'Health Facility 2', 'health facility 2', (SELECT id FROM geographic_zones WHERE code = 'MARRACUENE'),
   (SELECT id FROM facility_types WHERE code = 'health_facility'), TRUE, TRUE, '11/11/12', TRUE, FALSE),
-('F30', 'Health Facility 3', 'health facility 3', (SELECT id FROM geographic_zones WHERE code = 'Mozambique'),
+('F30', 'Health Facility 3', 'health facility 3', (SELECT id FROM geographic_zones WHERE code = 'MARRACUENE'),
   (SELECT id FROM facility_types WHERE code = 'health_facility'), TRUE, TRUE, '11/11/12', TRUE, FALSE),
-('D01', 'DDM 1', 'DDM1', (SELECT id FROM geographic_zones WHERE code = 'Mozambique'),
+('D01', 'DDM 1', 'DDM1', (SELECT id FROM geographic_zones WHERE code = 'MARRACUENE'),
   (SELECT id FROM facility_types WHERE code = 'ddm'), TRUE, TRUE, '11/11/12', TRUE, FALSE),
-('D02', 'DPS 1', 'DPS1', (SELECT id FROM geographic_zones WHERE code = 'Mozambique'),
+('D02', 'DPS 1', 'DPS1', (SELECT id FROM geographic_zones WHERE code = 'MATOLA'),
   (SELECT id FROM facility_types WHERE code = 'dps'), TRUE, TRUE, '11/11/12', TRUE, FALSE);
 
 INSERT INTO programs_supported (facilityId, programId, startDate, active) VALUES
