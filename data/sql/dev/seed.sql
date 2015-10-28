@@ -7,3 +7,4 @@
 \i data/sql/dev/V6__processing_schedules.sql
 \i data/sql/dev/V7__requisition_groups.sql
 \i data/sql/dev/V8__regimens.sql
+\i data/sql/dev/V9__adjustment_reasons.sql
