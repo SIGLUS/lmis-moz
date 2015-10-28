@@ -1,4 +1,4 @@
-INSERT INTO losses_adjustments_types ('name'', ' 'description'', ' 'additive') VALUES
+INSERT INTO losses_adjustments_types ('name', 'description', 'additive') VALUES
 ('DISTRICT_DDM', 'District(DDM)', TRUE),
 ('PROVINCE_DPM', 'Province (DPM)', TRUE),
 ('PUB_PHARMACY', 'Public pharmacy', FALSE),
