@@ -25,7 +25,7 @@ INSERT INTO program_rnr_columns
 (20, null, (select id from programs where code = 'MMIA'), FALSE, 'C', 21, 'Packs to Ship'),
 (21, null, (select id from programs where code = 'MMIA'), FALSE, 'R', 22, 'Price per Pack'),
 (22, null, (select id from programs where code = 'MMIA'), FALSE, 'C', 23, 'Total Cost'),
-(23, null, (select id from programs where code = 'MMIA'), FALSE, 'U', 24, 'Expiration Date(MM/YYYY)'),
+(23, null, (select id from programs where code = 'MMIA'), TRUE, 'U', 24, 'Expiration Date(MM/YYYY)'),
 (24, null, (select id from programs where code = 'MMIA'), FALSE, 'U', 25, 'Remarks');
 UPDATE programs SET templateConfigured = TRUE WHERE id = (SELECT id FROM programs WHERE code = 'MMIA');
 
