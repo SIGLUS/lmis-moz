@@ -23,6 +23,7 @@ end
 
 def replace_file_list
   ['modules/openlmis-web/src/main/resources/openlmis_logging.xml',
+   'modules/openlmis-web/build.gradle',
    'modules/db/src/main/resources/db/migration/V5_2__create_product_forms.sql']
 end
 
