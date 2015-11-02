@@ -7,4 +7,3 @@
 \i V7__add_admin_rights.sql
 \i V8__set_up_rnr_template.sql
 \i V9__set_up_regimens_template.sql
-\i V11__adjustment_reasons.sql
