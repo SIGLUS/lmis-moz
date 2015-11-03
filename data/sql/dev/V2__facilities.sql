@@ -5,9 +5,18 @@ INSERT INTO geographic_levels (code, name, levelNumber) VALUES
 
 INSERT INTO geographic_zones
 (code, name, levelId, parentId) VALUES
-('MOZ', 'Mozambique', (select id from geographic_levels where code = 'national'), null),
-('MAPUTO_PROVINCIA', 'Maputo Província', (select id from geographic_levels where code = 'province'), (select id from geographic_zones where code = 'MOZ')),
-('MARRACUENE', 'Marracuene', (select id from geographic_levels where code = 'district'), (select id from geographic_zones where code = 'MAPUTO_PROVINCIA')),
+('MOZ', 'Mozambique', (select id from geographic_levels where code = 'national'), null);
+
+INSERT INTO geographic_zones
+(code, name, levelId, parentId) VALUES
+('MAPUTO_PROVINCIA', 'Maputo Província', (select id from geographic_levels where code = 'province'), (select id from geographic_zones where code = 'MOZ'));
+
+INSERT INTO geographic_zones
+(code, name, levelId, parentId) VALUES
+('MARRACUENE', 'Marracuene', (select id from geographic_levels where code = 'district'), (select id from geographic_zones where code = 'MAPUTO_PROVINCIA'));
+
+INSERT INTO geographic_zones
+(code, name, levelId, parentId) VALUES
 ('MATOLA', 'Matola', (select id from geographic_levels where code = 'district'), (select id from geographic_zones where code = 'MAPUTO_PROVINCIA'));
 
 INSERT INTO facility_types (code, name, description, levelId, nominalMaxMonth, nominalEop,
