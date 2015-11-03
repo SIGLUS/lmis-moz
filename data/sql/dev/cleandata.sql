@@ -1,3 +1,4 @@
+DELETE FROM stock_card_entry_key_values;
 DELETE FROM stock_card_entries;
 DELETE FROM stock_movement_line_items;
 DELETE FROM stock_movement_lots;
