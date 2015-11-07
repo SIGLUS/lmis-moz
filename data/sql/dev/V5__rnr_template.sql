@@ -50,7 +50,7 @@ INSERT INTO program_rnr_columns
 (16, null, (select id from programs where code = 'ESS_MEDS'), TRUE, 'U', 17, 'Calculated Order Quantity'),
 (17, null, (select id from programs where code = 'ESS_MEDS'), TRUE, 'U', 18, 'Requested Quantity'),
 (18, null, (select id from programs where code = 'ESS_MEDS'), TRUE, 'U', 19, 'Requested Quantity Explanation'),
-(19, null, (select id from programs where code = 'ESS_MEDS'), FALSE, 'U', 20, 'Approved Quantity'),
+(19, null, (select id from programs where code = 'ESS_MEDS'), TRUE, 'U', 20, 'Approved Quantity'),
 (20, null, (select id from programs where code = 'ESS_MEDS'), FALSE, 'C', 21, 'Packs to Ship'),
 (21, null, (select id from programs where code = 'ESS_MEDS'), FALSE, 'R', 22, 'Price per Pack'),
 (22, null, (select id from programs where code = 'ESS_MEDS'), FALSE, 'C', 23, 'Total Cost'),
