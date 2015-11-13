@@ -1,3 +1,5 @@
+ALTER TABLE products ALTER COLUMN strength TYPE varchar(50);
+
 INSERT INTO products (code, primaryName, dispensingUnit, dosesPerDispensingUnit, packSize, active, fullSupply, tracer, packRoundingThreshold, roundToZero, strength, formId) values
 ('P1', 'Acetylsalicylic Acid, tablet 300mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE, '10mg', (SELECT id from product_forms where code='Other')),
 ('P2', 'Acyclovir, tablet 400mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE, '10mg', (SELECT id from product_forms where code='Other')),
