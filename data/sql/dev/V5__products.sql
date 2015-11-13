@@ -1,11 +1,6 @@
 ALTER TABLE products ALTER COLUMN strength TYPE varchar(50);
 
 INSERT INTO products (code, primaryName, dispensingUnit, dosesPerDispensingUnit, packSize, active, fullSupply, tracer, packRoundingThreshold, roundToZero, strength, formId) values
-('P1', 'Acetylsalicylic Acid, tablet 300mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE, '10mg', (SELECT id from product_forms where code='Other')),
-('P2', 'Acyclovir, tablet 400mg', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE, '10mg', (SELECT id from product_forms where code='Other')),
-('P3', 'Aminophylline Injection 250mg/10ml', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE, '10mg', (SELECT id from product_forms where code='Other')),
-('P4', 'Amoxicillin (Trihydrate), Dry powder for suspension 125mg/5ml', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE, '10mg', (SELECT id from product_forms where code='Other')),
-('P5', 'Atenolol 50mg tab', 'Strip', 10, 10, TRUE, TRUE, FALSE, 1, FALSE, '10mg', (SELECT id from product_forms where code='Other')),
 ('01A01', 'Digoxina 0,25mg Comp', '1', 1,1,TRUE,TRUE,FALSE,0,FALSE, '0,25mg', (SELECT id from product_forms where code='Comprimidos')),
 ('01A02', 'Digoxina; 2,5mg/50mL; Gotas Orais', '1', 1,1,TRUE,TRUE,FALSE,0,FALSE, '2,5mg/50mL', (SELECT id from product_forms where code='Gotas Orais')),
 ('01A03', 'Digoxina; 0,5mg/2mL; Injectável', '1', 1,1,TRUE,TRUE,FALSE,0,FALSE, '0,5mg/2mL', (SELECT id from product_forms where code='Injectável')),
