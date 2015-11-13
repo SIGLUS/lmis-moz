@@ -178,14 +178,14 @@ Product Code,Product Primary Name,Dispensing Units,Doses Per Dispensing Unit,Pac
 04F04,Etinilest+Levonorgestrel; 50mcg + 250mcg; Comprimidos,1,1,1,TRUE,TRUE,FALSE,0,FALSE,50mcg + 250mcg,Comprimidos,Etinilest+Levonorgestrel
 04F05,Etinilest+Levonorgestrel; 30mcg + 50 mcg/40mcg + 75mcg/3; Comprimidos,1,1,1,TRUE,TRUE,FALSE,0,FALSE,30mcg + 50 mcg/40mcg + 75mcg/30mcg+125mcg,Comprimidos,Etinilest+Levonorgestrel
 04F06,Levonorgestrel(Microlut) 30mcg Ciclo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,30mcg,Ciclo,Levonorgestrel(Microlut)
-04F06W,Levonorgestrel  0.75mg Comp,1,1,1,TRUE,TRUE,FALSE,0,FALSE,0.75mg,Comprimidos,Levonorgestrel 
+04F06W,Levonorgestrel  0.75mg Comp,1,1,1,TRUE,TRUE,FALSE,0,FALSE,0.75mg,Comprimidos,Levonorgestrel
 04F06Y,Levonorgestrel (Microlut) 30mcg Ciclo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,30mcg,Ciclo,Levonorgestrel (Microlut)
 04F06Z,Levonorgestrel; JADELLE; Implante,1,1,1,TRUE,TRUE,FALSE,0,FALSE,JADELLE,Implante,Levonorgestrel
 04F07,Medroxiprogesterona acet (Depo; 150mg/3mL; Injectável,1,1,1,TRUE,TRUE,FALSE,0,FALSE,150mg/3mL,Injectável,Medroxiprogesterona acet (Depo-Provera)
 04F07Z,Medroxiprogesterona (Sayana Press) 104mg/0.65ml Inj,1,1,1,TRUE,TRUE,FALSE,0,FALSE,104mg/0.65ml,Injectável,Medroxiprogesterona (Sayana Press)
 04F08,Levonorgestrel+Etinilestradiol; 250mcg + 50mcg; Comprimidos,1,1,1,TRUE,TRUE,FALSE,0,FALSE,250mcg + 50mcg,Comprimidos,Levonorgestrel+Etinilestradiol
 04F08Z,"Levonor+Etinil (Microgynon); Microgynon; Ciclo0,15mg + 0,03; Ciclo",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"Microgynon; Ciclo0,15mg + 0,03mg",Ciclo,Levonor+Etinil (Microgynon)
-04F09,"Copper T380 dispositivo ; 0,2%; DIU",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,2%",DIU,Copper T380 dispositivo 
+04F09,"Copper T380 dispositivo ; 0,2%; DIU",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,2%",DIU,Copper T380 dispositivo
 04F0XX,"Preservativos Femininos; 0,2%; Preservativo",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,2%",Preservativo,Preservativos Femininos
 04F0XY,Preservativos Masculino (53mm ; 53mm /2mm; Preservativo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,53mm /2mm,Preservativo,Preservativos Masculino (53mm 2mm)
 04F0XZ,"Norgestrel (Ovrette); 0,075mg; Ciclo",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,075mg",Ciclo,Norgestrel (Ovrette)
@@ -229,7 +229,7 @@ Product Code,Product Primary Name,Dispensing Units,Doses Per Dispensing Unit,Pac
 05A09,Salbutamol; 2mg; Comprimidos,1,1,1,TRUE,TRUE,FALSE,0,FALSE,2mg,Comprimidos,Salbutamol
 05A09Z,Salbutamol; 4mg; Comprimidos,1,1,1,TRUE,TRUE,FALSE,0,FALSE,4mg,Comprimidos,Salbutamol
 05A10,Salbutamol; 500mcg/mL; Injectável,1,1,1,TRUE,TRUE,FALSE,0,FALSE,500mcg/mL,Injectável,Salbutamol
-05A11,Salbutamol ; 5mg/mL; Solução para Nebulização,1,1,1,TRUE,TRUE,FALSE,0,FALSE,5mg/mL,Solução para Nebulização,Salbutamol 
+05A11,Salbutamol ; 5mg/mL; Solução para Nebulização,1,1,1,TRUE,TRUE,FALSE,0,FALSE,5mg/mL,Solução para Nebulização,Salbutamol
 05A12,Salbutamol; 2mg/5mL; Xarope,1,1,1,TRUE,TRUE,FALSE,0,FALSE,2mg/5mL,Xarope,Salbutamol
 05A13,Salmeterol; 25mcg/inalacao; Aerosol,1,1,1,TRUE,TRUE,FALSE,0,FALSE,25mcg/inalacao,Aerosol,Salmeterol
 05A14,Teofilina de accao prolongada; 250mg; Comprimidos,1,1,1,TRUE,TRUE,FALSE,0,FALSE,250mg,Comprimidos,Teofilina de accao prolongada
@@ -279,7 +279,7 @@ Product Code,Product Primary Name,Dispensing Units,Doses Per Dispensing Unit,Pac
 07A03,Paracetamol; 500mg; Comprimidos,1,1,1,TRUE,TRUE,FALSE,0,FALSE,500mg,Comprimidos,Paracetamol
 07A04,Paracetamol; 1g/100mL; Injectável,1,1,1,TRUE,TRUE,FALSE,0,FALSE,1g/100mL,Injectável,Paracetamol
 07A05,Paracetamol; 250mg; Supositório,1,1,1,TRUE,TRUE,FALSE,0,FALSE,250mg,Supositório,Paracetamol
-07A05Z,Paracetamol ; 125mg; Supositório,1,1,1,TRUE,TRUE,FALSE,0,FALSE,125mg,Supositório,Paracetamol 
+07A05Z,Paracetamol ; 125mg; Supositório,1,1,1,TRUE,TRUE,FALSE,0,FALSE,125mg,Supositório,Paracetamol
 07A06,Paracetamol; 120mg/5mL; Suspensão,1,1,1,TRUE,TRUE,FALSE,0,FALSE,120mg/5mL,Suspensão,Paracetamol
 07A06Y,Paracetamol; 250mg/5mL; Xarope,1,1,1,TRUE,TRUE,FALSE,0,FALSE,250mg/5mL,Xarope,Paracetamol
 07A06Z,Paracetamol; 125mg/5mL; Xarope,1,1,1,TRUE,TRUE,FALSE,0,FALSE,125mg/5mL,Xarope,Paracetamol
@@ -375,7 +375,7 @@ Product Code,Product Primary Name,Dispensing Units,Doses Per Dispensing Unit,Pac
 08A01,Fenoximetilpenicilina; 500mg; Comprimidos,1,1,1,TRUE,TRUE,FALSE,0,FALSE,500mg,Comprimidos,Fenoximetilpenicilina
 08A01Z,Fenoximetilpenicilina; 250mg; Comprimidos,1,1,1,TRUE,TRUE,FALSE,0,FALSE,250mg,Comprimidos,Fenoximetilpenicilina
 08A02,Fenoximetilpenicilina; 250mg/5mL; Suspensão,1,1,1,TRUE,TRUE,FALSE,0,FALSE,250mg/5mL,Suspensão,Fenoximetilpenicilina
-08A02Z,Fenoximetilpenicilina  125mg/5mL Susp,1,1,1,TRUE,TRUE,FALSE,0,FALSE,125mg/5mL,Suspensão,Fenoximetilpenicilina 
+08A02Z,Fenoximetilpenicilina  125mg/5mL Susp,1,1,1,TRUE,TRUE,FALSE,0,FALSE,125mg/5mL,Suspensão,Fenoximetilpenicilina
 08A03,Penicilina benzatinica; 1 200 000UI; Injectável Ampola,1,1,1,TRUE,TRUE,FALSE,0,FALSE,1 200 000UI,Injectável Ampola,Penicilina benzatinica
 08A04,Penicilina benzatinica; 2 400 000UI; Injectável Ampola,1,1,1,TRUE,TRUE,FALSE,0,FALSE,2 400 000UI,Injectável Ampola,Penicilina benzatinica
 08A05,Penicilina G sodica; 10 000 000UI; Injectável Frasco,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10 000 000UI,Injectável Frasco,Penicilina G sodica
@@ -449,7 +449,7 @@ Product Code,Product Primary Name,Dispensing Units,Doses Per Dispensing Unit,Pac
 08G01Z,Doxicilina; 50mg; Cápsulas,1,1,1,TRUE,TRUE,FALSE,0,FALSE,50mg,Cápsulas,Doxicilina
 08G02,"Minociclina, hidrocloreto; 50mg; Cápsulas",1,1,1,TRUE,TRUE,FALSE,0,FALSE,50mg,Cápsulas,"Minociclina, hidrocloreto"
 08G03,"Tetraciclina, hidrocloreto; 500mg; Cápsulas",1,1,1,TRUE,TRUE,FALSE,0,FALSE,500mg,Cápsulas,"Tetraciclina, hidrocloreto"
-08G03Z,Tetraciclina ; 250mg; Cápsulas,1,1,1,TRUE,TRUE,FALSE,0,FALSE,250mg,Cápsulas,Tetraciclina 
+08G03Z,Tetraciclina ; 250mg; Cápsulas,1,1,1,TRUE,TRUE,FALSE,0,FALSE,250mg,Cápsulas,Tetraciclina
 08H01,Acido Nalidíxico; 500mg; Comprimidos,1,1,1,TRUE,TRUE,FALSE,0,FALSE,500mg,Comprimidos,Acido NalidÕxico
 08H01Z,Acido Nalidíxico; 125mg; Comprimidos,1,1,1,TRUE,TRUE,FALSE,0,FALSE,125mg,Comprimidos,Acido NalidÕxico
 08H02,Acido Nalidíxico; 300mg/5mL; Xarope,1,1,1,TRUE,TRUE,FALSE,0,FALSE,300mg/5mL,Xarope,Acido NalidÕxico
@@ -622,9 +622,9 @@ Product Code,Product Primary Name,Dispensing Units,Doses Per Dispensing Unit,Pac
 08S23Z,Nevirapina (NVP); 50mg 60Comp Disp; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,50mg 60Comp Disp,Embalagem,Nevirapina (NVP)
 08S24,Amprenavir (APV); 150mg; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,150mg,Embalagem,Amprenavir (APV)
 08S25,Amprenavir (APV); 15mg/mL; Solução,1,1,1,TRUE,TRUE,FALSE,0,FALSE,15mg/mL,Solução,Amprenavir (APV)
-08S26,"Indinavir (IDV) ; 400mg, 180 Caps; Embalagem",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"400mg, 180 Caps",Embalagem,Indinavir (IDV) 
-08S29,Ritonavir ; 100mg 60 comp; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,100mg 60 comp,Embalagem,Ritonavir 
-08S30,Saquinavir ; 200mg 270Caps; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,200mg 270Caps,Embalagem,Saquinavir 
+08S26,"Indinavir (IDV) ; 400mg, 180 Caps; Embalagem",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"400mg, 180 Caps",Embalagem,Indinavir (IDV)
+08S29,Ritonavir ; 100mg 60 comp; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,100mg 60 comp,Embalagem,Ritonavir
+08S30,Saquinavir ; 200mg 270Caps; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,200mg 270Caps,Embalagem,Saquinavir
 08S30W,Atazanavir; 300mg 30Caps; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,300mg 30Caps,Embalagem,Atazanavir
 08S30X,Atazanavir; 150mg 60Caps; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,150mg 60Caps,Embalagem,Atazanavir
 08S30Y,Darunavir; 600mg 60Comp; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,600mg 60Comp,Embalagem,Darunavir
@@ -652,7 +652,7 @@ Product Code,Product Primary Name,Dispensing Units,Doses Per Dispensing Unit,Pac
 09A03,Ciclofosfamida; 500mg; Injectável,1,1,1,TRUE,TRUE,FALSE,0,FALSE,500mg,Injectável,Ciclofosfamida
 09A03Z,Ciclofosfamida; 1000mg; Injectável,1,1,1,TRUE,TRUE,FALSE,0,FALSE,1000mg,Injectável,Ciclofosfamida
 09A04,Clorambucil; 2mg; Comprimidos,1,1,1,TRUE,TRUE,FALSE,0,FALSE,2mg,Comprimidos,Clorambucil
-09A05,Clormetina ; 10mg; Injectável,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10mg,Injectável,Clormetina 
+09A05,Clormetina ; 10mg; Injectável,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10mg,Injectável,Clormetina
 09A06,Estramustina fosfato; 140mg; Injectável,1,1,1,TRUE,TRUE,FALSE,0,FALSE,140mg,Injectável,Estramustina fosfato
 09A07,Ifosfamida; 1g; Injectável,1,1,1,TRUE,TRUE,FALSE,0,FALSE,1g,Injectável,Ifosfamida
 09A08,Ifosfamida; 3 g; Injectável,1,1,1,TRUE,TRUE,FALSE,0,FALSE,3 g,Injectável,Ifosfamida
@@ -738,8 +738,8 @@ Product Code,Product Primary Name,Dispensing Units,Doses Per Dispensing Unit,Pac
 11A08,"Cloreto de sodio; 500 mL 0,9%; Injectável",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"500 mL 0,9%",Injectável,Cloreto de sodio
 11A09,"Cloreto de Sódio; 1000 mL (0,9%); Injectável",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"1000 mL (0,9%)",Injectável,Cloreto de SÑdio
 11A0VY,"Glucose+Cloreto de Sodio; 5% +0,9% 500ml set AD; Injectável",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"5% +0,9% 500ml set AD",Injectável,Glucose+Cloreto Sodio
-11A0XX,Agua para Injectaveis ; 10ml; Injectável,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10ml,Injectável,Agua para Injectaveis 
-11A0XZ,Agua para Injectaveis  5ml Inj,1,1,1,TRUE,TRUE,FALSE,0,FALSE,5ml,Injectável,Agua para Injectaveis 
+11A0XX,Agua para Injectaveis ; 10ml; Injectável,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10ml,Injectável,Agua para Injectaveis
+11A0XZ,Agua para Injectaveis  5ml Inj,1,1,1,TRUE,TRUE,FALSE,0,FALSE,5ml,Injectável,Agua para Injectaveis
 11A10,Cloreto de sodio; 20mL 20%; Injectável,1,1,1,TRUE,TRUE,FALSE,0,FALSE,20mL 20%,Injectável,Cloreto de sodio
 11A11,"Gelatina polimerizada; 17,5 g/500mL; Injectável",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"17,5 g/500mL",Injectável,Gelatina polimerizada
 11A12,Glicose (Dextrose); 100mL 5%; Injectável,1,1,1,TRUE,TRUE,FALSE,0,FALSE,100mL 5%,Injectável,Glicose (Dextrose)
@@ -850,7 +850,7 @@ Product Code,Product Primary Name,Dispensing Units,Doses Per Dispensing Unit,Pac
 14A06,Indometacina; 100mg; Supositório,1,1,1,TRUE,TRUE,FALSE,0,FALSE,100mg,Supositório,Indometacina
 14A07,Ketorolac; 30mg/mL; Injectável,1,1,1,TRUE,TRUE,FALSE,0,FALSE,30mg/mL,Injectável,Ketorolac
 14A08,Metilprednisolona acetato; 40mg/mL; Injectável,1,1,1,TRUE,TRUE,FALSE,0,FALSE,40mg/mL,Injectável,Metilprednisolona acetato
-14A0Z,Diclofenac ; 1%; Gel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,1%,Gel,Diclofenac 
+14A0Z,Diclofenac ; 1%; Gel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,1%,Gel,Diclofenac
 14A0ZZ,Ibuprofeno+Paracetamol; 400mg+350mg; Comprimidos,1,1,1,TRUE,TRUE,FALSE,0,FALSE,400mg+350mg,Comprimidos,Ibuprofeno+Paracetamol
 14B01,Alopurinol; 100mg; Comprimidos,1,1,1,TRUE,TRUE,FALSE,0,FALSE,100mg,Comprimidos,Alopurinol
 14B02,"Colchicina; 0,5mg; Comprimidos",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,5mg",Comprimidos,Colchicina
@@ -882,7 +882,7 @@ Product Code,Product Primary Name,Dispensing Units,Doses Per Dispensing Unit,Pac
 15B01Z,"Betametasona dipropionato; 0,05%; Créme",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,05%",Créme,Betametasona dipropionato
 15B02,"Betametasona dipropionato; 0,05%; Loção Capilar",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,05%",Loção Capilar,Betametasona dipropionato
 15B03,"Betametasona dipropionato; 0,1%; Pomada",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,1%",Pomada,Betametasona dipropionato
-15B03Z,"Betametasona dipropionato  ; 0,05%; Pomada",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,05%",Pomada,Betametasona dipropionato  
+15B03Z,"Betametasona dipropionato  ; 0,05%; Pomada",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,05%",Pomada,Betametasona dipropionato
 15B04,"Betametasona+Acido salicilico; 0,05%+3%; Loção",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,05%+3%",Loção,Betametasona+Acido salicilico
 15B05,"Betametasona+Acido salicilico; 0,05%+3%; Pomada",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,05%+3%",Pomada,Betametasona+Acido salicilico
 15B06,"Betametasona+Clotrimazol+Genta; (0,5+10+1)mg; Créme",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"(0,5+10+1)mg",Créme,Betametasona+Clotrimazol+Gentamicina
@@ -923,7 +923,7 @@ Product Code,Product Primary Name,Dispensing Units,Doses Per Dispensing Unit,Pac
 15C11,Crotamitona; 10%; Loção,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10%,Loção,Crotamitona
 15C12,Enxofre+Acido salicílico; 3g + 3g; Pomada,1,1,1,TRUE,TRUE,FALSE,0,FALSE,3g + 3g,Pomada,Enxofre+Acido salicÕlico
 15C13,Eosina dermica; 2%; Solução alcoólica ,1,1,1,TRUE,TRUE,FALSE,0,FALSE,2%,Solução alcoólica,Eosina dermica
-15C13Z,Eosina ; 2%; Solução Aquosa,1,1,1,TRUE,TRUE,FALSE,0,FALSE,2%,Solução Aquosa,Eosina 
+15C13Z,Eosina ; 2%; Solução Aquosa,1,1,1,TRUE,TRUE,FALSE,0,FALSE,2%,Solução Aquosa,Eosina
 15C14,Eritromicina estearato; 4%; Loção,1,1,1,TRUE,TRUE,FALSE,0,FALSE,4%,Loção,Eritromicina estearato
 15C15,Hexacloreto de benzeno; 600mg/60ml; Loção,1,1,1,TRUE,TRUE,FALSE,0,FALSE,600mg/60ml,Loção,Hexacloreto de benzeno
 15C15Z,Hexacloreto de benzeno; 1%; Loção,1,1,1,TRUE,TRUE,FALSE,0,FALSE,1%,Loção,Hexacloreto de benzeno
@@ -970,7 +970,7 @@ Product Code,Product Primary Name,Dispensing Units,Doses Per Dispensing Unit,Pac
 15I01,Hidroxicloreto de aluminio; 20%; Solução,1,1,1,TRUE,TRUE,FALSE,0,FALSE,20%,Solução,Hidroxicloreto de aluminio
 15J01,Hidroquinona; 2%; Créme,1,1,1,TRUE,TRUE,FALSE,0,FALSE,2%,Créme,Hidroquinona
 15K01,"Capsaicina; 0,075%; Créme",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,075%",Créme,Capsaicina
-15K01Z,"Capsaicina ; 0,025%; Créme",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,025%",Créme,Capsaicina 
+15K01Z,"Capsaicina ; 0,025%; Créme",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,025%",Créme,Capsaicina
 15L01,"Tacrolimus; 0,03%; Pomada",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,03%",Pomada,Tacrolimus
 15L02,"Tacrolimus; 0,1%; Pomada",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,1%",Pomada,Tacrolimus
 16A01,Ciprofloxacina+Hidrocortisona 10ml Gota auricular,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10ml,Gotas auriculares,Ciprofloxacina+Hidrocortisona
@@ -991,7 +991,7 @@ Product Code,Product Primary Name,Dispensing Units,Doses Per Dispensing Unit,Pac
 16D01,"Acido tricloroacetico; 0,2%; Cristais",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,2%",Cristais,Acido tricloroacetico
 16D02,Acido tricloroacetico; 50%; Solução,1,1,1,TRUE,TRUE,FALSE,0,FALSE,50%,Solução,Acido tricloroacetico
 16D03,"Benzidamina HCl; 0,15%; Solução",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,15%",Solução,Benzidamina HCl
-16D04,Miconazol nitrato ; 2%; Gel oral,1,1,1,TRUE,TRUE,FALSE,0,FALSE,2%,Gel oral,Miconazol nitrato 
+16D04,Miconazol nitrato ; 2%; Gel oral,1,1,1,TRUE,TRUE,FALSE,0,FALSE,2%,Gel oral,Miconazol nitrato
 17A01,Acetazolamida; 250mg; Comprimidos,1,1,1,TRUE,TRUE,FALSE,0,FALSE,250mg,Comprimidos,Acetazolamida
 17A02,Acetazolamida; 500mg; Injectável,1,1,1,TRUE,TRUE,FALSE,0,FALSE,500mg,Injectável,Acetazolamida
 17A03,Adrenalina pediatrica; 2%; Solução,1,1,1,TRUE,TRUE,FALSE,0,FALSE,2%,Solução,Adrenalina pediatrica
@@ -1072,7 +1072,7 @@ Product Code,Product Primary Name,Dispensing Units,Doses Per Dispensing Unit,Pac
 18C11,"Lidocaina+Adrenalina  carpule; 0,2%; Injectável",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,2%",Injectável,Lidocaina+Adrenalina  carpule
 18C11Y,Lidocaina+Adrenalina carpule; 2%; Injectável,1,1,1,TRUE,TRUE,FALSE,0,FALSE,2%,Injectável,Lidocaina+Adrenalina carpule
 18C11Z,Lidocaina+Prilocaína; 5% (25mg + 25mg); Créme,1,1,1,TRUE,TRUE,FALSE,0,FALSE,5% (25mg + 25mg),Créme,Lidocaina+PrilocaÕna
-18D01,Atracurio ; 10mg/ml; Injectável,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10mg/mL,Injectável,Atracurio 
+18D01,Atracurio ; 10mg/ml; Injectável,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10mg/mL,Injectável,Atracurio
 18D02,Pancuronio; 4mg/2mL; Injectável,1,1,1,TRUE,TRUE,FALSE,0,FALSE,4mg/2mL,Injectável,Pancuronio
 18D03,Vecuronio brometo; 10mg/5mL; Injectável,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10mg/5mL,Injectável,Vecuronio brometo
 18D03Z,Vecuronio brometo; 10mg/5mL; Injectável,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10mg/5mL,Injectável,Vecuronio brometo
@@ -1114,11 +1114,11 @@ Product Code,Product Primary Name,Dispensing Units,Doses Per Dispensing Unit,Pac
 20A08Z,Cetrimida+Clorexidina; 15%+7.5% 500mL; Solução,1,1,1,TRUE,TRUE,FALSE,0,FALSE,15%+7.5% 500mL,Solução,Cetrimida+Clorexidina
 20A09,Gluteraldeído; 2%; Solução,1,1,1,TRUE,TRUE,FALSE,0,FALSE,2%,Solução,GluteraldeÕdo
 20A09ZY,Sabonete de maos 100-125g ,1,1,1,TRUE,TRUE,FALSE,0,FALSE,100-125g,Sabonete,Sabonete de maos
-20A0X,Clorohexidina  7.1% 25g gel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,7.1% 25g,Gel,Clorohexidina 
+20A0X,Clorohexidina  7.1% 25g gel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,7.1% 25g,Gel,Clorohexidina
 20A10,"Hipoclorito de sodio; 0,025% 250 ppm; Solução",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,025% 250 ppm",Solução,Hipoclorito de sodio
 20A11,"Hipoclorito de Sódio; 0,2%; Granulado",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,2%",Granulado,Hipoclorito de SÑdio
 20A11Y,Hipoclorito de Calcio 1 000g (1kg) Granulado,1,1,1,TRUE,TRUE,FALSE,0,FALSE,1 000g (1kg),Granulado,Hipoclorito de Calcio
-20A12,Iodopovidona ; 4% 4g/100ml; Solução Aquosa,1,1,1,TRUE,TRUE,FALSE,0,FALSE,4% 4g/100ml,Solução Aquosa,Iodopovidona 
+20A12,Iodopovidona ; 4% 4g/100ml; Solução Aquosa,1,1,1,TRUE,TRUE,FALSE,0,FALSE,4% 4g/100ml,Solução Aquosa,Iodopovidona
 20A14,Permanganato de potassio 500mg Comp,1,1,1,TRUE,TRUE,FALSE,0,FALSE,500mg,Comprimidos,Permanganato de potassio
 20A15,Sulfadiazina de prata; 1% 1g/100g; Créme,1,1,1,TRUE,TRUE,FALSE,0,FALSE,1% 1g/100g,Créme,Sulfadiazina de prata
 20A16,Trioximetileno; 1g; Comprimidos,1,1,1,TRUE,TRUE,FALSE,0,FALSE,1g,Comprimidos,Trioximetileno
@@ -1159,58 +1159,58 @@ Product Code,Product Primary Name,Dispensing Units,Doses Per Dispensing Unit,Pac
 23A07,Adesivo Transparente; 72mmx5m; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,72mmX5m,Rolo,Adesivo Transparente
 23A08,Adesivo Transparente 96mm x 5m Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,96mm x 5m,Rolo,Adesivo Transparente
 23A09,Adesivo Tape (Micropore Tipo C; 20cmX5m; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,20cmX5m,Rolo,Adesivo Tape (Micropore Tipo Cirugico)
-23A10,Adesivo Transparente  10cm X 10m Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10cm X 10m,Rolo,Adesivo Transparente 
-23B01,Algodao Hidrofilo ; 500g; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,500g,Rolo,Algodao Hidrofilo 
-23B02,Algodao Oftalmologico ; 500g; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,500g,Rolo,Algodao Oftalmologico 
+23A10,Adesivo Transparente  10cm X 10m Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10cm X 10m,Rolo,Adesivo Transparente
+23B01,Algodao Hidrofilo ; 500g; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,500g,Rolo,Algodao Hidrofilo
+23B02,Algodao Oftalmologico ; 500g; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,500g,Rolo,Algodao Oftalmologico
 23B03,Algodao Ortopedico; 500mg; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,500mg,Rolo,Algodao Ortopedico
-23C01,Gaze Gordurosa ; 10cm X 10cm; Compressa,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10cm X 10cm,Compressa,Gaze Gordurosa 
-23C02,Gaze Gordurosa ; 20cm X 20cm; Compressa,1,1,1,TRUE,TRUE,FALSE,0,FALSE,20cm X 20cm,Compressa,Gaze Gordurosa 
-23C03,Gaze Hidrofila ; 90 cm x 100 m; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,90 cm x 100 m,Rolo,Gaze Hidrofila 
+23C01,Gaze Gordurosa ; 10cm X 10cm; Compressa,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10cm X 10cm,Compressa,Gaze Gordurosa
+23C02,Gaze Gordurosa ; 20cm X 20cm; Compressa,1,1,1,TRUE,TRUE,FALSE,0,FALSE,20cm X 20cm,Compressa,Gaze Gordurosa
+23C03,Gaze Hidrofila ; 90 cm x 100 m; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,90 cm x 100 m,Rolo,Gaze Hidrofila
 23C04,Gaze Oftalmologica; 58x82mm; Compressa,1,1,1,TRUE,TRUE,FALSE,0,FALSE,58x82mm,Compressa,Gaze Oftalmologica
 23C05,Penso Ocular Adesivo; 58x82mm; Compressa,1,1,1,TRUE,TRUE,FALSE,0,FALSE,58x82mm,Compressa,Penso Ocular Adesivo
 23C06,Penso Ocular Adesivo; 50x62mm; Compressa,1,1,1,TRUE,TRUE,FALSE,0,FALSE,50x62mm,Compressa,Penso Ocular Adesivo
-23D01,Ligadura De Cambraia ; 5cm X 5m; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,5cm X 5m,Rolo,Ligadura De Cambraia 
-23D02,Ligadura De Cambraia ; 10cm X 5m; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10cm X 5m,Rolo,Ligadura De Cambraia 
-23D03,Ligadura De Cambraia ; 10cm X 10m; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10cm X 10m,Rolo,Ligadura De Cambraia 
-23D03Z,Ligadura De Cambraia ; 20cm X 20m; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,20cm X 20m,Rolo,Ligadura De Cambraia 
-23D04,Ligadura De Gaze ; 5cm X 5m; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,5cm X 5m,Rolo,Ligadura De Gaze 
-23D05,Ligadura De Gaze ; 10cm X 5m; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10cm X 5m,Rolo,Ligadura De Gaze 
-23D06,Ligadura De Gaze ; 10cm X 10m; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10cm X 10m,Rolo,Ligadura De Gaze 
-23D07,"Ligadura Gessada  ; 7,5cmx3m; Rolo",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"7,5cmx3m",Rolo,Ligadura Gessada  
-23D08,Ligadura Gessada  ; 10cm X 3m; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10cm X 3m,Rolo,Ligadura Gessada  
-23D09,Ligadura Gessada  ; 15cm X 3m; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,15cm X 3m,Rolo,Ligadura Gessada  
-23D10,"Ligadura Gessada  ; 20cm X2,7m; Rolo",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"20cm X2,7m",Rolo,Ligadura Gessada  
-23D11,Ligadura Gessada  ; 20cm X 3m; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,20cm X 3m,Rolo,Ligadura Gessada  
+23D01,Ligadura De Cambraia ; 5cm X 5m; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,5cm X 5m,Rolo,Ligadura De Cambraia
+23D02,Ligadura De Cambraia ; 10cm X 5m; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10cm X 5m,Rolo,Ligadura De Cambraia
+23D03,Ligadura De Cambraia ; 10cm X 10m; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10cm X 10m,Rolo,Ligadura De Cambraia
+23D03Z,Ligadura De Cambraia ; 20cm X 20m; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,20cm X 20m,Rolo,Ligadura De Cambraia
+23D04,Ligadura De Gaze ; 5cm X 5m; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,5cm X 5m,Rolo,Ligadura De Gaze
+23D05,Ligadura De Gaze ; 10cm X 5m; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10cm X 5m,Rolo,Ligadura De Gaze
+23D06,Ligadura De Gaze ; 10cm X 10m; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10cm X 10m,Rolo,Ligadura De Gaze
+23D07,"Ligadura Gessada  ; 7,5cmx3m; Rolo",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"7,5cmx3m",Rolo,Ligadura Gessada
+23D08,Ligadura Gessada  ; 10cm X 3m; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10cm X 3m,Rolo,Ligadura Gessada
+23D09,Ligadura Gessada  ; 15cm X 3m; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,15cm X 3m,Rolo,Ligadura Gessada
+23D10,"Ligadura Gessada  ; 20cm X2,7m; Rolo",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"20cm X2,7m",Rolo,Ligadura Gessada
+23D11,Ligadura Gessada  ; 20cm X 3m; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,20cm X 3m,Rolo,Ligadura Gessada
 23D12,Ligadura  Elastica; 8cmx3m; Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,8cmx3m,Rolo,Ligadura  Elastica
 23D12Z,Ligadura  Elastica; 70% (700mg/mL); Rolo,1,1,1,TRUE,TRUE,FALSE,0,FALSE,70% (700mg/mL),Rolo,Ligadura  Elastica
 23E01,Vaselina solida esterilizada; 500g; Pomada,1,1,1,TRUE,TRUE,FALSE,0,FALSE,500g,Pomada,Vaselina solida esterilizada
 23E01Z,Vaselina solida esterilizada; 20g Bisnaga; Pomada,1,1,1,TRUE,TRUE,FALSE,0,FALSE,20g Bisnaga,Pomada,Vaselina solida esterilizada
-23E02,Po Talco ; 1000 g; Pó,1,1,1,TRUE,TRUE,FALSE,0,FALSE,1000 g,Pó,Po Talco 
+23E02,Po Talco ; 1000 g; Pó,1,1,1,TRUE,TRUE,FALSE,0,FALSE,1000 g,Pó,Po Talco
 23E02Z,Pó Talco 30 KG Pó,1,1,1,TRUE,TRUE,FALSE,0,FALSE,30 KG,Pó,PÑ Talco
-24A01,"Agulha Hipodermica ; 0,55x25mm; Embalagem",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,55x25mm",Embalagem,Agulha Hipodermica 
+24A01,"Agulha Hipodermica ; 0,55x25mm; Embalagem",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,55x25mm",Embalagem,Agulha Hipodermica
 24A01Z,"Agulha Hipodermica 24G; 0,55x25mm; Embalagem",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,55x25mm",Embalagem,Agulha Hipodermica 24G
-24A02,"Agulha Hipodermica ; 0,70x38mm; Embalagem",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,70x38mm",Embalagem,Agulha Hipodermica 
+24A02,"Agulha Hipodermica ; 0,70x38mm; Embalagem",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,70x38mm",Embalagem,Agulha Hipodermica
 24A02Z,"Agulha Hipodermica 22G; 0,70x38mm; Embalagem",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,70x38mm",Embalagem,Agulha Hipodermica 22G
-24A03,"Agulha Hipodermica ; 0,90x38mm; Embalagem",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,90x38mm",Embalagem,Agulha Hipodermica 
-24A04,"Agulha Hipodermica ; 1,20x38mm; Embalagem",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"1,20x38mm",Embalagem,Agulha Hipodermica 
+24A03,"Agulha Hipodermica ; 0,90x38mm; Embalagem",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,90x38mm",Embalagem,Agulha Hipodermica
+24A04,"Agulha Hipodermica ; 1,20x38mm; Embalagem",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"1,20x38mm",Embalagem,Agulha Hipodermica
 24A04Z,"Agulha Hipodermica 18G; 1,20x38mm; Embalagem",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"1,20x38mm",Embalagem,Agulha Hipodermica 18G
-24A05,"Agulha Hipodermica ; 1,60x38mm; Embalagem",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"1,60x38mm",Embalagem,Agulha Hipodermica 
+24A05,"Agulha Hipodermica ; 1,60x38mm; Embalagem",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"1,60x38mm",Embalagem,Agulha Hipodermica
 24A05Z,"Agulha Hipodermica 16G; 1,60x38mm; Embalagem",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"1,60x38mm",Embalagem,Agulha Hipodermica 16G
 24A23Z,"Agulha Hipodermica 20G; 0,90x38mm; Embalagem",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,90x38mm",Embalagem,Agulha Hipodermica 20G
-24B01,Seringa para insulina 1 ml com; 100 UI; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,100 UI,Embalagem,Seringa para insulina 1 ml com agulha 
-24B02,Seringa para Tuberculina 1 ml ; 100 UI; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,100 UI,Embalagem,Seringa para Tuberculina 1 ml com agulha 
-24B03,Seringa para Medroxiprogestero; SEM DOSAGEM; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Embalagem,Seringa para Medroxiprogesterona injectavel 1 ml com agulha 
-24B03Z,Seringa para Depoprovera  1ml Inj,1,1,1,TRUE,TRUE,FALSE,0,FALSE,1ml,Injectável,Seringa para Depoprovera 
+24B01,Seringa para insulina 1 ml com; 100 UI; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,100 UI,Embalagem,Seringa para insulina 1 ml com agulha
+24B02,Seringa para Tuberculina 1 ml ; 100 UI; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,100 UI,Embalagem,Seringa para Tuberculina 1 ml com agulha
+24B03,Seringa para Medroxiprogestero; SEM DOSAGEM; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Embalagem,Seringa para Medroxiprogesterona injectavel 1 ml com agulha
+24B03Z,Seringa para Depoprovera  1ml Inj,1,1,1,TRUE,TRUE,FALSE,0,FALSE,1ml,Injectável,Seringa para Depoprovera
 24B04,"Seringa Hipodermica 2,5 ml com; 0,60x25mm; Embalagem",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,60x25mm",Embalagem,"Seringa Hipodermica 2,5 ml com agulha "
-24B05,"Seringa Hipodermica 5 ml com a; 0,80x38mm; Embalagem",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,80x38mm",Embalagem,Seringa Hipodermica 5 ml com agulha 
+24B05,"Seringa Hipodermica 5 ml com a; 0,80x38mm; Embalagem",1,1,1,TRUE,TRUE,FALSE,0,FALSE,"0,80x38mm",Embalagem,Seringa Hipodermica 5 ml com agulha
 24B05Z,Seringa Hipodermica 10 mL com agulha 10ml ,1,1,1,TRUE,TRUE,FALSE,0,FALSE,10ml,Seringas,Seringa Hipodermica 10 mL com agulha
-24B06,Seringa 3 ml  ; SEM DOSAGEM; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Embalagem,Seringa 3 ml  
-24B07,Seringa 5 ml  ; SEM DOSAGEM; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Embalagem,Seringa 5 ml  
-24B08,Seringa 10 ml ; SEM DOSAGEM; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Embalagem,Seringa 10 ml 
-24B09,Seringa 20 ml  ; SEM DOSAGEM; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Embalagem,Seringa 20 ml  
-24B10,Seringa 100 ml  ; SEM DOSAGEM; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Embalagem,Seringa 100 ml  
+24B06,Seringa 3 ml  ; SEM DOSAGEM; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Embalagem,Seringa 3 ml
+24B07,Seringa 5 ml  ; SEM DOSAGEM; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Embalagem,Seringa 5 ml
+24B08,Seringa 10 ml ; SEM DOSAGEM; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Embalagem,Seringa 10 ml
+24B09,Seringa 20 ml  ; SEM DOSAGEM; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Embalagem,Seringa 20 ml
+24B10,Seringa 100 ml  ; SEM DOSAGEM; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Embalagem,Seringa 100 ml
 24C01,Sistemas para Soro IV; SEM DOSAGEM; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Embalagem,Sistemas para Soro IV
-24C02,Sistemas paraTransfusao de san; SEM DOSAGEM; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Embalagem,Sistemas paraTransfusao de sangue 
+24C02,Sistemas paraTransfusao de san; SEM DOSAGEM; Embalagem,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Embalagem,Sistemas paraTransfusao de sangue
 24D01,"Cateter periferico c/ agulha, valvula de injeccao e abas 14G, Radiopaco unidade Embalagem",1,1,1,TRUE,TRUE,FALSE,0,FALSE,unidade,Embalagem,"Cateter periferico c/ agulha, valvula de injeccao e abas 14G, Radiopaco"
 24D02,"Cateter periferico c/ agulha, valvula de injeccao e abas 16G, Radiopaco unidade Embalagem",1,1,1,TRUE,TRUE,FALSE,0,FALSE,unidade,Embalagem,"Cateter periferico c/ agulha, valvula de injeccao e abas 16G, Radiopaco"
 24D03,"Cateter periferico c/ agulha, valvula de injeccao e abas 18G, Radiopaco unidade Embalagem",1,1,1,TRUE,TRUE,FALSE,0,FALSE,unidade,Embalagem,"Cateter periferico c/ agulha, valvula de injeccao e abas 18G, Radiopaco"
@@ -1220,13 +1220,13 @@ Product Code,Product Primary Name,Dispensing Units,Doses Per Dispensing Unit,Pac
 24D07,"Cateter periferico c/ agulha, valvula de injeccao e abas 26G, Radiopaco unidade Embalagem",1,1,1,TRUE,TRUE,FALSE,0,FALSE,unidade,Embalagem,"Cateter periferico c/ agulha, valvula de injeccao e abas 26G, Radiopaco"
 25A01,Requisicao / Balancete; SEM DOSAGEM; Papel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Papel,Requisicao / Balancete
 25A02,Guia de Remessa /Entrada; SEM DOSAGEM; Papel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Papel,Guia de Remessa /Entrada
-25A03,Ficha de  Stock ; SEM DOSAGEM; Papel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Papel,Ficha de  Stock 
+25A03,Ficha de  Stock ; SEM DOSAGEM; Papel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Papel,Ficha de  Stock
 25A04,Requisicao Interna / Balancete; SEM DOSAGEM; Papel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Papel,Requisicao Interna / Balancete
 25A06,Livro de Receita Medica Sem Dosagem Papel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Papel,Livro de Receita Medica
 25A07,Mapa Resumo Mensal Caixa; SEM DOSAGEM; Papel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Papel,Mapa Resumo Mensal Caixa
 25A08,Mapa Finaceiro; SEM DOSAGEM; Papel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Papel,Mapa Finaceiro
 25A09,Mapa  Resumo/Plano Trimestral ; SEM DOSAGEM; Papel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Papel,Mapa  Resumo/Plano Trimestral Distribuicao de Kits
-25A09Y,Livro de Mapa de Resumo/Plano Dist/KIT  Sem Dosagem Papel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Papel,Livro de Mapa de Resumo/Plano Dist/KIT 
+25A09Y,Livro de Mapa de Resumo/Plano Dist/KIT  Sem Dosagem Papel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Papel,Livro de Mapa de Resumo/Plano Dist/KIT
 25A10,Nota de Entrega Sem Dosagem Papel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Papel,Nota de Entrega
 25B01,Ficha  Individual Levantamento; SEM DOSAGEM; Papel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Papel,Ficha  Individual Levantamento ARVs
 25B02,Livro de  Registo  Diario de  ARVs-TARV Sem Dosagem Papel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Papel,Livro de  Registo  Diario de  ARVs-TARV
@@ -1237,7 +1237,7 @@ Product Code,Product Primary Name,Dispensing Units,Doses Per Dispensing Unit,Pac
 25B06,Mapa Mensal Distrital de Consu; SEM DOSAGEM; Papel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Papel,Mapa Mensal Distrital de Consumo de AL
 25B07,Mapa de  Resumo Mensal de Deposito AL Sem Dosagem Papel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Papel,Mapa de  Resumo Mensal de Deposito AL
 25C01,Mapa  Mensal de TDRs; SEM DOSAGEM; Papel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Papel,Mapa  Mensal de TDRs
-25D01,Manual de procedimentos do Centro de Saude  Sem Dosagem Papel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Papel,Manual de procedimentos do Centro de Saude 
+25D01,Manual de procedimentos do Centro de Saude  Sem Dosagem Papel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Papel,Manual de procedimentos do Centro de Saude
 25D02,Manual de procedimentos dos Hospitais Sem Dosagem Papel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Papel,Manual de procedimentos dos Hospitais
 25D03,Manual de procedimentos  do Deposito Distital de Medicamentos Sem Dosagem Papel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Papel,Manual de procedimentos  do Deposito Distital de Medicamentos
 25D04,Manual de procedimentos do Deposito Provincial de Medicamentos Sem Dosagem Papel,1,1,1,TRUE,TRUE,FALSE,0,FALSE,Sem Dosagem,Papel,Manual de procedimentos do Deposito Provincial de Medicamentos
