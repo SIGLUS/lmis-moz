@@ -3,6 +3,7 @@
 BUILD_DIR="#{Dir.pwd}/build"
 OPENLMIS_DIR="#{Dir.pwd}/open-lmis"
 MOZ_DIR="#{Dir.pwd}/moz"
+ENVIRONMENT = ARGV[0] || "ci"
 
 def update_openlmis
   if !Dir.exists?(OPENLMIS_DIR)
@@ -17,6 +18,11 @@ def openlmis_setup
   return result1 if !result1
   result2 = system("cd #{OPENLMIS_DIR} && git checkout 2.0-moz && git submodule init && git submodule update")
   return result2 if !result2
+
+  #HACK: forcefully go into stock-management directory and update code,
+  #git submodule update here does not always work
+  system("cd #{OPENLMIS_DIR}/modules/stock-management && git checkout develop && git pull -f")
+
   result3 = system("cd #{OPENLMIS_DIR}/modules/openlmis-web && npm install")
   return result3 if !result3
 end
@@ -72,10 +78,12 @@ r2 = replace_files
 exit 1 if !r2
 puts "Finished replacing files"
 
-puts "Removing properties files..."
-r3 = remove_openlmis_properties_files
-exit 1 if !r3
-puts "Finished removing properties files"
+if ENVIRONMENT == 'ci'
+  puts "Removing properties files..."
+  r3 = remove_openlmis_properties_files
+  exit 1 if !r3
+  puts "Finished removing properties files"
+end
 
 puts "Running tests and building artifact..."
 r4 = build_project
