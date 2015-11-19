@@ -4,7 +4,8 @@ INSERT INTO rights (name, rightType, description) VALUES
 INSERT INTO roles
 (name, description) VALUES
 ('FacilityHead', ''),
-('ReportViewer', '');
+('ReportViewer', ''),
+('Supervisor', '');
 
 INSERT INTO role_rights
 (roleId, rightName) VALUES
@@ -12,6 +13,8 @@ INSERT INTO role_rights
 ((SELECT id FROM roles WHERE name = 'FacilityHead'), 'VIEW_REQUISITION'),
 ((SELECT id FROM roles WHERE name = 'FacilityHead'), 'CREATE_REQUISITION'),
 ((SELECT id FROM roles WHERE name = 'ReportViewer'), 'VIEW_REQUISITION_REPORT'),
+((SELECT id FROM roles WHERE name = 'Supervisor'), 'VIEW_REQUISITION'),
+((SELECT id FROM roles WHERE name = 'Supervisor'), 'APPROVE_REQUISITION'),
 ((SELECT id FROM roles WHERE name = 'Admin'), 'MANAGE_GEOGRAPHIC_ZONE'),
 ((SELECT id FROM roles WHERE name = 'Admin'), 'MANAGE_SUPERVISORY_NODE'),
 ((SELECT id FROM roles WHERE name = 'Admin'), 'MANAGE_REQUISITION_GROUP'),
@@ -53,4 +56,10 @@ INSERT INTO role_assignments
 ((SELECT ID FROM USERS WHERE username = 'professor_x'),
   (SELECT id FROM roles WHERE name = 'ReportViewer'), NULL, NULL),
 ((SELECT ID FROM USERS WHERE username = 'magneto'),
-  (SELECT id FROM roles WHERE name = 'ReportViewer'), NULL, NULL);
+  (SELECT id FROM roles WHERE name = 'ReportViewer'), NULL, NULL),
+((SELECT ID FROM USERS WHERE username = 'professor_x'),
+  (SELECT id FROM roles WHERE name = 'Supervisor'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),
+  (SELECT id FROM supervisory_nodes WHERE code = 'N1')),
+((SELECT ID FROM USERS WHERE username = 'magneto'),
+  (SELECT id FROM roles WHERE name = 'Supervisor'), (SELECT id FROM programs WHERE code = 'MMIA'),
+  (SELECT id FROM supervisory_nodes WHERE code = 'N2'));

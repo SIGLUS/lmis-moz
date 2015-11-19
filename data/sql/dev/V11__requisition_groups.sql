@@ -1,8 +1,3 @@
-INSERT INTO supervisory_nodes
-(facilityId, name, code, parentId) VALUES
-((SELECT id FROM facilities WHERE code = 'DDM1'), 'DDM supervisory node', 'N1', NULL),
-((SELECT id FROM facilities WHERE code = 'DPM1'), 'DPM supervisory node', 'N2', NULL);
-
 INSERT INTO requisition_groups (code, name, supervisoryNodeId) VALUES
 ('RG1','Requistion Group VIA', (SELECT id FROM supervisory_nodes WHERE code ='N1')),
 ('RG2','Requistion Group MMIA', (SELECT id FROM supervisory_nodes WHERE code ='N2'));

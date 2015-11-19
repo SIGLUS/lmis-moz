@@ -53,6 +53,11 @@ VALUES
   (SELECT id FROM geographic_zones WHERE code = 'MATOLA'),
   (SELECT id FROM facility_types WHERE code = 'DPM'),TRUE,'9/21/2013',TRUE,TRUE,FALSE);
 
+INSERT INTO supervisory_nodes
+(facilityId, name, code, parentId) VALUES
+((SELECT id FROM facilities WHERE code = 'DDM1'), 'DDM supervisory node', 'N1', NULL),
+((SELECT id FROM facilities WHERE code = 'DPM1'), 'DPM supervisory node', 'N2', NULL);
+
 INSERT INTO programs_supported (facilityId, programId, active, startDate) VALUES
 ((SELECT id FROM facilities WHERE code = 'HF1'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),TRUE,'9/21/2013'),
 ((SELECT id FROM facilities WHERE code = 'HF2'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),TRUE,'9/21/2013'),
