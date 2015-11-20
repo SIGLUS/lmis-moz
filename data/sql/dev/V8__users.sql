@@ -1,6 +1,3 @@
-INSERT INTO rights (name, rightType, description) VALUES
-('VIEW_REQUISITION_REPORT','REPORT','Permission to View Requisitions Report');
-
 INSERT INTO roles
 (name, description) VALUES
 ('FacilityHead', ''),
@@ -13,6 +10,7 @@ INSERT INTO role_rights
 ((SELECT id FROM roles WHERE name = 'FacilityHead'), 'VIEW_REQUISITION'),
 ((SELECT id FROM roles WHERE name = 'FacilityHead'), 'CREATE_REQUISITION'),
 ((SELECT id FROM roles WHERE name = 'ReportViewer'), 'VIEW_REQUISITION_REPORT'),
+((SELECT id FROM roles WHERE name = 'ReportViewer'), 'VIEW_STOCK_ON_HAND_REPORT'),
 ((SELECT id FROM roles WHERE name = 'Supervisor'), 'VIEW_REQUISITION'),
 ((SELECT id FROM roles WHERE name = 'Supervisor'), 'APPROVE_REQUISITION'),
 ((SELECT id FROM roles WHERE name = 'Admin'), 'MANAGE_GEOGRAPHIC_ZONE'),
