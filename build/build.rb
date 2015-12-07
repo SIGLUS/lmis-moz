@@ -21,7 +21,7 @@ def openlmis_setup
 
   #HACK: forcefully go into stock-management directory and update code,
   #git submodule update here does not always work
-  system("cd #{OPENLMIS_DIR}/modules/stock-management && git checkout develop && git pull -f")
+  system("cd #{OPENLMIS_DIR}/modules/stock-management && git checkout 2.0-moz && git pull -f origin 2.0-moz")
 
   result3 = system("cd #{OPENLMIS_DIR}/modules/openlmis-web && npm install")
   return result3 if !result3
