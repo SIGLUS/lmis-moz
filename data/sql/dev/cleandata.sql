@@ -1,3 +1,5 @@
+DELETE FROM moz_app_info;
+
 DELETE FROM stock_card_entry_key_values;
 DELETE FROM stock_card_entries;
 DELETE FROM stock_movement_line_items;
