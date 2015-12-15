@@ -14,14 +14,14 @@ def insert_stock_movement_signatures():
     no_signature_entries = cursor.fetchall()
 
     for stock_card_entry_id in no_signature_entries:
-        query = "INSERT INTO stock_card_entry_key_values (stockcardentryid, keycolumn, valuecolumn, createdby, modifiedby) VALUES(%s, 'signatures', '', 1, 1)" % (stock_card_entry_id)
+        query = "INSERT INTO stock_card_entry_key_values (stockcardentryid, keycolumn, valuecolumn, createdby, modifiedby) VALUES(%s, 'signature', '', 1, 1)" % (stock_card_entry_id)
         cursor.execute(query)
         pprint.pprint(query)
         conn.commit()
     print "Inserted %s stock card entry signatures" % len(no_signature_entries)
 
 def insert_requisition_signatures():
-    cursor.execute("SELECT id FROM requisitions WHERE id NOT IN (SELECT id FROM requisitions LEFT JOIN requisition_signatures ON requisition_signatures.rnrid = requisitions.id)")
+    cursor.execute("SELECT id FROM requisitions WHERE id NOT IN (SELECT id FROM requisitions INNER JOIN requisition_signatures ON requisition_signatures.rnrid = requisitions.id)")
     requisitions = cursor.fetchall()
     for requisition_id in requisitions:
         cursor.execute("INSERT INTO signatures (type, text, modifiedby, createdby) VALUES ('SUBMITTER', '', 1, 1)")
