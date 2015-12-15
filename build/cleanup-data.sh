@@ -1,1 +1,1 @@
-psql -U postgres --file data/sql/dev/cleandata.sql -w open_lmis -h localhost
+psql -U postgres --file data/setup/dev/cleandata.sql -w open_lmis -h localhost
