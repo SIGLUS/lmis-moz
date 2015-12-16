@@ -26,23 +26,24 @@ def main():
             for row in cursor.fetchall():
                 stock_card_entries.append(dict(zip(columns, row)))
 
-            pprint.pprint(stock_card_entries)
-
             soh = 0
             first_entry = True
             for stock_card_entry in stock_card_entries:
                 if first_entry:
                     soh = stock_card_entry['quantity']
-                    cursor.execute("INSERT INTO stock_card_entry_key_values (stockcardentryid, keycolumn, valuecolumn, createdby, modifiedby) VALUES (%s, 'SOH', %s, 1, 1)" % (stock_card_entry['id'], str(soh)))
+                    query = "INSERT INTO stock_card_entry_key_values (stockcardentryid, keycolumn, valuecolumn, createdby, modifiedby) VALUES (%s, 'soh', %s, 1, 1)" % (stock_card_entry['id'], str(soh))
+                    cursor.execute(query)
+                    pprint.pprint(query)
                     conn.commit()
                     pprint.pprint(stock_card_entry['id'])
                     first_entry = False
                 else:
                     soh += stock_card_entry['quantity']
-                    cursor.execute("INSERT INTO stock_card_entry_key_values (stockcardentryid, keycolumn, valuecolumn, createdby, modifiedby) VALUES (%s, 'SOH', %s, 1, 1)" % (stock_card_entry['id'], str(soh)))
+                    query = "INSERT INTO stock_card_entry_key_values (stockcardentryid, keycolumn, valuecolumn, createdby, modifiedby) VALUES (%s, 'soh', %s, 1, 1)" % (stock_card_entry['id'], str(soh))
+                    cursor.execute(query)
+                    pprint.pprint(query)
                     conn.commit()
                     pprint.pprint(stock_card_entry['id'])
-
 
 if __name__ == "__main__":
     main()
