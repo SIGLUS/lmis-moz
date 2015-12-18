@@ -34,7 +34,8 @@ def replace_file_list
 end
 
 def properties_files
-  ['modules/openlmis-web/src/main/resources/local/app.properties',
+  ['modules/openlmis-web/src/main/resources/secrets.properties',
+  'modules/openlmis-web/src/main/resources/local/app.properties',
    'modules/openlmis-web/src/main/resources/uat/app.properties']
 end
 
