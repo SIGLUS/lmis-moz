@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-kill $(ps aux | grep '[G]radleMain jettyRun' | awk '{print $2}')
+kill -9 $(ps aux | grep '[G]radleMain run' | awk '{print $2}')

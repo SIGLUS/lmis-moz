@@ -1,12 +1,14 @@
+require 'socket'
+
 BUILD_DIR="#{Dir.pwd}/build"
 OPENLMIS_DIR="#{Dir.pwd}/open-lmis"
 MOZ_DIR="#{Dir.pwd}/moz"
 
 def update_openlmis
   if !Dir.exists?(OPENLMIS_DIR)
-    return openlmis_setup
+    openlmis_setup
   else
-    return system("cd #{OPENLMIS_DIR} && git checkout . && git pull -f origin 2.0-moz")
+    system("cd #{OPENLMIS_DIR} && git checkout . && git pull -f origin 2.0-moz")
   end
 end
 
@@ -21,7 +23,7 @@ def openlmis_setup
   system("cd #{OPENLMIS_DIR}/modules/stock-management && git checkout 2.0-moz && git pull -f origin 2.0-moz")
 
   result3 = system("cd #{OPENLMIS_DIR}/modules/openlmis-web && npm install")
-  return result3 if !result3
+  result3 if !result3
 end
 
 def replace_file_list
@@ -58,17 +60,30 @@ def remove_openlmis_properties_files
 end
 
 def build_project
-  return system("cd #{OPENLMIS_DIR} && export DISPLAY=:1 && gradle clean setupdb setupExtensions seed build")
-  end
+  system("cd #{OPENLMIS_DIR} && export DISPLAY=:1 && gradle clean setupdb setupExtensions seed build")
+end
 
 def setup_db
-  return system("cd #{OPENLMIS_DIR} && export DISPLAY=:1 && gradle setupdb setupExtensions seed")
-  end
+  system("cd #{OPENLMIS_DIR} && export DISPLAY=:1 && gradle setupdb setupExtensions seed")
+end
 
 def start_jetty
-  return system("cd #{OPENLMIS_DIR} && export DISPLAY=:1 && gradle run")
+  t = Thread.start do
+    system "cd #{OPENLMIS_DIR} && gradle run > startjetty.log"
+  end
+  t.kill #the thread will be killed, but gradle is still running
+  wait_for_jetty
 end
 
 def build_data
-  return system("cd #{OPENLMIS_DIR}/.. && ./build/setup-data.sh")
+  system("cd #{OPENLMIS_DIR}/.. && ./build/setup-data.sh")
+end
+
+def wait_for_jetty
+  loop {
+    break if (TCPSocket.open("localhost", 9091) rescue nil)
+    puts "Waitting for jetty..."
+    sleep 1
+  }
+  "jetty started"
 end
