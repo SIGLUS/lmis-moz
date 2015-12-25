@@ -59,6 +59,14 @@ end
 
 def build_project
   return system("cd #{OPENLMIS_DIR} && export DISPLAY=:1 && gradle clean setupdb setupExtensions seed build")
+  end
+
+def setup_db
+  return system("cd #{OPENLMIS_DIR} && export DISPLAY=:1 && gradle setupdb setupExtensions seed")
+  end
+
+def start_jetty
+  return system("cd #{OPENLMIS_DIR} && export DISPLAY=:1 && gradle run")
 end
 
 def build_data
