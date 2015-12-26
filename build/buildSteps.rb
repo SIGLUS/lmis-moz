@@ -69,7 +69,7 @@ end
 
 def start_jetty
   t = Thread.start do
-    system "cd #{OPENLMIS_DIR} && gradle run > startjetty.log"
+    system "cd #{OPENLMIS_DIR} && export DISPLAY=:1 && gradle run"
   end
   t.kill #the thread will be killed, but gradle is still running
   wait_for_jetty
