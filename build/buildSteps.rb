@@ -69,9 +69,15 @@ end
 
 def start_jetty
   t = Thread.start do
-    system "cd #{OPENLMIS_DIR} && export DISPLAY=:1 && gradle run"
+    puts "trying to start jetty in thread"
+    # system "cd #{OPENLMIS_DIR} && export DISPLAY=:1 && gradle run"
+    # puts "command gradle run executed"
+    loop {
+      puts "if you see this, it means jenkins can run ruby threads"
+      sleep 2
+    }
   end
-  t.kill #the thread will be killed, but gradle is still running
+  # t.kill #the thread will be killed, but gradle is still running
   wait_for_jetty
 end
 
