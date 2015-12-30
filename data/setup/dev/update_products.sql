@@ -7,4 +7,4 @@ INSERT INTO program_products (programId, productId, fullSupply, active, dosesPer
 INSERT INTO facility_approved_products (facilityTypeId, programProductId, maxMonthsOfStock) VALUES
 ((SELECT id FROM facility_types WHERE code = 'CSRUR-II'),(SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = '99X99')), 1);
 
-UPDATE products set primaryName='Updated Drug' WHERE code = '25D03';
+UPDATE products set primaryName='Updated Drug',modifieddate=now() WHERE code = '25D03';
