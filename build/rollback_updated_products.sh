@@ -1,0 +1,1 @@
+psql -U postgres --file data/setup/dev/rollback_updated_products.sql -w open_lmis -h localhost
