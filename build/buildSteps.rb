@@ -13,13 +13,15 @@ def update_openlmis
 end
 
 def openlmis_setup
-  result1 = system("git clone https://github.com/OpenLMIS/open-lmis.git #{OPENLMIS_DIR}")
+  result1 = system("git clone --depth 1 --branch 2.0-moz https://github.com/OpenLMIS/open-lmis.git --single-branch #{OPENLMIS_DIR}")
   return result1 if !result1
-  result2 = system("cd #{OPENLMIS_DIR} && git checkout 2.0-moz && git submodule init && git submodule update")
+  puts "initing submodule"
+  result2 = system("cd #{OPENLMIS_DIR} && git submodule init && git submodule update")
   return result2 if !result2
 
   #HACK: forcefully go into stock-management directory and update code,
   #git submodule update here does not always work
+  puts "force pull submodule"
   system("cd #{OPENLMIS_DIR}/modules/stock-management && git checkout 2.0-moz && git pull -f origin 2.0-moz")
 
   result3 = system("cd #{OPENLMIS_DIR}/modules/openlmis-web && npm install")
