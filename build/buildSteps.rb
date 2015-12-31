@@ -8,7 +8,7 @@ def update_openlmis
   if !Dir.exists?(OPENLMIS_DIR)
     openlmis_setup
   else
-    system("cd #{OPENLMIS_DIR} && git checkout . && git pull -f origin 2.0-moz")
+    system("cd #{OPENLMIS_DIR} && git checkout . && git pull -f origin 2.0-moz && git submodule update")
   end
 end
 
