@@ -1,1 +1,1 @@
-psql -U postgres --file data/setup/dev/deactivate_products.sql -w open_lmis -h localhost
+psql -U postgres --file data/functional_tests/sql/deactivate_products.sql -w open_lmis -h localhost
