@@ -1,0 +1,1 @@
+psql -U postgres --file data/setup/dev/reactivate_products.sql -w open_lmis -h localhost
