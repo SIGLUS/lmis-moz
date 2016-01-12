@@ -10,3 +10,6 @@ INSERT INTO facility_approved_products (facilityTypeId, programProductId, maxMon
 UPDATE products set primaryName='Updated Drug',modifieddate=now() WHERE code = '25D03';
 
 UPDATE products set modifieddate=now() WHERE code = '08S32Z';
+
+UPDATE products set active=FALSE,modifieddate=now() WHERE code = '01A03Z';
+UPDATE products set active=FALSE,modifieddate=now() WHERE code = '01A04Z';
