@@ -1,1 +1,1 @@
-psql -U postgres --file data/functional_tests/sql/deactivate_product_has_stock_movement.sql -w open_lmis -h localhost
+psql -U postgres --file data/functional_tests/sql/deactivate_product_have_stock_movement.sql -w open_lmis -h localhost
