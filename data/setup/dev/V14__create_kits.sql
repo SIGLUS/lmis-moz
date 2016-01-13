@@ -12,6 +12,10 @@ INSERT INTO products (code, primaryName, dispensingUnit, dosesPerDispensingUnit,
 ('MMC00005', 'Sabao', '1', 1,1,TRUE,TRUE,FALSE,0,FALSE, '110g', (SELECT id from product_forms where code='Sem')),
 ('MMC00006', 'Seringa descartavel, 10ml c/agulha 21gx1 1/2 3', '1', 1,1,TRUE,TRUE,FALSE,0,FALSE, 'SEM DOSAGEM', (SELECT id from product_forms where code='Sem'));
 
+INSERT INTO products (code, primaryName, dispensingUnit, dosesPerDispensingUnit, packSize, active, fullSupply, tracer, packRoundingThreshold, roundToZero, strength, formId, isKit) values
+('SCOD10', 'KITS  (DE PME US)', '1', 1,1,TRUE,TRUE,FALSE,0,FALSE, '1000', (SELECT id from product_forms where code='KIT'), TRUE),
+('SCOD12', 'KITS  (DE PME APE)', '1', 1,1,TRUE,TRUE,FALSE,0,FALSE, '250', (SELECT id from product_forms where code='KIT'), TRUE);
+
 INSERT INTO program_products (programId, productId, fullSupply, active, dosesPerMonth, productCategoryId, currentPrice, displayOrder) VALUES
 ((SELECT id FROM programs WHERE code = 'ESS_MEDS'), (SELECT id FROM products WHERE code = '08L01X'), TRUE, TRUE,12.5, (SELECT id FROM product_categories where code = 'C1'), 0.0,  14),
 ((SELECT id FROM programs WHERE code = 'ESS_MEDS'), (SELECT id FROM products WHERE code = '12D0YZ'), TRUE, TRUE,12.5, (SELECT id FROM product_categories where code = 'C1'), 0.0,  14),
@@ -22,11 +26,36 @@ INSERT INTO program_products (programId, productId, fullSupply, active, dosesPer
 ((SELECT id FROM programs WHERE code = 'ESS_MEDS'), (SELECT id FROM products WHERE code = 'MMC00003'), TRUE, TRUE,12.5, (SELECT id FROM product_categories where code = 'C1'), 0.0,  14),
 ((SELECT id FROM programs WHERE code = 'ESS_MEDS'), (SELECT id FROM products WHERE code = 'MMC00004'), TRUE, TRUE,12.5, (SELECT id FROM product_categories where code = 'C1'), 0.0,  14),
 ((SELECT id FROM programs WHERE code = 'ESS_MEDS'), (SELECT id FROM products WHERE code = 'MMC00005'), TRUE, TRUE,12.5, (SELECT id FROM product_categories where code = 'C1'), 0.0,  14),
-((SELECT id FROM programs WHERE code = 'ESS_MEDS'), (SELECT id FROM products WHERE code = 'MMC00006'), TRUE, TRUE,12.5, (SELECT id FROM product_categories where code = 'C1'), 0.0,  14);
+((SELECT id FROM programs WHERE code = 'ESS_MEDS'), (SELECT id FROM products WHERE code = 'MMC00006'), TRUE, TRUE,12.5, (SELECT id FROM product_categories where code = 'C1'), 0.0,  14),
+((SELECT id FROM programs WHERE code = 'ESS_MEDS'), (SELECT id FROM products WHERE code = 'SCOD10'), TRUE, TRUE,12.5, (SELECT id FROM product_categories where code = 'C1'), 0.0,  14),
+((SELECT id FROM programs WHERE code = 'ESS_MEDS'), (SELECT id FROM products WHERE code = 'SCOD12'), TRUE, TRUE,12.5, (SELECT id FROM product_categories where code = 'C1'), 0.0,  14);
 
-INSERT INTO products (code, primaryName, dispensingUnit, dosesPerDispensingUnit, packSize, active, fullSupply, tracer, packRoundingThreshold, roundToZero, strength, formId, isKit) values
-('SCOD10', 'KITS  (DE PME US)', '1', 1,1,TRUE,TRUE,FALSE,0,FALSE, '1000', (SELECT id from product_forms where code='KIT'), TRUE),
-('SCOD12', 'KITS  (DE PME APE)', '1', 1,1,TRUE,TRUE,FALSE,0,FALSE, '250', (SELECT id from product_forms where code='KIT'), TRUE);
+INSERT INTO facility_approved_products (facilityTypeId, programProductId, maxMonthsOfStock) VALUES
+((SELECT id FROM facility_types WHERE code = 'CSRUR-I'),(SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = '08L01X')), 1),
+((SELECT id FROM facility_types WHERE code = 'CSRUR-II'),(SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = '08L01X')), 1),
+((SELECT id FROM facility_types WHERE code = 'CSRUR-I'),(SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = '12D0YZ')), 1),
+((SELECT id FROM facility_types WHERE code = 'CSRUR-II'),(SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = '12D0YZ')), 1),
+((SELECT id FROM facility_types WHERE code = 'CSRUR-I'),(SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = '15C0ZY')), 1),
+((SELECT id FROM facility_types WHERE code = 'CSRUR-II'),(SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = '15C0ZY')), 1),
+((SELECT id FROM facility_types WHERE code = 'CSRUR-I'),(SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = '20A05')), 1),
+((SELECT id FROM facility_types WHERE code = 'CSRUR-II'),(SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = '20A05')), 1),
+((SELECT id FROM facility_types WHERE code = 'CSRUR-I'),(SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'MMC00001')), 1),
+((SELECT id FROM facility_types WHERE code = 'CSRUR-II'),(SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'MMC00001')), 1),
+((SELECT id FROM facility_types WHERE code = 'CSRUR-I'),(SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'MMC00002')), 1),
+((SELECT id FROM facility_types WHERE code = 'CSRUR-II'),(SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'MMC00002')), 1),
+((SELECT id FROM facility_types WHERE code = 'CSRUR-I'),(SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'MMC00003')), 1),
+((SELECT id FROM facility_types WHERE code = 'CSRUR-II'),(SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'MMC00003')), 1),
+((SELECT id FROM facility_types WHERE code = 'CSRUR-I'),(SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'MMC00004')), 1),
+((SELECT id FROM facility_types WHERE code = 'CSRUR-II'),(SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'MMC00004')), 1),
+((SELECT id FROM facility_types WHERE code = 'CSRUR-I'),(SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'MMC00005')), 1),
+((SELECT id FROM facility_types WHERE code = 'CSRUR-II'),(SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'MMC00005')), 1),
+((SELECT id FROM facility_types WHERE code = 'CSRUR-I'),(SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'MMC00006')), 1),
+((SELECT id FROM facility_types WHERE code = 'CSRUR-II'),(SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'MMC00006')), 1),
+((SELECT id FROM facility_types WHERE code = 'CSRUR-I'),(SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'SCOD10')), 1),
+((SELECT id FROM facility_types WHERE code = 'CSRUR-II'),(SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'SCOD10')), 1),
+((SELECT id FROM facility_types WHERE code = 'CSRUR-I'),(SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'SCOD12')), 1),
+((SELECT id FROM facility_types WHERE code = 'CSRUR-II'),(SELECT id FROM program_products WHERE productId = (SELECT id FROM products WHERE code = 'SCOD12')), 1);
+
 
 INSERT INTO kit_products_relation (kitCode, productCode, quantity) values
 ('SCOD10', '02A03', 200),
