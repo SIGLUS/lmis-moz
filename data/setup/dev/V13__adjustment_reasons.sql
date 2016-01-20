@@ -11,6 +11,7 @@ INSERT INTO losses_adjustments_types (name, description, additive) VALUES
 ('PNCTL', 'PNCTL', FALSE),
 ('PAV', 'PAV', FALSE),
 ('DENTAL_WARD', 'Dental ward', FALSE),
+('UNPACK_KIT', 'Unpack kit', FALSE),
 ('EXPIRED_RETURN_TO_SUPPLIER', 'Drugs in quarantine have expired returned to Supplier', FALSE),
 ('DAMAGED', 'Damaged on arrival', FALSE),
 ('LOANS_DEPOSIT', 'Loans made from a health facility deposit', FALSE),
