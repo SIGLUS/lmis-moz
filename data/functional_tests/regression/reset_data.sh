@@ -1,0 +1,1 @@
+psql -U openlmis --file data/setup/dev/seed.sql -w open_lmis -h 52.193.34.16 -p 5432
