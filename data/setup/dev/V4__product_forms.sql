@@ -74,14 +74,14 @@ INSERT INTO product_forms
 
 INSERT INTO product_categories
 (code, name , displayOrder) VALUES
-('C1', 'Antibiotics', 1),
-('C2', 'Analgesics', 2),
-('C3', 'Inhalers', 3),
-('C4', 'Injections', 4),
-('C5', 'Drops', 5),
-('C6', 'Buccal', 6),
-('C7', 'Anabolics', 7),
-('C8', 'Vitamin Supplements', 8),
-('C9', 'Anesthetics', 9),
-('C10', 'Sedative', 10),
-('C11', 'Other', 11);
+('1', 'Antibiotics', 1),
+('2', 'Analgesics', 2),
+('3', 'Inhalers', 3),
+('4', 'Injections', 4),
+('5', 'Drops', 5),
+('6', 'Buccal', 6),
+('7', 'Anabolics', 7),
+('8', 'Vitamin Supplements', 8),
+('9', 'Anesthetics', 9),
+('10', 'Sedative', 10),
+('11', 'Other', 11);
