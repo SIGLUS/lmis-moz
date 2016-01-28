@@ -63,6 +63,8 @@ VALUES
 ('F_PHYSICAL_INVENTORY','Nhongonhane (Ed.Mondl.)','',(SELECT id FROM geographic_zones WHERE code = 'MARRACUENE'),
   (SELECT id FROM facility_types WHERE code = 'CSRUR-II'),TRUE,'9/21/2013',TRUE,TRUE,FALSE),
 ('F_STOCKCARD','Nhongonhane (Ed.Mondl.)','',(SELECT id FROM geographic_zones WHERE code = 'MARRACUENE'),
+  (SELECT id FROM facility_types WHERE code = 'CSRUR-II'),TRUE,'9/21/2013',TRUE,TRUE,FALSE),
+('F_KIT','Nhongonhane (Ed.Mondl.)','',(SELECT id FROM geographic_zones WHERE code = 'MARRACUENE'),
   (SELECT id FROM facility_types WHERE code = 'CSRUR-II'),TRUE,'9/21/2013',TRUE,TRUE,FALSE);
 
 INSERT INTO supervisory_nodes
@@ -82,6 +84,7 @@ INSERT INTO programs_supported (facilityId, programId, active, startDate) VALUES
 ((SELECT id FROM facilities WHERE code = 'HF9'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),TRUE,'9/21/2013'),
 ((SELECT id FROM facilities WHERE code = 'F_VIA'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),TRUE,'9/21/2013'),
 ((SELECT id FROM facilities WHERE code = 'F_STOCKCARD'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),TRUE,'9/21/2013'),
+((SELECT id FROM facilities WHERE code = 'F_KIT'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),TRUE,'9/21/2013'),
 ((SELECT id FROM facilities WHERE code = 'F_PHYSICAL_INVENTORY'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),TRUE,'9/21/2013'),
 ((SELECT id FROM facilities WHERE code = 'F_INITIAL_INVENTORY'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),TRUE,'9/21/2013'),
 ((SELECT id FROM facilities WHERE code = 'HF2'), (SELECT id FROM programs WHERE code = 'MMIA'),TRUE,'9/21/2013'),
