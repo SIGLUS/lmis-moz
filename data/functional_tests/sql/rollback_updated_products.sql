@@ -3,3 +3,7 @@ DELETE FROM program_products WHERE productId = (SELECT id FROM products WHERE co
 DELETE FROM products where code='99X99';
 
 UPDATE products set primaryName='Manual de procedimentos  do Deposito Distital de Medicamentos Sem Dosagem Papel',modifieddate=now() WHERE code = '25D03';
+
+UPDATE products set active=true,modifieddate=now() WHERE code = '08S32Z';
+
+UPDATE products set active=true, modifieddate=now() WHERE code = '12D03Z';
