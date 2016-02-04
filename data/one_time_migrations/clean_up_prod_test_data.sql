@@ -7,9 +7,9 @@ DELETE FROM stock_cards WHERE facilityid IN (1, 13, 14);
 DELETE FROM requisition_signatures WHERE rnrid IN (SELECT id FROM requisitions WHERE facilityid IN (1, 13, 14));
 DELETE FROM signatures WHERE id IN (3, 4, 13 ,14, 15, 16, 17, 18, 29, 30, 31, 32, 33, 34, 39, 40, 41, 42, 51, 52, 53, 54);
 
-DELETE FROM patient_quantification_line_items WHERE rnrid IN (SELECT id FROM requisitions WHERE facilityid IN (1, 13, 14));;
+DELETE FROM patient_quantification_line_items WHERE rnrid IN (SELECT id FROM requisitions WHERE facilityid IN (1, 13, 14));
 
-DELETE FROM regimen_line_items WHERE rnrid IN (SELECT id FROM requisitions WHERE facilityid IN (1, 13, 14));;
+DELETE FROM regimen_line_items WHERE rnrid IN (SELECT id FROM requisitions WHERE facilityid IN (1, 13, 14));
 
 DELETE FROM requisition_line_items WHERE rnrid IN (SELECT id FROM requisitions WHERE facilityid IN (1, 13, 14));
 DELETE FROM requisition_status_changes WHERE rnrid IN (SELECT id FROM requisitions WHERE facilityid IN (1, 13, 14));
