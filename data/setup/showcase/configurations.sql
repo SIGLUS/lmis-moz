@@ -289,6 +289,12 @@ INSERT INTO requisition_group_program_schedules
 ((SELECT id FROM requisition_groups WHERE code='RG2'), (SELECT id FROM programs WHERE code='MMIA'),
   (SELECT id FROM processing_schedules WHERE code='M'), TRUE);
 
+INSERT INTO roles
+(name, description) VALUES
+('FacilityHead', ''),
+('ReportViewer', ''),
+('Supervisor', '');
+
 INSERT INTO role_assignments
 (userId, roleId, programId, supervisoryNodeId) VALUES
 ((SELECT ID FROM USERS WHERE username = 'Admin123'),
