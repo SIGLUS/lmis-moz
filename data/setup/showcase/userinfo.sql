@@ -2,7 +2,7 @@ INSERT INTO facilities
 (code, name, description, geographicZoneId, typeId, active, goLiveDate, enabled, sdp, virtualFacility)
 VALUES
 ('HF1','Facility-1','',(SELECT id FROM geographic_zones WHERE code = 'MARRACUENE'),
-  (SELECT id FROM facility_types WHERE code = 'CSRUR-II'),TRUE,'1/21/2015',TRUE,TRUE,FALSE),
+  (SELECT id FROM facility_types WHERE code = 'CSRUR-II'),TRUE,'1/21/2016',TRUE,TRUE,FALSE),
 ('HF2','Facility-2','',(SELECT id FROM geographic_zones WHERE code = 'MARRACUENE'),
   (SELECT id FROM facility_types WHERE code = 'CSRUR-II'),TRUE,'11/21/2015',TRUE,TRUE,FALSE),
 ('DDM1','DDM','DDM', (SELECT id FROM geographic_zones WHERE code = 'MARRACUENE'),
@@ -11,8 +11,8 @@ VALUES
   (SELECT id FROM facility_types WHERE code = 'DPM'),TRUE,'11/21/2015',TRUE,TRUE,FALSE);
 
 INSERT INTO programs_supported (facilityId, programId, active, startDate) VALUES
-((SELECT id FROM facilities WHERE code = 'HF1'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),TRUE,'1/21/2015'),
-((SELECT id FROM facilities WHERE code = 'HF1'), (SELECT id FROM programs WHERE code = 'MMIA'),TRUE,'1/21/2015'),
+((SELECT id FROM facilities WHERE code = 'HF1'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),TRUE,'1/21/2016'),
+((SELECT id FROM facilities WHERE code = 'HF1'), (SELECT id FROM programs WHERE code = 'MMIA'),TRUE,'1/21/2016'),
 ((SELECT id FROM facilities WHERE code = 'HF2'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),TRUE,'11/21/2015'),
 ((SELECT id FROM facilities WHERE code = 'HF2'), (SELECT id FROM programs WHERE code = 'MMIA'),TRUE,'11/21/2015');
 

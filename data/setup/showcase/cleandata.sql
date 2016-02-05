@@ -66,3 +66,6 @@ DELETE FROM geographic_levels;
 
 DELETE FROM programs;
 
+DELETE FROM email_attachments;
+DELETE FROM email_notifications;
+
