@@ -1,1 +1,1 @@
-psql -U openlmis --file data/setup/showcase/seed.sql -w open_lmis -h localhost
+psql -U openlmis --file data/setup/showcase/seed.sql -w open_lmis -h 52.76.22.134
