@@ -1,9 +1,5 @@
 INSERT INTO processing_periods
 (name, description, startDate, endDate, numberOfMonths, scheduleId, modifiedBy) VALUES
-('Nov-21-2015', 'Nov2015', '2015-11-21', '2015-12-20 23:59:59', 1,
-  (SELECT id FROM processing_schedules WHERE code = 'M'), (SELECT id FROM users LIMIT 1)),
-('Dec-21-2015', 'Dec2015', '2015-12-21', '2016-01-20 23:59:59', 1,
-  (SELECT id FROM processing_schedules WHERE code = 'M'), (SELECT id FROM users LIMIT 1)),
 ('Jan-21-2015', 'Jan2015', '2016-01-21', '2016-02-20 23:59:59', 1,
   (SELECT id FROM processing_schedules WHERE code = 'M'), (SELECT id FROM users LIMIT 1));
 
