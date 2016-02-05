@@ -202,15 +202,6 @@ UPDATE programs SET templateConfigured = TRUE WHERE id = (SELECT id FROM program
 
 INSERT INTO processing_schedules (code, name, description) VALUES ('M', 'Monthly', 'Month');
 
-INSERT INTO processing_periods
-(name, description, startDate, endDate, numberOfMonths, scheduleId, modifiedBy) VALUES
-('Nov-21-2015', 'Nov2015', '2015-11-21', '2015-12-20 23:59:59', 1,
-  (SELECT id FROM processing_schedules WHERE code = 'M'), (SELECT id FROM users LIMIT 1)),
-('Dec-21-2015', 'Dec2015', '2015-12-21', '2016-01-20 23:59:59', 1,
-  (SELECT id FROM processing_schedules WHERE code = 'M'), (SELECT id FROM users LIMIT 1)),
-('Jan-21-2015', 'Jan2015', '2016-01-21', '2016-02-20 23:59:59', 1,
-  (SELECT id FROM processing_schedules WHERE code = 'M'), (SELECT id FROM users LIMIT 1));
-
 INSERT INTO regimen_categories (code, name, displayOrder) VALUES
 ('ADULTS', 'Adults', 1),
 ('PAEDIATRICS', 'Paediatrics', 2);
@@ -274,5 +265,41 @@ INSERT INTO losses_adjustments_types (name, description, additive) VALUES
 ('DEFAULT_NEGATIVE_ADJUSTMENT', 'Negative adjustment', FALSE),
 ('DEFAULT_POSITIVE_ADJUSTMENT', 'Positive adjustment', TRUE);
 
+INSERT INTO facilities
+(code, name, description, geographicZoneId, typeId, active, goLiveDate, enabled, sdp, virtualFacility)
+VALUES
+('DDM1','DDM','DDM', (SELECT id FROM geographic_zones WHERE code = 'MARRACUENE'),
+  (SELECT id FROM facility_types WHERE code = 'DDM'),TRUE,'11/21/2015',TRUE,TRUE,FALSE),
+('DPM1','DPM','DPM', (SELECT id FROM geographic_zones WHERE code = 'MATOLA'),
+  (SELECT id FROM facility_types WHERE code = 'DPM'),TRUE,'11/21/2015',TRUE,TRUE,FALSE);
+
+INSERT INTO supervisory_nodes
+(facilityId, name, code, parentId) VALUES
+((SELECT id FROM facilities WHERE code = 'DDM1'), 'DDM supervisory node', 'N1', NULL),
+((SELECT id FROM facilities WHERE code = 'DPM1'), 'DPM supervisory node', 'N2', NULL);
+
+INSERT INTO requisition_groups (code, name, supervisoryNodeId) VALUES
+('RG1','Requistion Group VIA', (SELECT id FROM supervisory_nodes WHERE code ='N1')),
+('RG2','Requistion Group MMIA', (SELECT id FROM supervisory_nodes WHERE code ='N2'));
+
+INSERT INTO requisition_group_program_schedules
+(requisitionGroupId, programId, scheduleId, directDelivery ) VALUES
+((SELECT id FROM requisition_groups WHERE code='RG1'), (SELECT id FROM programs WHERE code='ESS_MEDS'),
+  (SELECT id FROM processing_schedules WHERE code='M'), TRUE),
+((SELECT id FROM requisition_groups WHERE code='RG2'), (SELECT id FROM programs WHERE code='MMIA'),
+  (SELECT id FROM processing_schedules WHERE code='M'), TRUE);
+
+INSERT INTO role_assignments
+(userId, roleId, programId, supervisoryNodeId) VALUES
+((SELECT ID FROM USERS WHERE username = 'Admin123'),
+  (SELECT id FROM roles WHERE name = 'Supervisor'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),
+  (SELECT id FROM supervisory_nodes WHERE code = 'N1')),
+((SELECT ID FROM USERS WHERE username = 'Admin123'),
+  (SELECT id FROM roles WHERE name = 'Supervisor'), (SELECT id FROM programs WHERE code = 'MMIA'),
+  (SELECT id FROM supervisory_nodes WHERE code = 'N2')),
+((SELECT ID FROM USERS WHERE username = 'Admin123'),
+  (SELECT id FROM roles WHERE name = 'ReportViewer'), NULL, NULL);
+
+UPDATE users SET email = 'openlmis.test.dpm@gmail.com' WHERE userName = 'Admin123';
 
 

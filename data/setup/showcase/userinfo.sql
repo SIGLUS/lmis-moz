@@ -1,36 +1,25 @@
+INSERT INTO processing_periods
+(name, description, startDate, endDate, numberOfMonths, scheduleId, modifiedBy) VALUES
+('Nov-21-2015', 'Nov2015', '2015-11-21', '2015-12-20 23:59:59', 1,
+  (SELECT id FROM processing_schedules WHERE code = 'M'), (SELECT id FROM users LIMIT 1)),
+('Dec-21-2015', 'Dec2015', '2015-12-21', '2016-01-20 23:59:59', 1,
+  (SELECT id FROM processing_schedules WHERE code = 'M'), (SELECT id FROM users LIMIT 1)),
+('Jan-21-2015', 'Jan2015', '2016-01-21', '2016-02-20 23:59:59', 1,
+  (SELECT id FROM processing_schedules WHERE code = 'M'), (SELECT id FROM users LIMIT 1));
+
 INSERT INTO facilities
 (code, name, description, geographicZoneId, typeId, active, goLiveDate, enabled, sdp, virtualFacility)
 VALUES
 ('HF1','Facility-1','',(SELECT id FROM geographic_zones WHERE code = 'MARRACUENE'),
   (SELECT id FROM facility_types WHERE code = 'CSRUR-II'),TRUE,'1/21/2016',TRUE,TRUE,FALSE),
 ('HF2','Facility-2','',(SELECT id FROM geographic_zones WHERE code = 'MARRACUENE'),
-  (SELECT id FROM facility_types WHERE code = 'CSRUR-II'),TRUE,'11/21/2015',TRUE,TRUE,FALSE),
-('DDM1','DDM','DDM', (SELECT id FROM geographic_zones WHERE code = 'MARRACUENE'),
-  (SELECT id FROM facility_types WHERE code = 'DDM'),TRUE,'11/21/2015',TRUE,TRUE,FALSE),
-('DPM1','DPM','DPM', (SELECT id FROM geographic_zones WHERE code = 'MATOLA'),
-  (SELECT id FROM facility_types WHERE code = 'DPM'),TRUE,'11/21/2015',TRUE,TRUE,FALSE);
+  (SELECT id FROM facility_types WHERE code = 'CSRUR-II'),TRUE,'11/21/2015',TRUE,TRUE,FALSE);
 
 INSERT INTO programs_supported (facilityId, programId, active, startDate) VALUES
 ((SELECT id FROM facilities WHERE code = 'HF1'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),TRUE,'1/21/2016'),
 ((SELECT id FROM facilities WHERE code = 'HF1'), (SELECT id FROM programs WHERE code = 'MMIA'),TRUE,'1/21/2016'),
 ((SELECT id FROM facilities WHERE code = 'HF2'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),TRUE,'11/21/2015'),
 ((SELECT id FROM facilities WHERE code = 'HF2'), (SELECT id FROM programs WHERE code = 'MMIA'),TRUE,'11/21/2015');
-
-INSERT INTO supervisory_nodes
-(facilityId, name, code, parentId) VALUES
-((SELECT id FROM facilities WHERE code = 'DDM1'), 'DDM supervisory node', 'N1', NULL),
-((SELECT id FROM facilities WHERE code = 'DPM1'), 'DPM supervisory node', 'N2', NULL);
-
-INSERT INTO requisition_groups (code, name, supervisoryNodeId) VALUES
-('RG1','Requistion Group VIA', (SELECT id FROM supervisory_nodes WHERE code ='N1')),
-('RG2','Requistion Group MMIA', (SELECT id FROM supervisory_nodes WHERE code ='N2'));
-
-INSERT INTO requisition_group_program_schedules
-(requisitionGroupId, programId, scheduleId, directDelivery ) VALUES
-((SELECT id FROM requisition_groups WHERE code='RG1'), (SELECT id FROM programs WHERE code='ESS_MEDS'),
-  (SELECT id FROM processing_schedules WHERE code='M'), TRUE),
-((SELECT id FROM requisition_groups WHERE code='RG2'), (SELECT id FROM programs WHERE code='MMIA'),
-  (SELECT id FROM processing_schedules WHERE code='M'), TRUE);
 
 INSERT INTO requisition_group_members (requisitionGroupId, facilityId) VALUES
 ((SELECT id FROM requisition_groups WHERE code ='RG1'), (SELECT id FROM facilities WHERE code ='HF1')),
