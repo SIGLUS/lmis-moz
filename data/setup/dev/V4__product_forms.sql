@@ -70,7 +70,12 @@ INSERT INTO product_forms
 ('Rolo',68),
 ('Compressa',69),
 ('Seringas',70),
-('Rede',71);
+('Rede',71),
+('Esponjas', 73),
+('Gotas oftálmicas', 74),
+('Saqueta', 75),
+('Shampô', 76),
+('Tests', 77);
 
 INSERT INTO product_categories
 (code, name , displayOrder) VALUES
