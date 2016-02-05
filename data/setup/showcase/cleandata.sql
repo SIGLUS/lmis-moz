@@ -34,6 +34,6 @@ DELETE FROM users WHERE username != 'Admin123';
 DELETE FROM programs_supported;
 DELETE FROM facilities WHERE code != 'DDM1' AND code != 'DPM1';
 
-DELETE FROM email_notifications;
+DELETE FROM email_attachments_relation;
 DELETE FROM email_attachments;
-
+DELETE FROM email_notifications;

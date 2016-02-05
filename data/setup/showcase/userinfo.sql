@@ -45,15 +45,4 @@ INSERT INTO role_assignments
 ((SELECT ID FROM USERS WHERE username = 'facility2-user'),
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'MMIA'), NULL),
 ((SELECT ID FROM USERS WHERE username = 'facility2-user'),
-  (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'), NULL),
-((SELECT ID FROM USERS WHERE username = 'Admin123'),
-  (SELECT id FROM roles WHERE name = 'Supervisor'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),
-  (SELECT id FROM supervisory_nodes WHERE code = 'N1')),
-((SELECT ID FROM USERS WHERE username = 'Admin123'),
-  (SELECT id FROM roles WHERE name = 'Supervisor'), (SELECT id FROM programs WHERE code = 'MMIA'),
-  (SELECT id FROM supervisory_nodes WHERE code = 'N2')),
-((SELECT ID FROM USERS WHERE username = 'Admin123'),
-  (SELECT id FROM roles WHERE name = 'ReportViewer'), NULL, NULL);
-
-UPDATE users SET email = 'openlmis.test.dpm@gmail.com' WHERE userName = 'Admin123';
-
+  (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'), NULL);
