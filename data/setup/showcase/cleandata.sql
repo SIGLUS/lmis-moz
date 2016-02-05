@@ -27,6 +27,10 @@ DELETE FROM program_products;
 DELETE FROM kit_products_relation;
 DELETE FROM products;
 
+DELETE FROM role_assignments WHERE userid != 1;
+DELETE FROM user_password_reset_tokens;
+DELETE FROM users WHERE username != 'Admin123';
+
 DELETE FROM programs_supported;
 DELETE FROM facilities WHERE code != 'DDM1' AND code != 'DPM1';
 
