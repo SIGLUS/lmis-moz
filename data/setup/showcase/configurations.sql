@@ -140,30 +140,6 @@ INSERT INTO product_categories
 
 ALTER TABLE products ALTER COLUMN strength TYPE varchar(50);
 
-INSERT INTO roles
-(name, description) VALUES
-('FacilityHead', ''),
-('ReportViewer', ''),
-('Supervisor', '');
-
-INSERT INTO role_rights
-(roleId, rightName) VALUES
-((SELECT id FROM roles WHERE name = 'FacilityHead'), 'AUTHORIZE_REQUISITION'),
-((SELECT id FROM roles WHERE name = 'FacilityHead'), 'VIEW_REQUISITION'),
-((SELECT id FROM roles WHERE name = 'FacilityHead'), 'CREATE_REQUISITION'),
-((SELECT id FROM roles WHERE name = 'ReportViewer'), 'VIEW_REQUISITION_REPORT'),
-((SELECT id FROM roles WHERE name = 'ReportViewer'), 'VIEW_STOCK_ON_HAND_REPORT'),
-((SELECT id FROM roles WHERE name = 'ReportViewer'), 'VIEW_STOCKOUT_REPORT'),
-((SELECT id FROM roles WHERE name = 'ReportViewer'), 'EXPORTS'),
-((SELECT id FROM roles WHERE name = 'ReportViewer'), 'VIEW_TABLET_INFO_REPORT'),
-((SELECT id FROM roles WHERE name = 'Supervisor'), 'VIEW_REQUISITION'),
-((SELECT id FROM roles WHERE name = 'Supervisor'), 'APPROVE_REQUISITION'),
-((SELECT id FROM roles WHERE name = 'Admin'), 'MANAGE_GEOGRAPHIC_ZONE'),
-((SELECT id FROM roles WHERE name = 'Admin'), 'MANAGE_SUPERVISORY_NODE'),
-((SELECT id FROM roles WHERE name = 'Admin'), 'MANAGE_REQUISITION_GROUP'),
-((SELECT id FROM roles WHERE name = 'Admin'), 'MANAGE_FACILITY_APPROVED_PRODUCT'),
-((SELECT id FROM roles WHERE name = 'Admin'), 'MANAGE_PRODUCT');
-
 UPDATE master_rnr_columns SET name = 'totalLossesAndAdjustments', formula = '' where name = 'lossesAndAdjustments';
 
 INSERT INTO program_rnr_columns
