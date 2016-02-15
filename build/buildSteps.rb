@@ -89,3 +89,13 @@ def wait_for_jetty
   }
   "jetty started"
 end
+
+def write_version_info
+  version_html_path="#{OPENLMIS_DIR}/modules/openlmis-web/src/main/webapp/public/pages/version_base.html"
+  openlmis_version = `cd #{OPENLMIS_DIR} && git log -1`.gsub(/\n/, "<br>")
+  html_with_version = File.read(version_html_path).gsub(/VersionInfoAndMessage/, openlmis_version)
+  File.open(version_html_path, "w") do |file|
+    file.puts html_with_version
+  end
+  openlmis_version
+end

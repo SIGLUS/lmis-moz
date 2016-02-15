@@ -21,6 +21,11 @@ if ENVIRONMENT == 'ci'
   puts "Finished removing properties files"
 end
 
+puts "Writting latest commit message as version info"
+version_written=write_version_info
+exit 1 if !version_written
+puts "Version info written"
+
 puts "Running tests and building artifact..."
 r4 = build_project
 exit 1 if !r4
