@@ -11,6 +11,7 @@ DELETE FROM stock_cards;
 
 DELETE FROM requisition_signatures;
 DELETE FROM signatures;
+DELETE FROM requisition_period;
 
 DELETE FROM patient_quantification_line_items;
 DELETE FROM requisition_line_item_losses_adjustments;
