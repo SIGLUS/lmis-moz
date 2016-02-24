@@ -70,3 +70,4 @@ DELETE FROM programs;
 DELETE FROM email_attachments_relation;
 DELETE FROM email_attachments;
 DELETE FROM email_notifications;
+DELETE FROM sync_up_hashes;
