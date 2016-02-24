@@ -7,6 +7,7 @@ DELETE FROM stock_cards;
 
 DELETE FROM requisition_signatures;
 DELETE FROM signatures;
+DELETE FROM requisition_periods;
 
 DELETE FROM patient_quantification_line_items;
 DELETE FROM requisition_line_item_losses_adjustments;
@@ -37,3 +38,4 @@ DELETE FROM facilities WHERE code != 'DDM1' AND code != 'DPM1';
 DELETE FROM email_attachments_relation;
 DELETE FROM email_attachments;
 DELETE FROM email_notifications;
+DELETE FROM sync_up_hashes;
