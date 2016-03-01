@@ -11,68 +11,85 @@
 
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
 <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
-  <appender name="logFileAppender" class="org.apache.log4j.DailyRollingFileAppender">
-    <param name="File" value="${logHome}/openlmis-web.log"/>
-    <param name="MaxFileSize" value="1MB"/>
-    <param name="MaxBackupIndex" value="5"/>
-    <param name="Append" value="true"/>
-    <param name="Encoding" value="UTF-8"/>
-    <layout class="org.apache.log4j.EnhancedPatternLayout">
-      <param name="ConversionPattern" value="%d{ISO8601} [%-5p][%-16.16t][%40.40c] - %m%n"/>
-    </layout>
-  </appender>
+    <appender name="logFileAppender" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="${logHome}/openlmis-web.log"/>
+        <param name="MaxFileSize" value="1MB"/>
+        <param name="MaxBackupIndex" value="5"/>
+        <param name="Append" value="true"/>
+        <param name="Encoding" value="UTF-8"/>
+        <layout class="org.apache.log4j.EnhancedPatternLayout">
+            <param name="ConversionPattern" value="%d{ISO8601} [%-5p][%-16.16t][%40.40c] - %m%n"/>
+        </layout>
+    </appender>
 
-  <appender name="consoleAppender" class="org.apache.log4j.ConsoleAppender">
-    <param name="Append" value="true"/>
-    <param name="Encoding" value="UTF-8"/>
-    <layout class="org.apache.log4j.EnhancedPatternLayout">
-      <param name="ConversionPattern" value="%d{ISO8601} [%-5p][%-16.16t][%80.80c] - %m%n"/>
-    </layout>
-  </appender>
+    <appender name="syncActivityLogFileAppender" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="${logHome}/sync-activity.log"/>
+        <param name="MaxFileSize" value="10MB"/>
+        <param name="MaxBackupIndex" value="5"/>
+        <param name="Append" value="true"/>
+        <param name="Encoding" value="UTF-8"/>
+        <layout class="org.apache.log4j.EnhancedPatternLayout">
+            <param name="ConversionPattern" value="%d{ISO8601} [%-5p][%-16.16t][%40.40c] - %m%n"/>
+        </layout>
+    </appender>
 
-  <!--<logger name="java.sql" additivity="false">-->
+    <appender name="consoleAppender" class="org.apache.log4j.ConsoleAppender">
+        <param name="Append" value="true"/>
+        <param name="Encoding" value="UTF-8"/>
+        <layout class="org.apache.log4j.EnhancedPatternLayout">
+            <param name="ConversionPattern" value="%d{ISO8601} [%-5p][%-16.16t][%80.80c] - %m%n"/>
+        </layout>
+    </appender>
+
+    <!--<logger name="java.sql" additivity="false">-->
     <!--<level value="DEBUG"/>-->
     <!--<appender-ref ref="consoleAppender"/>-->
-  <!--</logger>-->
+    <!--</logger>-->
 
-  <!--<logger name="org.openlmis.rnr.repository.mapper">-->
+    <!--<logger name="org.openlmis.rnr.repository.mapper">-->
     <!--<level value="DEBUG"/>-->
     <!--<appender-ref ref="consoleAppender"/>-->
-  <!--</logger>-->
+    <!--</logger>-->
 
-  <!--<logger name="org.openlmis.db.repository.mapper">-->
+    <!--<logger name="org.openlmis.db.repository.mapper">-->
     <!--<level value="DEBUG"/>-->
     <!--<appender-ref ref="consoleAppender"/>-->
-  <!--</logger>-->
+    <!--</logger>-->
 
-  <!--<logger name="org.openlmis.core.repository.mapper">-->
+    <!--<logger name="org.openlmis.core.repository.mapper">-->
     <!--<level value="DEBUG"/>-->
     <!--<appender-ref ref="consoleAppender"/>-->
-  <!--</logger>-->
+    <!--</logger>-->
 
-  <!--<logger name="org.openlmis.shipment.repository.mapper">-->
+    <!--<logger name="org.openlmis.shipment.repository.mapper">-->
     <!--<level value="DEBUG"/>-->
     <!--<appender-ref ref="consoleAppender"/>-->
-  <!--</logger>-->
+    <!--</logger>-->
 
-  <logger name="org.springframework.mail">
-    <level value="DEBUG"/>
-    <appender-ref ref="logFileAppender"/>
-  </logger>
+    <logger name="org.springframework.mail">
+        <level value="DEBUG"/>
+        <appender-ref ref="logFileAppender"/>
+    </logger>
 
 
-  <logger name="org.openlmis">
-    <level value="INFO"/>
-    <appender-ref ref="logFileAppender"/>
-  </logger>
+    <logger name="org.openlmis">
+        <level value="INFO"/>
+        <appender-ref ref="logFileAppender"/>
+    </logger>
 
-  <logger name="org.springframework.integration">
-    <level value="INFO"/>
-    <appender-ref ref="logFileAppender"/>
-  </logger>
+    <logger name="org.springframework.integration">
+        <level value="INFO"/>
+        <appender-ref ref="logFileAppender"/>
+    </logger>
 
-  <root>
-    <level value="INFO"/>
-    <appender-ref ref="logFileAppender"/>
-  </root>
+    <logger name="org.openlmis.web">
+        <level value="INFO"/>
+        <appender-ref ref="syncActivityLogFileAppender"/>
+    </logger>
+
+    <root>
+        <level value="INFO"/>
+        <appender-ref ref="logFileAppender"/>
+    </root>
+
 </log4j:configuration>
