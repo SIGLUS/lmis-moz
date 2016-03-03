@@ -73,8 +73,13 @@
 
 
     <logger name="org.openlmis">
-        <level value="INFO"/>
+        <level value="ERROR"/>
         <appender-ref ref="logFileAppender"/>
+    </logger>
+
+    <logger name="org.openlmis.web.interceptor">
+        <level value="INFO"/>
+        <appender-ref ref="syncActivityLogFileAppender"/>
     </logger>
 
     <logger name="org.springframework.integration">
@@ -82,10 +87,6 @@
         <appender-ref ref="logFileAppender"/>
     </logger>
 
-    <logger name="org.openlmis.web">
-        <level value="INFO"/>
-        <appender-ref ref="syncActivityLogFileAppender"/>
-    </logger>
 
     <root>
         <level value="INFO"/>
