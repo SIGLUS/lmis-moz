@@ -75,6 +75,8 @@ INSERT INTO supervisory_nodes
 INSERT INTO programs_supported (facilityId, programId, active, startDate) VALUES
 ((SELECT id FROM facilities WHERE code = 'HF1'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),TRUE,'9/21/2013'),
 ((SELECT id FROM facilities WHERE code = 'HF2'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),TRUE,'9/21/2013'),
+((SELECT id FROM facilities WHERE code = 'HF2'), (SELECT id FROM programs WHERE code = 'TB'),TRUE,'1/21/2016'),
+((SELECT id FROM facilities WHERE code = 'HF2'), (SELECT id FROM programs WHERE code = 'NUTRITION'),TRUE,'1/21/2016'),
 ((SELECT id FROM facilities WHERE code = 'HF3'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),TRUE,'9/21/2013'),
 ((SELECT id FROM facilities WHERE code = 'HF4'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),TRUE,'9/21/2013'),
 ((SELECT id FROM facilities WHERE code = 'HF5'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),TRUE,'9/21/2013'),
