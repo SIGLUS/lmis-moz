@@ -1249,7 +1249,7 @@ INSERT INTO program_products (programId, productId, fullSupply, active, dosesPer
 ((SELECT id FROM programs WHERE code = 'ESS_MEDS'), (SELECT id FROM products WHERE code = '26B03'), TRUE, TRUE,12.5, (SELECT id FROM product_categories where code = '11'), 0.0,  0),
 ((SELECT id FROM programs WHERE code = 'ESS_MEDS'), (SELECT id FROM products WHERE code = '26B04'), TRUE, TRUE,12.5, (SELECT id FROM product_categories where code = '11'), 0.0,  0),
 ((SELECT id FROM programs WHERE code = 'ESS_MEDS'), (SELECT id FROM products WHERE code = '26B05'), TRUE, TRUE,12.5, (SELECT id FROM product_categories where code = '11'), 0.0,  0),
-((SELECT id FROM programs WHERE code = 'TB'), (SELECT id FROM products WHERE code = '26B06'), TRUE, TRUE,12.5, (SELECT id FROM product_categories where code = '11'), 0.0,  0),
-((SELECT id FROM programs WHERE code = 'NUTRITION'), (SELECT id FROM products WHERE code = '26B07'), TRUE, TRUE,12.5, (SELECT id FROM product_categories where code = '11'), 0.0,  0),
+((SELECT id FROM programs WHERE code = 'ESS_MEDS'), (SELECT id FROM products WHERE code = '26B06'), TRUE, TRUE,12.5, (SELECT id FROM product_categories where code = '11'), 0.0,  0),
+((SELECT id FROM programs WHERE code = 'ESS_MEDS'), (SELECT id FROM products WHERE code = '26B07'), TRUE, TRUE,12.5, (SELECT id FROM product_categories where code = '11'), 0.0,  0),
 ((SELECT id FROM programs WHERE code = 'ESS_MEDS'), (SELECT id FROM products WHERE code = 'FC001'), TRUE, TRUE,12.5, (SELECT id FROM product_categories where code = '11'), 0.0,  0),
 ((SELECT id FROM programs WHERE code = 'ESS_MEDS'), (SELECT id FROM products WHERE code = 'FC0015'), TRUE, TRUE,12.5, (SELECT id FROM product_categories where code = '11'), 0.0,  0);
