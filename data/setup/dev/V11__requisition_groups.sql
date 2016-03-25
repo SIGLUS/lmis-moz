@@ -32,7 +32,7 @@ INSERT INTO requisition_group_members (requisitionGroupId, facilityId) VALUES
 
 INSERT INTO requisition_group_program_schedules
 (requisitionGroupId, programId, scheduleId, directDelivery ) VALUES
-((SELECT id FROM requisition_groups WHERE code='RG1'), (SELECT id FROM programs WHERE code='VIA'),
+((SELECT id FROM requisition_groups WHERE code='RG1'), (SELECT id FROM programs WHERE code='MMIA'),
   (SELECT id FROM processing_schedules WHERE code='M'), TRUE),
-((SELECT id FROM requisition_groups WHERE code='RG2'), (SELECT id FROM programs WHERE code='MMIA'),
+((SELECT id FROM requisition_groups WHERE code='RG2'), (SELECT id FROM programs WHERE code='VIA'),
   (SELECT id FROM processing_schedules WHERE code='M'), TRUE);
