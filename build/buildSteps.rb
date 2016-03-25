@@ -13,7 +13,7 @@ def update_openlmis
 end
 
 def openlmis_setup
-  result1 = system("git clone https://github.com/clintonhealthaccess/open-lmis.git #{OPENLMIS_DIR}")
+  result1 = system("git clone https://github.com/clintonhealthaccess/open-lmis.git #{OPENLMIS_DIR} && cd #{OPENLMIS_DIR} && git checkout 2.0-moz")
   return result1 if !result1
   puts "initing submodule"
   result2 = system("cd #{OPENLMIS_DIR} && git submodule init && git submodule update")
@@ -57,11 +57,11 @@ def remove_openlmis_properties_files
 end
 
 def build_project
-  system("cd #{OPENLMIS_DIR} && export DISPLAY=:1 && gradle clean setupdb setupExtensions seed build")
+  system("cd #{OPENLMIS_DIR} && gradle clean setupdb setupExtensions seed build")
 end
 
 def setup_db
-  system("cd #{OPENLMIS_DIR} && export DISPLAY=:1 && gradle setupdb setupExtensions seed")
+  system("cd #{OPENLMIS_DIR} && gradle setupdb setupExtensions seed")
 end
 
 def start_jetty
