@@ -16,7 +16,7 @@ INSERT INTO regimens (programid, categoryid, code, name, active, displayorder) V
 ((SELECT id FROM programs where code = 'MMIA'), (SELECT id FROM regimen_categories WHERE code = 'PAEDIATRICS'), '011', 'd4T+3TC+ABC(2DFC Baby + ABC)', TRUE, 3),
 ((SELECT id FROM programs where code = 'MMIA'), (SELECT id FROM regimen_categories WHERE code = 'PAEDIATRICS'), '012', 'd4T+3TC+EFV(2DFC Baby + EFV)', TRUE, 3),
 ((SELECT id FROM programs where code = 'MMIA'), (SELECT id FROM regimen_categories WHERE code = 'PAEDIATRICS'), '013', 'AZT60+3TC+NVP(3DFC)', TRUE, 3),
-((SELECT id FROM programs where code = 'MMIA'), (SELECT id FROM regimen_categories WHERE code = 'PAEDIATRICS'), '014', 'AZT60+3TC+EFV(2DFC + EFV', TRUE, 3),
+((SELECT id FROM programs where code = 'MMIA'), (SELECT id FROM regimen_categories WHERE code = 'PAEDIATRICS'), '014', 'AZT60+3TC+EFV(2DFC + EFV)', TRUE, 3),
 ((SELECT id FROM programs where code = 'MMIA'), (SELECT id FROM regimen_categories WHERE code = 'PAEDIATRICS'), '015', 'AZT60+3TC+ABC(2DFC + ABC)', TRUE, 3),
 ((SELECT id FROM programs where code = 'MMIA'), (SELECT id FROM regimen_categories WHERE code = 'PAEDIATRICS'), '016', 'AZT60+3TC+LPV/r(2DFC + LPV/r)', TRUE, 3),
 ((SELECT id FROM programs where code = 'MMIA'), (SELECT id FROM regimen_categories WHERE code = 'PAEDIATRICS'), '017', 'ABC+3TC+LPV/r', TRUE, 3),
