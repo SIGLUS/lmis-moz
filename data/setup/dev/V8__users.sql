@@ -12,12 +12,7 @@ INSERT INTO role_rights
 ((SELECT id FROM roles WHERE name = 'ReportViewer'), 'VIEW_REQUISITION_REPORT'),
 ((SELECT id FROM roles WHERE name = 'ReportViewer'), 'VIEW_STOCK_ON_HAND_REPORT'),
 ((SELECT id FROM roles WHERE name = 'Supervisor'), 'VIEW_REQUISITION'),
-((SELECT id FROM roles WHERE name = 'Supervisor'), 'APPROVE_REQUISITION'),
-((SELECT id FROM roles WHERE name = 'Admin'), 'MANAGE_GEOGRAPHIC_ZONE'),
-((SELECT id FROM roles WHERE name = 'Admin'), 'MANAGE_SUPERVISORY_NODE'),
-((SELECT id FROM roles WHERE name = 'Admin'), 'MANAGE_REQUISITION_GROUP'),
-((SELECT id FROM roles WHERE name = 'Admin'), 'MANAGE_FACILITY_APPROVED_PRODUCT'),
-((SELECT id FROM roles WHERE name = 'Admin'), 'MANAGE_PRODUCT');
+((SELECT id FROM roles WHERE name = 'Supervisor'), 'APPROVE_REQUISITION');
 
 INSERT INTO users
 (userName, password, facilityId, firstName, lastName, email, verified, active, restrictLogin, isMobileUser) VALUES
@@ -70,8 +65,7 @@ INSERT INTO role_assignments
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'TB'), NULL),
 ((SELECT ID FROM USERS WHERE username = 'superuser'),
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'NUTRITION'), NULL),
-((SELECT ID FROM USERS WHERE username = 'superuser'),
-  (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'), NULL),
+
 ((SELECT ID FROM USERS WHERE username = 'mmia_mismatch'),
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'MMIA'), NULL),
 ((SELECT ID FROM USERS WHERE username = 'mmia_mismatch'),
@@ -82,8 +76,7 @@ INSERT INTO role_assignments
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'TB'), NULL),
 ((SELECT ID FROM USERS WHERE username = 'mmia_mismatch'),
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'NUTRITION'), NULL),
-((SELECT ID FROM USERS WHERE username = 'mmia_mismatch'),
-  (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'), NULL),
+
 ((SELECT ID FROM USERS WHERE username = 'mmia'),
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'MMIA'), NULL),
 ((SELECT ID FROM USERS WHERE username = 'mmia'),
@@ -94,8 +87,7 @@ INSERT INTO role_assignments
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'TB'), NULL),
 ((SELECT ID FROM USERS WHERE username = 'mmia'),
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'NUTRITION'), NULL),
-((SELECT ID FROM USERS WHERE username = 'mmia'),
-  (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'), NULL),
+
 ((SELECT ID FROM USERS WHERE username = 'via'),
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'MMIA'), NULL),
 ((SELECT ID FROM USERS WHERE username = 'via'),
@@ -106,8 +98,7 @@ INSERT INTO role_assignments
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'TB'), NULL),
 ((SELECT ID FROM USERS WHERE username = 'via'),
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'NUTRITION'), NULL),
-((SELECT ID FROM USERS WHERE username = 'via'),
-  (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'), NULL),
+
 ((SELECT ID FROM USERS WHERE username = 'kit'),
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'MMIA'), NULL),
 ((SELECT ID FROM USERS WHERE username = 'kit'),
@@ -118,6 +109,7 @@ INSERT INTO role_assignments
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'TB'), NULL),
 ((SELECT ID FROM USERS WHERE username = 'kit'),
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'NUTRITION'), NULL),
+
 ((SELECT ID FROM USERS WHERE username = 'physical_inventory'),
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'MMIA'), NULL),
 ((SELECT ID FROM USERS WHERE username = 'physical_inventory'),
@@ -128,6 +120,7 @@ INSERT INTO role_assignments
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'TB'), NULL),
 ((SELECT ID FROM USERS WHERE username = 'physical_inventory'),
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'NUTRITION'), NULL),
+
 ((SELECT ID FROM USERS WHERE username = 'initial_inventory'),
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'MMIA'), NULL),
 ((SELECT ID FROM USERS WHERE username = 'initial_inventory'),
@@ -136,6 +129,9 @@ INSERT INTO role_assignments
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'), NULL),
 ((SELECT ID FROM USERS WHERE username = 'initial_inventory'),
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'TB'), NULL),
+((SELECT ID FROM USERS WHERE username = 'initial_inventory'),
+  (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'NUTRITION'), NULL),
+
 ((SELECT ID FROM USERS WHERE username = 'mystique'),
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'MMIA'), NULL),
 ((SELECT ID FROM USERS WHERE username = 'mystique'),
@@ -146,6 +142,7 @@ INSERT INTO role_assignments
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'TB'), NULL),
 ((SELECT ID FROM USERS WHERE username = 'mystique'),
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'NUTRITION'), NULL),
+
 ((SELECT ID FROM USERS WHERE username = 'wolverine'),
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'MMIA'), NULL),
 ((SELECT ID FROM USERS WHERE username = 'wolverine'),
@@ -156,13 +153,17 @@ INSERT INTO role_assignments
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'TB'), NULL),
 ((SELECT ID FROM USERS WHERE username = 'wolverine'),
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'NUTRITION'), NULL),
+
 ((SELECT ID FROM USERS WHERE username = 'professor_x'),
   (SELECT id FROM roles WHERE name = 'ReportViewer'), NULL, NULL),
+
 ((SELECT ID FROM USERS WHERE username = 'magneto'),
   (SELECT id FROM roles WHERE name = 'ReportViewer'), NULL, NULL),
+
 ((SELECT ID FROM USERS WHERE username = 'professor_x'),
   (SELECT id FROM roles WHERE name = 'Supervisor'), (SELECT id FROM programs WHERE code = 'VIA'),
   (SELECT id FROM supervisory_nodes WHERE code = 'N1')),
+
 ((SELECT ID FROM USERS WHERE username = 'magneto'),
   (SELECT id FROM roles WHERE name = 'Supervisor'), (SELECT id FROM programs WHERE code = 'MMIA'),
   (SELECT id FROM supervisory_nodes WHERE code = 'N2'));
