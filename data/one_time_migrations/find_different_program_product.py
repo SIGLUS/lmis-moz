@@ -10,7 +10,8 @@ cursor = conn.cursor()
 print "Connected!\n"
 
 def create_new_product_table_and_copy_from_new_product_csv_file(csv_path):
-    cursor.execute("CREATE TABLE new_products(CODE VARCHAR(100),DESCRIPTION VARCHAR(200),DOSAGE VARCHAR(100),FORM VARCHAR(100),ACTIVE BOOLEAN,PROGRAM VARCHAR(100));")
+    cursor.execute(
+        "CREATE TABLE IF NOT EXISTS new_products(CODE VARCHAR(100),DESCRIPTION VARCHAR(200),DOSAGE VARCHAR(100),FORM VARCHAR(100),ACTIVE BOOLEAN,PROGRAM VARCHAR(100));")
     pprint.pprint("add new products table!")
 
     cursor.execute("COPY new_products FROM '%s' DELIMITER ',' CSV;" % (csv_path))
@@ -19,19 +20,38 @@ def create_new_product_table_and_copy_from_new_product_csv_file(csv_path):
 
 
 def find_diff_between_new_and_old_program_products():
-    cursor.execute("SELECT p.code,pr.code,new.program FROM new_products as new ,program_products as pp inner JOIN programs as pr ON pr.id = pp.programid INNER JOIN products as p on pp.productid = p.id WHERE new.code = p.code AND new.program!= pr.code;")
+    cursor.execute(
+        "SELECT p.code,pr.code,new.program,pp.productid,pp.productcategoryid,pp.dosespermonth,pp.currentprice,pp.createdby,pp.modifiedby,pp.fullsupply "
+        "FROM new_products as new ,program_products as pp inner JOIN programs as pr ON pr.id = pp.programid INNER JOIN products as p on pp.productid = p.id "
+        "WHERE new.code = p.code AND new.program!= pr.code;")
     diff_program_products = cursor.fetchall()
     count = 0
     for program_product in diff_program_products:
-        pprint.pprint(program_product)
         product_code = program_product[0]
         new_program_code = program_product[2]
-        query = "UPDATE program_products SET programid = (SELECT pr.id FROM programs as pr WHERE pr.code = '%s') WHERE  productid = (SELECT p.id from products p WHERE p.code = '%s');"% (new_program_code, product_code)
-        cursor.execute(query)
-        pprint.pprint(query)
-        count+=1
-        pprint.pprint("excute sucess : %s" % (count))
+        productid = program_product[3]
+        productcategoryid = program_product[4]
+        dosespermonth = program_product[5]
+        currentprice = program_product[6]
+        createdby = program_product[7]
+        if createdby == None:
+            createdby = 'NULL'
+        modifiedby = program_product[8]
+        fullsupply = program_product[9]
 
+        deactive = "UPDATE program_products SET active = FALSE WHERE productid = (SELECT p.id from products p WHERE p.code ='%s');" % (
+        product_code)
+        cursor.execute(deactive)
+        pprint.pprint(deactive)
+
+        insert = "INSERT INTO program_products(programid,productid,productcategoryid,dosespermonth,isacoefficientsid,active,currentprice,createdby,createddate,modifiedby,modifieddate,fullsupply) " \
+                 "VALUES ((SELECT id FROM programs WHERE code = '%s'),%s,%s,%s,NULL,TRUE ,%s,%s,current_timestamp,%s,current_timestamp,%s);" \
+                 % (new_program_code, productid, productcategoryid, dosespermonth, currentprice, createdby, modifiedby,
+                    fullsupply)
+        cursor.execute(insert)
+        pprint.pprint(insert)
+        count += 1
+    pprint.pprint("excute sucess : %s" % count)
     conn.commit()
 
 def update_all_product_modify_date():
