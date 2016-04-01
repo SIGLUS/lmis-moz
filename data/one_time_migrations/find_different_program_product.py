@@ -21,7 +21,7 @@ def create_new_product_table_and_copy_from_new_product_csv_file(csv_path):
 
 def find_diff_between_new_and_old_program_products():
     cursor.execute(
-        "SELECT p.code,pr.code,new.program,pp.productid,pp.productcategoryid,pp.dosespermonth,pp.currentprice,pp.createdby,pp.modifiedby,pp.fullsupply "
+        "SELECT p.code,pr.code,new.program,pp.productid,pp.productcategoryid,pp.dosespermonth,pp.currentprice,pp.createdby,pp.modifiedby,pp.fullsupply,pp.id "
         "FROM new_products as new ,program_products as pp inner JOIN programs as pr ON pr.id = pp.programid INNER JOIN products as p on pp.productid = p.id "
         "WHERE new.code = p.code AND new.program!= pr.code;")
     diff_program_products = cursor.fetchall()
@@ -34,10 +34,11 @@ def find_diff_between_new_and_old_program_products():
         dosespermonth = program_product[5]
         currentprice = program_product[6]
         createdby = program_product[7]
-        if createdby == None:
+        if createdby is None:
             createdby = 'NULL'
         modifiedby = program_product[8]
         fullsupply = program_product[9]
+        program_product_id = program_product[10]
 
         deactive = "UPDATE program_products SET active = FALSE WHERE productid = (SELECT p.id from products p WHERE p.code ='%s');" % (
         product_code)
@@ -50,6 +51,23 @@ def find_diff_between_new_and_old_program_products():
                     fullsupply)
         cursor.execute(insert)
         pprint.pprint(insert)
+
+        cursor.execute("SELECT facilitytypeid, maxmonthsofstock, createdby, modifiedby FROM facility_approved_products WHERE programproductid = %s;" % (program_product_id))
+        facility_approved_products = cursor.fetchall()
+        for facility_approved in facility_approved_products:
+            facilitytypeid = facility_approved[0]
+            maxmonthsofstock = facility_approved[1]
+            createdby = facility_approved[2]
+            if createdby is None:
+                createdby = 'NULL'
+            modifiedby = facility_approved[3]
+
+            update_facility_approved_products = "INSERT INTO facility_approved_products (facilitytypeid, programproductid, maxmonthsofstock, minmonthsofstock, eop, createdby, createddate, modifiedby, modifieddate) " \
+                                                "VALUES (%s, (SELECT pp.id FROM program_products pp WHERE pp.productid = %s AND pp.active = TRUE), %s, NULL , NULL , %s, current_timestamp, %s, current_timestamp);" \
+                                                % (facilitytypeid, productid, maxmonthsofstock, createdby, modifiedby)
+            cursor.execute(update_facility_approved_products)
+            pprint.pprint(update_facility_approved_products)
+
         count += 1
     pprint.pprint("excute sucess : %s" % count)
     conn.commit()
