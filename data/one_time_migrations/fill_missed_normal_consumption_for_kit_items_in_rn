@@ -1,0 +1,4 @@
+UPDATE requisition_line_items SET normalizedconsumption = 0 WHERE normalizedconsumption IS NULL and skipped = FALSE;
+UPDATE requisition_line_items SET amc = 0 WHERE amc IS NULL and skipped = FALSE;
+UPDATE requisition_line_items SET maxstockquantity = 0 WHERE maxstockquantity IS NULL and skipped = FALSE;
+UPDATE requisition_line_items SET periodnormalizedconsumption = 0 WHERE periodnormalizedconsumption IS NULL and skipped = FALSE;
