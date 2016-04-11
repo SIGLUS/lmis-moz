@@ -46,8 +46,8 @@ def find_diff_between_new_and_old_program_products():
         pprint.pprint(deactive)
 
         insert = "INSERT INTO program_products(programid,productid,productcategoryid,dosespermonth,isacoefficientsid,active,currentprice,createdby,createddate,modifiedby,modifieddate,fullsupply) " \
-                 "VALUES ((SELECT id FROM programs WHERE code = '%s'),%s,%s,%s,NULL,TRUE ,%s,%s,current_timestamp,%s,current_timestamp,%s);" \
-                 % (new_program_code, productid, productcategoryid, dosespermonth, currentprice, createdby, modifiedby,
+                 "VALUES ((SELECT id FROM programs WHERE code = '%s'),(SELECT p.id from products p WHERE p.code ='%s'),%s,%s,NULL,TRUE ,%s,%s,current_timestamp,%s,current_timestamp,%s);" \
+                 % (new_program_code, product_code, productcategoryid, dosespermonth, currentprice, createdby, modifiedby,
                     fullsupply)
         cursor.execute(insert)
         pprint.pprint(insert)
@@ -63,8 +63,8 @@ def find_diff_between_new_and_old_program_products():
             modifiedby = facility_approved[3]
 
             update_facility_approved_products = "INSERT INTO facility_approved_products (facilitytypeid, programproductid, maxmonthsofstock, minmonthsofstock, eop, createdby, createddate, modifiedby, modifieddate) " \
-                                                "VALUES (%s, (SELECT pp.id FROM program_products pp WHERE pp.productid = %s AND pp.active = TRUE), %s, NULL , NULL , %s, current_timestamp, %s, current_timestamp);" \
-                                                % (facilitytypeid, productid, maxmonthsofstock, createdby, modifiedby)
+                                                "VALUES (%s, (SELECT pp.id FROM program_products pp WHERE pp.productid = (SELECT p.id from products p WHERE p.code ='%s') AND pp.active = TRUE), %s, NULL , NULL , %s, current_timestamp, %s, current_timestamp);" \
+                                                % (facilitytypeid, product_code, maxmonthsofstock, createdby, modifiedby)
             cursor.execute(update_facility_approved_products)
             pprint.pprint(update_facility_approved_products)
 
