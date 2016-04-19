@@ -79,14 +79,7 @@ INSERT INTO product_forms
 
 INSERT INTO product_categories
 (code, name , displayOrder) VALUES
-('1', 'Antibiotics', 1),
-('2', 'Analgesics', 2),
-('3', 'Inhalers', 3),
-('4', 'Injections', 4),
-('5', 'Drops', 5),
-('6', 'Buccal', 6),
-('7', 'Anabolics', 7),
-('8', 'Vitamin Supplements', 8),
-('9', 'Anesthetics', 9),
-('10', 'Sedative', 10),
-('11', 'Other', 11);
+('11', 'Other', 11),
+('12', 'Adult', 12),
+('13', 'Children', 13),
+('14', 'Solution', 14);
