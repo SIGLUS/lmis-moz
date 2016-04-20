@@ -13,6 +13,7 @@ DELETE FROM regimen_line_items WHERE rnrid IN (SELECT id FROM requisitions WHERE
 
 DELETE FROM requisition_line_items WHERE rnrid IN (SELECT id FROM requisitions WHERE facilityid IN (1, 13, 14));
 DELETE FROM requisition_status_changes WHERE rnrid IN (SELECT id FROM requisitions WHERE facilityid IN (1, 13, 14));
+DELETE FROM requisition_periods WHERE rnrid IN (SELECT id FROM requisitions WHERE facilityid IN (1, 13, 14));
 DELETE FROM requisitions WHERE facilityid IN (1, 13, 14);
 
 DELETE FROM requisition_group_members WHERE facilityid IN (1, 13, 14);
