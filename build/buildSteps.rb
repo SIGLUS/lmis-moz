@@ -61,8 +61,8 @@ def build_project
 end
 
 def build_slave_project
-  system("rm #{OPENLMIS_DIR}/modules/report/src/main/resource/applicationContext-report.xml && cp #{MOZ_DIR}/applicationContext-report.xml #{OPENLMIS_DIR}/modules/report/src/main/resource/applicationContext-report.xml")
-  system("cd #{OPENLMIS_DIR} && gradle war -PwarName openlmis-web-slave.war")
+  system("rm #{OPENLMIS_DIR}/modules/report/src/main/resources/applicationContext-report.xml && cp #{MOZ_DIR}/applicationContext-report.xml #{OPENLMIS_DIR}/modules/report/src/main/resources/applicationContext-report.xml")
+  system("cd #{OPENLMIS_DIR} && gradle war -PwarName=openlmis-web-slave.war")
 end
 
 def setup_db
