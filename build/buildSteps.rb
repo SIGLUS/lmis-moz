@@ -60,6 +60,11 @@ def build_project
   system("cd #{OPENLMIS_DIR} && gradle clean setupdb setupExtensions seed build")
 end
 
+def build_slave_project
+  system("rm #{OPENLMIS_DIR}/modules/report/src/main/resource/applicationContext-report.xml && cp #{MOZ_DIR}/applicationContext-report.xml #{OPENLMIS_DIR}/modules/report/src/main/resource/applicationContext-report.xml")
+  system("cd #{OPENLMIS_DIR} && gradle war -PwarName openlmis-web-slave.war")
+end
+
 def setup_db
   system("cd #{OPENLMIS_DIR} && gradle setupdb setupExtensions seed")
 end

@@ -16,6 +16,8 @@ DELETE FROM requisition_status_changes WHERE rnrid IN (SELECT id FROM requisitio
 DELETE FROM requisition_periods WHERE rnrid IN (SELECT id FROM requisitions WHERE facilityid IN (1, 13, 14));
 DELETE FROM requisitions WHERE facilityid IN (1, 13, 14);
 
+DELETE FROM archived_products WHERE facilityid IN (2, 6, 8, 14, 16, 17, 18, 19)
+
 DELETE FROM requisition_group_members WHERE facilityid IN (1, 13, 14);
 
 DELETE FROM user_password_reset_tokens WHERE userid IN (2, 4, 5, 6, 7, 8, 13, 14, 15, 33, 34, 35, 36, 37, 49);
