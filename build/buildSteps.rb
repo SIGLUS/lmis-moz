@@ -62,6 +62,7 @@ end
 
 def build_slave_project
   system("rm #{OPENLMIS_DIR}/modules/report/src/main/resources/applicationContext-report.xml && cp #{MOZ_DIR}/applicationContext-report.xml #{OPENLMIS_DIR}/modules/report/src/main/resources/applicationContext-report.xml")
+  system("rm #{OPENLMIS_DIR}/modules/email/src/main/resources/applicationContext-email.xml && cp #{MOZ_DIR}/applicationContext-email.xml #{OPENLMIS_DIR}/modules/email/src/main/resources/applicationContext-email.xml")
   system("cd #{OPENLMIS_DIR} && gradle war -PwarName=openlmis-web-slave.war")
 end
 
