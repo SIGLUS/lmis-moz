@@ -4,16 +4,16 @@ BUILD_DIR="#{Dir.pwd}/build"
 OPENLMIS_DIR="#{Dir.pwd}/open-lmis"
 MOZ_DIR="#{Dir.pwd}/moz"
 
-def update_openlmis
+def update_openlmis(branch)
   if !Dir.exists?(OPENLMIS_DIR)
-    openlmis_setup
+    openlmis_setup(branch)
   else
-    system("cd #{OPENLMIS_DIR} && git checkout . && git pull -f origin 2.0-moz && git submodule update")
+    system("cd #{OPENLMIS_DIR} && git checkout . && git pull -f origin #{branch} && git submodule update")
   end
 end
 
-def openlmis_setup
-  result1 = system("git clone https://github.com/clintonhealthaccess/open-lmis.git #{OPENLMIS_DIR} && cd #{OPENLMIS_DIR} && git checkout 2.0-moz")
+def openlmis_setup(branch)
+  result1 = system("git clone https://github.com/clintonhealthaccess/open-lmis.git #{OPENLMIS_DIR} && cd #{OPENLMIS_DIR} && git checkout #{branch}")
   return result1 if !result1
   puts "initing submodule"
   result2 = system("cd #{OPENLMIS_DIR} && git submodule init && git submodule update")

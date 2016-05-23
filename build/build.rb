@@ -2,10 +2,10 @@
 $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'buildSteps'
 
-ENVIRONMENT = ARGV[0] || "ci"
+BRANCH = ARGV[0] || "2.0-moz"
 
 puts "Updating openlmis code..."
-r1 = update_openlmis
+r1 = update_openlmis(BRANCH)
 exit 1 if !r1
 puts "Finished updating openlmis code"
 
@@ -14,12 +14,10 @@ r2 = replace_files
 exit 1 if !r2
 puts "Finished replacing files"
 
-if ENVIRONMENT == 'ci'
-  puts "Removing properties files..."
-  r3 = remove_openlmis_properties_files
-  exit 1 if !r3
-  puts "Finished removing properties files"
-end
+puts "Removing properties files..."
+r3 = remove_openlmis_properties_files
+exit 1 if !r3
+puts "Finished removing properties files"
 
 puts "Writting latest commit message as version info"
 version_written=write_version_info
