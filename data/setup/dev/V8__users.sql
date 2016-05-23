@@ -162,8 +162,8 @@ INSERT INTO role_assignments
 
 ((SELECT ID FROM USERS WHERE username = 'professor_x'),
   (SELECT id FROM roles WHERE name = 'Supervisor'), (SELECT id FROM programs WHERE code = 'VIA'),
-  (SELECT id FROM supervisory_nodes WHERE code = 'N1')),
+  (SELECT id FROM supervisory_nodes WHERE code = 'N2')),
 
 ((SELECT ID FROM USERS WHERE username = 'magneto'),
   (SELECT id FROM roles WHERE name = 'Supervisor'), (SELECT id FROM programs WHERE code = 'MMIA'),
-  (SELECT id FROM supervisory_nodes WHERE code = 'N2'));
+  (SELECT id FROM supervisory_nodes WHERE code = 'N1'));
