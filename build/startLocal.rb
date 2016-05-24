@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(File.dirname(__FILE__))
 require 'buildSteps'
 
 puts "Updating openlmis code..."
-r1 = update_openlmis
+r1 = update_openlmis '2.0-moz'
 exit 1 if !r1
 puts "Finished updating openlmis code"
 
