@@ -49,6 +49,7 @@ DELETE FROM program_rnr_columns;
 DELETE FROM facility_approved_products;
 DELETE FROM program_products;
 DELETE FROM kit_products_relation;
+DELETE FROM cmm_entries;
 DELETE FROM products;
 DELETE FROM product_groups;
 DELETE FROM product_categories;
