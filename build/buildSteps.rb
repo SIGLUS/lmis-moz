@@ -40,7 +40,7 @@ def replace_files
   result = false
   replace_file_list.each do |file_path|
     result = system("rm #{OPENLMIS_DIR}/#{file_path} && cp #{MOZ_DIR}/#{file_path} #{OPENLMIS_DIR}/#{file_path}")
-    # break if !result
+    break if !result
     puts "replaced #{file_path}"
   end
   result
