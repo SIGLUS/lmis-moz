@@ -24,8 +24,7 @@ end
 
 def replace_file_list
   ['modules/openlmis-web/src/main/resources/openlmis_logging.xml',
-   'modules/openlmis-web/build.gradle',
-   'modules/db/src/main/resources/db/migration/V5_2__create_product_forms.sql']
+   'modules/openlmis-web/build.gradle']
 end
 
 def properties_files
@@ -57,7 +56,7 @@ def remove_openlmis_properties_files
 end
 
 def build_project
-  system("cd #{OPENLMIS_DIR} && gradle clean setupdb setupExtensions seed build")
+  system("cd #{OPENLMIS_DIR} && gradle clean setupdb seed build")
 end
 
 def build_slave_project
@@ -67,7 +66,7 @@ def build_slave_project
 end
 
 def setup_db
-  system("cd #{OPENLMIS_DIR} && gradle setupdb setupExtensions seed")
+  system("cd #{OPENLMIS_DIR} && gradle setupdb seed")
 end
 
 def start_jetty
