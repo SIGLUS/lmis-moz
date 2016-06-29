@@ -23,8 +23,7 @@ def openlmis_setup(branch)
 end
 
 def replace_file_list
-  ['modules/openlmis-web/src/main/resources/openlmis_logging.xml',
-   'modules/openlmis-web/build.gradle']
+  ['modules/openlmis-web/build.gradle']
 end
 
 def properties_files
