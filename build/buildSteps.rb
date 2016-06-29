@@ -56,7 +56,7 @@ def remove_openlmis_properties_files
 end
 
 def build_project
-  system("cd #{OPENLMIS_DIR} && gradle clean setupdb seed build")
+  system("cd #{OPENLMIS_DIR} && gradle clean setupdb setupExtensions seed build")
 end
 
 def build_slave_project
