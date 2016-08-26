@@ -1,5 +1,7 @@
 DELETE FROM moz_app_info;
 
+DELETE FROM stock_card_entry_lot_items_key_values;
+DELETE FROM stock_card_entry_lot_items;
 DELETE FROM stock_card_entry_key_values;
 DELETE FROM stock_card_entries;
 DELETE FROM stock_movement_line_items;
@@ -7,6 +9,8 @@ DELETE FROM stock_movement_lots;
 DELETE FROM stock_movements;
 DELETE FROM stock_adjustment_reasons_programs;
 DELETE FROM losses_adjustments_types;
+DELETE FROM lots_on_hand;
+DELETE FROM lots;
 DELETE FROM stock_cards;
 
 DELETE FROM requisition_signatures;
