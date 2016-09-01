@@ -9,6 +9,7 @@ DELETE FROM stock_movement_lots;
 DELETE FROM stock_movements;
 DELETE FROM stock_adjustment_reasons_programs;
 DELETE FROM losses_adjustments_types;
+DELETE FROM lot_conflicts;
 DELETE FROM lots_on_hand;
 DELETE FROM lots;
 DELETE FROM stock_cards;
