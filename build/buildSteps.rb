@@ -33,7 +33,8 @@ def properties_files
    'modules/openlmis-web/src/main/resources/default.properties',
    'modules/openlmis-web/src/main/resources/local/app.properties',
    'modules/openlmis-web/src/main/resources/app.properties',
-   'modules/openlmis-web/src/main/resources/uat/app.properties']
+   'modules/openlmis-web/src/main/resources/uat/app.properties',
+   'modules/report/src/main/resources/reports-configs.properties']
 end
 
 def replace_files
