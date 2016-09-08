@@ -6,16 +6,24 @@ INSERT INTO roles
 
 INSERT INTO role_rights
 (roleId, rightName) VALUES
-((SELECT id FROM roles WHERE name = 'FacilityHead'), 'AUTHORIZE_REQUISITION'),
 ((SELECT id FROM roles WHERE name = 'FacilityHead'), 'VIEW_REQUISITION'),
-((SELECT id FROM roles WHERE name = 'FacilityHead'), 'CREATE_REQUISITION'),
 ((SELECT id FROM roles WHERE name = 'ReportViewer'), 'VIEW_REQUISITION_REPORT'),
 ((SELECT id FROM roles WHERE name = 'ReportViewer'), 'VIEW_STOCK_ON_HAND_REPORT'),
+((SELECT id FROM roles WHERE name = 'ReportViewer'), 'VIEW_TABLET_INFO_REPORT'),
+((SELECT id FROM roles WHERE name = 'ReportViewer'), 'VIEW_STOCKOUT_REPORT'),
+((SELECT id FROM roles WHERE name = 'ReportViewer'), 'VIEW_EXPIRY_DATES_REPORT'),
+((SELECT id FROM roles WHERE name = 'ReportViewer'), 'VIEW_TRACER_DRUGS_REPORT'),
+((SELECT id FROM roles WHERE name = 'ReportViewer'), 'VIEW_CONSUMPTION_MOVEMENTS_REPORT'),
+((SELECT id FROM roles WHERE name = 'ReportViewer'), 'VIEW_ADJUSTMENT_OCCURRENCES_REPORT'),
+((SELECT id FROM roles WHERE name = 'ReportViewer'), 'VIEW_LAST_SYNC_TIME_REPORTS'),
 ((SELECT id FROM roles WHERE name = 'Supervisor'), 'VIEW_REQUISITION'),
 ((SELECT id FROM roles WHERE name = 'Supervisor'), 'APPROVE_REQUISITION');
 
 INSERT INTO users
 (userName, password, facilityId, firstName, lastName, email, verified, active, restrictLogin, isMobileUser) VALUES
+('central', 'vFR3ULknlislVs2ESzJvdXN330IYhUdA6FnraiiZWqJKmtJGELNqaLwC2iiQUHuUWcK6hPtZGkJmkRT8zXLI5212gieie',
+  (SELECT id FROM facilities WHERE code = 'CENTRAL'), 'Central', 'User', 'central@test.com',
+  TRUE, TRUE, FALSE, FALSE),
 ('superuser', 'vFR3ULknlislVs2ESzJvdXN330IYhUdA6FnraiiZWqJKmtJGELNqaLwC2iiQUHuUWcK6hPtZGkJmkRT8zXLI5212gieie',
   (SELECT id FROM facilities WHERE code = 'HF5'), 'Super', 'User', NULL,
   TRUE, TRUE, FALSE, TRUE),
@@ -166,4 +174,7 @@ INSERT INTO role_assignments
 
 ((SELECT ID FROM USERS WHERE username = 'magneto'),
   (SELECT id FROM roles WHERE name = 'Supervisor'), (SELECT id FROM programs WHERE code = 'MMIA'),
-  (SELECT id FROM supervisory_nodes WHERE code = 'N1'));
+  (SELECT id FROM supervisory_nodes WHERE code = 'N1')),
+
+((SELECT ID FROM USERS WHERE username = 'central'),
+  (SELECT id FROM roles WHERE name = 'ReportViewer'), NULL, NULL);

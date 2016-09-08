@@ -23,11 +23,14 @@ INSERT INTO facility_types (code, name, nominalMaxMonth, nominalEop, active) VAL
 ('CSRUR-I','CSRUR - I', 3, 0.5, TRUE),
 ('CSRUR-II','CSRUR - II', 3, 0.5, TRUE),
 ('DDM','DDM', 3, 0.5, TRUE),
-('DPM','DPM', 3, 0.5, TRUE);
+('DPM','DPM', 3, 0.5, TRUE),
+('Central', 'Moçambique', 3, 0.5, TRUE);
 
 INSERT INTO facilities
 (code, name, description, geographicZoneId, typeId, active, goLiveDate, enabled, sdp, virtualFacility)
 VALUES
+('CENTRAL','Central','',(SELECT id FROM geographic_zones WHERE code = 'MARRACUENE'),
+  (SELECT id FROM facility_types WHERE code = 'Central'),TRUE,'9/21/2013',TRUE,TRUE,FALSE),
 ('HF1','Marracuene','',(SELECT id FROM geographic_zones WHERE code = 'MARRACUENE'),
   (SELECT id FROM facility_types WHERE code = 'CSRUR-II'),TRUE,'9/21/2013',TRUE,TRUE,FALSE),
 ('HF2','Matalane','',(SELECT id FROM geographic_zones WHERE code = 'MARRACUENE'),
