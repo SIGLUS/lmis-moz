@@ -6,7 +6,9 @@ INSERT INTO roles
 
 INSERT INTO role_rights
 (roleId, rightName) VALUES
+((SELECT id FROM roles WHERE name = 'FacilityHead'), 'AUTHORIZE_REQUISITION'),
 ((SELECT id FROM roles WHERE name = 'FacilityHead'), 'VIEW_REQUISITION'),
+((SELECT id FROM roles WHERE name = 'FacilityHead'), 'CREATE_REQUISITION'),
 ((SELECT id FROM roles WHERE name = 'ReportViewer'), 'VIEW_REQUISITION_REPORT'),
 ((SELECT id FROM roles WHERE name = 'ReportViewer'), 'VIEW_STOCK_ON_HAND_REPORT'),
 ((SELECT id FROM roles WHERE name = 'ReportViewer'), 'VIEW_TABLET_INFO_REPORT'),
