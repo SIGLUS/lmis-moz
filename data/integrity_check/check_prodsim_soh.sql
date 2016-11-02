@@ -30,34 +30,21 @@ FROM stock_cards
   JOIN facilities ON stock_cards.facilityid = facilities.id
 WHERE totalquantityonhand != cast(last_movement_soh_of_stockcard(stock_cards.id) AS INTEGER);
 
--- the following function will return the last soh in the key value table of a specified lotitemkeyvalue
-CREATE OR REPLACE FUNCTION last_movement_soh_of_lotonhandkeyvalue(lot_id INTEGER)
-  RETURNS TEXT AS $last_soh$
-DECLARE
-  soh TEXT;
-BEGIN
-  SELECT
-    valuecolumn,
-    stock_card_entry_lot_items_key_values.createddate
-  FROM stock_card_entry_lot_items_key_values
-    JOIN stock_card_entry_lot_items ON stock_card_entry_lot_items_key_values.stockcardentrylotitemid = stock_card_entry_lot_items.id
-  WHERE stock_card_entry_lot_items.lotid = lot_id AND keycolumn = 'soh'
-  ORDER BY stockcardentryid DESC
-  LIMIT 1
-  INTO soh;
-  RETURN soh;
-END;
-$last_soh$ LANGUAGE plpgsql;
+-- Lot's data integrity check
+SELECT sc.id, t1.lohstockcardid, t2.scestockcardid FROM stock_cards sc
+JOIN
+  (SELECT lots_on_hand.stockcardid AS lohstockcardid, lots_on_hand.id AS lohid, lots_on_hand.quantityonhand AS lohquantityonhand,
+    lots_on_hand.lotid AS lohlotid, lots.id AS lotid
+  FROM lots_on_hand JOIN lots ON lots_on_hand.lotid=lots.id) t1 ON sc.id=t1.lohstockcardid
+JOIN
+  (SELECT stock_card_entries.id AS sceid, stock_card_entries.stockcardid AS scestockcardid,
+    stock_card_entry_key_values.stockcardentryid AS scekvstockcardentryid,
+    stock_card_entry_key_values.keycolumn AS scekvkeycolumn,
+    stock_card_entry_key_values.valuecolumn AS scekvvaluecolumn FROM stock_card_entries JOIN stock_card_entry_key_values
+    ON stock_card_entries.id= stock_card_entry_key_values.stockcardentryid) t2 ON sc.id=t2.scestockcardid
+WHERE t2.scekvkeycolumn LIKE 'cast(t1.lotid AS VARCHAR)' AND t1.lohquantityonhand != cast(t2.scekvvaluecolumn AS INTEGER);
 
--- the following sql statement will return lotonhand whose loh mismatch the loh in the key value table
-SELECT
-  quantityonhand,lotid,stock_cards.id, last_movement_soh_of_lotonhandkeyvalue(lots.id), lots.lotnumber
-FROM lots_on_hand
-  JOIN lots on lots_on_hand.lotid=lots.id
-  JOIN stock_cards on lots_on_hand.stockcardid=stock_cards.id
-WHERE quantityonhand != cast(last_movement_soh_of_lotonhandkeyvalue(lots.id) AS INTEGER);
-
---
+--Lot integrity check
 SELECT sc.productid, t1.lotproductid, t1.lotid, t1.lotnumber, t1.expirationdate, sc.id
 FROM stock_cards sc
 JOIN
