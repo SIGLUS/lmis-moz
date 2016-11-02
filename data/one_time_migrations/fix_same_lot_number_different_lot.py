@@ -28,6 +28,8 @@ def main():
 
     print('productid, wrongproductid, oldlotid, lotnumber, stockcardid, lotonhandid')
 
+    stockcardid_list = []
+
     for entry in mismatched_info:
 
         print("===================")
@@ -38,6 +40,8 @@ def main():
         lotnumber = entry[3]
         stockcardid = entry[4]
         lotonhandid = entry[5]
+
+        stockcardid_list.append(stockcardid)
 
         pprint.pprint(entry)
 
@@ -98,6 +102,22 @@ def main():
                                     WHERE stockcardentryid = %d AND keycolumn = \'%s\'" % ('LOT#' + str(new_lotid), stock_entry_id, 'LOT#' + str(old_lotid)))
 
         conn.commit()
+
+    for stockcard_id in stockcardid_list:
+        cursor.execute("SELECT DISTINCT(lotid), SUM(quantityonhand), MAX(effectivedate) FROM lots_on_hand \
+                        WHERE stockcardid = %d \
+                        GROUP BY lotid" % stockcard_id)
+        loh_entries = cursor.fetchall()
+
+        cursor.execute("DELETE FROM lots_on_hand \
+                        WHERE stockcardid = %d" % stockcard_id)
+
+        for loh_entry in loh_entries:
+            cursor.execute("INSERT INTO lots_on_hand \
+                            (stockcardid, lotid, quantityonhand, effectivedate, createdby, createddate, modifiedby, modifieddate) \
+                            VALUES \
+                            (%d, %d, %d, \'%s\', 1, NOW(), 1, NOW())" % (stockcard_id, loh_entry[0], loh_entry[1], loh_entry[2]))
+            conn.commit()
 
 if __name__ == "__main__":
     main()
