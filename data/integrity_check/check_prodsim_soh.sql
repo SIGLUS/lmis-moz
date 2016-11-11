@@ -52,7 +52,7 @@ JOIN
     lots.expirationdate AS expirationdate, lots_on_hand.stockcardid AS loh_sc
     FROM lots JOIN lots_on_hand ON lots_on_hand.lotid = lots.id) t1
 ON sc.id = t1.loh_sc
-WHERE sc.productid != t1.lotproductid
+WHERE sc.productid != t1.lotproductid;
 
 --Data integrity check of the consistency of Consumption view and CMM in cmm_entries
 SELECT DISTINCT ce.productcode,ce.facilityid,ce.periodend,ce.cmmvalue,facilities.name, t1.vwcmm FROM cmm_entries ce
@@ -61,4 +61,4 @@ JOIN (SELECT vwpm.periodend AS vwperiodend,vwpm.cmm AS vwcmm,vwpm.drug_code AS v
   vwpm.facility_name AS vwfacilityname, facilities.id AS facilityid
   FROM vw_period_movements vwpm
   JOIN facilities ON vwpm.facility_name=facilities.name) t1 ON t1.facilityid=ce.facilityid
-  WHERE ce.productcode=t1.vwdrugcode AND ce.periodend::DATE=t1.vwperiodend::DATE AND ce.cmmvalue!=t1.vwcmm
+  WHERE ce.productcode=t1.vwdrugcode AND ce.periodend::DATE=t1.vwperiodend::DATE AND ce.cmmvalue!=t1.vwcmm;
