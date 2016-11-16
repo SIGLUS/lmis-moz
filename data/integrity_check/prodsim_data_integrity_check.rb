@@ -3,7 +3,7 @@ sqloutput=`psql -U openlmis --file data/integrity_check/check_prodsim_soh.sql -w
 def count_em(string, substring)
   string.scan(/(?=#{substring})/).count
 end
-if count_em(sqloutput,"0 rows")== 4
+if count_em(sqloutput,"0 rows")== 3
   puts "no soh mismatch found, sql output is:"
   puts sqloutput
 else

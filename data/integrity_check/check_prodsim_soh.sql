@@ -45,20 +45,21 @@ JOIN
 WHERE t2.scekvkeycolumn LIKE 'cast(t1.lotid AS VARCHAR)' AND t1.lohquantityonhand != cast(t2.scekvvaluecolumn AS INTEGER);
 
 --Lot integrity check
-SELECT sc.productid, t1.lotproductid, t1.lotid, t1.lotnumber, t1.expirationdate, sc.id
+SELECT sc.productid, t1.lotproductid, t1.lotid, t1.lotnumber, sc.id, t1.lotonhandid
 FROM stock_cards sc
 JOIN
-  (SELECT lots.productid AS lotproductid, lots.id AS lotid, lots.lotnumber AS lotnumber,
-    lots.expirationdate AS expirationdate, lots_on_hand.stockcardid AS loh_sc
+(SELECT lots.productid AS lotproductid, lots.id AS lotid, lots.lotnumber AS lotnumber,
+    lots_on_hand.stockcardid AS loh_sc, lots_on_hand.id AS lotonhandid
     FROM lots JOIN lots_on_hand ON lots_on_hand.lotid = lots.id) t1
 ON sc.id = t1.loh_sc
-WHERE sc.productid != t1.lotproductid;
+WHERE sc.productid != t1.lotproductid
+ORDER BY t1.lotonhandid;
 
---Data integrity check of the consistency of Consumption view and CMM in cmm_entries
-SELECT DISTINCT ce.productcode,ce.facilityid,ce.periodend,ce.cmmvalue,facilities.name, t1.vwcmm FROM cmm_entries ce
-JOIN facilities ON ce.facilityid=facilities.id
-JOIN (SELECT vwpm.periodend AS vwperiodend,vwpm.cmm AS vwcmm,vwpm.drug_code AS vwdrugcode,
-  vwpm.facility_name AS vwfacilityname, facilities.id AS facilityid
-  FROM vw_period_movements vwpm
-  JOIN facilities ON vwpm.facility_name=facilities.name) t1 ON t1.facilityid=ce.facilityid
-  WHERE ce.productcode=t1.vwdrugcode AND ce.periodend::DATE=t1.vwperiodend::DATE AND ce.cmmvalue!=t1.vwcmm;
+--Data integrity check of the consistencgy of Consumption view and CMM in cmm_entries
+--SELECT DISTINCT ce.productcode,ce.facilityid,ce.periodend,ce.cmmvalue,facilities.name, t1.vwcmm FROM cmm_entries ce
+--JOIN facilities ON ce.facilityid=facilities.id
+--JOIN (SELECT vwpm.periodend AS vwperiodend,vwpm.cmm AS vwcmm,vwpm.drug_code AS vwdrugcode,
+--  vwpm.facility_name AS vwfacilityname, facilities.id AS facilityid
+--  FROM vw_period_movements vwpm
+--  JOIN facilities ON vwpm.facility_name=facilities.name) t1 ON t1.facilityid=ce.facilityid
+--  WHERE ce.productcode=t1.vwdrugcode AND ce.periodend::DATE=t1.vwperiodend::DATE AND ce.cmmvalue!=t1.vwcmm;
