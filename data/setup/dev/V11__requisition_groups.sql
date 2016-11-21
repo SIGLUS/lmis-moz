@@ -17,6 +17,7 @@ INSERT INTO requisition_group_members (requisitionGroupId, facilityId) VALUES
 ((SELECT id FROM requisition_groups WHERE code ='RG2'), (SELECT id FROM facilities WHERE code ='F_PHYSICAL_INVENTORY')),
 ((SELECT id FROM requisition_groups WHERE code ='RG2'), (SELECT id FROM facilities WHERE code ='F_INITIAL_INVENTORY')),
 ((SELECT id FROM requisition_groups WHERE code ='RG2'), (SELECT id FROM facilities WHERE code ='F_KIT')),
+((SELECT id FROM requisition_groups WHERE code ='RG2'), (SELECT id FROM facilities WHERE code ='F_CORE')),
 ((SELECT id FROM requisition_groups WHERE code ='RG1'), (SELECT id FROM facilities WHERE code ='HF2')),
 ((SELECT id FROM requisition_groups WHERE code ='RG1'), (SELECT id FROM facilities WHERE code ='HF3')),
 ((SELECT id FROM requisition_groups WHERE code ='RG1'), (SELECT id FROM facilities WHERE code ='HF5')),
@@ -28,7 +29,8 @@ INSERT INTO requisition_group_members (requisitionGroupId, facilityId) VALUES
 ((SELECT id FROM requisition_groups WHERE code ='RG1'), (SELECT id FROM facilities WHERE code ='F_PHYSICAL_INVENTORY')),
 ((SELECT id FROM requisition_groups WHERE code ='RG1'), (SELECT id FROM facilities WHERE code ='F_INITIAL_INVENTORY')),
 ((SELECT id FROM requisition_groups WHERE code ='RG1'), (SELECT id FROM facilities WHERE code ='F_MMIA_MISMATCH')),
-((SELECT id FROM requisition_groups WHERE code ='RG1'), (SELECT id FROM facilities WHERE code ='F_KIT'));
+((SELECT id FROM requisition_groups WHERE code ='RG1'), (SELECT id FROM facilities WHERE code ='F_KIT')),
+((SELECT id FROM requisition_groups WHERE code ='RG1'), (SELECT id FROM facilities WHERE code ='F_CORE'));
 
 INSERT INTO requisition_group_program_schedules
 (requisitionGroupId, programId, scheduleId, directDelivery ) VALUES

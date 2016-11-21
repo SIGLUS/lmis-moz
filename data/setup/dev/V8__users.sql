@@ -61,6 +61,9 @@ INSERT INTO users
   TRUE, TRUE, FALSE, TRUE),
 ('wolverine', 'vFR3ULknlislVs2ESzJvdXN330IYhUdA6FnraiiZWqJKmtJGELNqaLwC2iiQUHuUWcK6hPtZGkJmkRT8zXLI5212gieie',
   (SELECT id FROM facilities WHERE code = 'HF3'), 'Logan', 'H', NULL,
+  TRUE, TRUE, FALSE, TRUE),
+('core', 'vFR3ULknlislVs2ESzJvdXN330IYhUdA6FnraiiZWqJKmtJGELNqaLwC2iiQUHuUWcK6hPtZGkJmkRT8zXLI5212gieie',
+  (SELECT id FROM facilities WHERE code = 'F_CORE'), 'Core', 'User', NULL,
   TRUE, TRUE, FALSE, TRUE);
 
 INSERT INTO role_assignments
@@ -163,6 +166,18 @@ INSERT INTO role_assignments
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'TB'), NULL),
 ((SELECT ID FROM USERS WHERE username = 'wolverine'),
   (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'NUTRITION'), NULL),
+
+((SELECT ID FROM USERS WHERE username = 'core'),
+  (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'MMIA'), NULL),
+((SELECT ID FROM USERS WHERE username = 'core'),
+  (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'VIA'), NULL),
+((SELECT ID FROM USERS WHERE username = 'core'),
+  (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'), NULL),
+((SELECT ID FROM USERS WHERE username = 'core'),
+  (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'TB'), NULL),
+((SELECT ID FROM USERS WHERE username = 'core'),
+  (SELECT id FROM roles WHERE name = 'FacilityHead'), (SELECT id FROM programs WHERE code = 'NUTRITION'), NULL),
+
 
 ((SELECT ID FROM USERS WHERE username = 'professor_x'),
   (SELECT id FROM roles WHERE name = 'ReportViewer'), NULL, NULL),

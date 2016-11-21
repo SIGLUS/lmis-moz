@@ -68,6 +68,8 @@ VALUES
 ('F_STOCKCARD','Nhongonhane (Ed.Mondl.)','',(SELECT id FROM geographic_zones WHERE code = 'MARRACUENE'),
   (SELECT id FROM facility_types WHERE code = 'CSRUR-II'),TRUE,'9/21/2013',TRUE,TRUE,FALSE),
 ('F_KIT','Nhongonhane (Ed.Mondl.)','',(SELECT id FROM geographic_zones WHERE code = 'MARRACUENE'),
+  (SELECT id FROM facility_types WHERE code = 'CSRUR-II'),TRUE,'9/21/2013',TRUE,TRUE,FALSE),
+('F_CORE','Nhongonhane (Ed.Mondl.)','',(SELECT id FROM geographic_zones WHERE code = 'MARRACUENE'),
   (SELECT id FROM facility_types WHERE code = 'CSRUR-II'),TRUE,'9/21/2013',TRUE,TRUE,FALSE);
 
 INSERT INTO supervisory_nodes
@@ -170,4 +172,10 @@ INSERT INTO programs_supported (facilityId, programId, active, startDate) VALUES
 ((SELECT id FROM facilities WHERE code = 'F_MMIA'), (SELECT id FROM programs WHERE code = 'VIA'),TRUE,'1/21/2016'),
 ((SELECT id FROM facilities WHERE code = 'F_MMIA'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),TRUE,'1/21/2016'),
 ((SELECT id FROM facilities WHERE code = 'F_MMIA'), (SELECT id FROM programs WHERE code = 'TB'),TRUE,'1/21/2016'),
-((SELECT id FROM facilities WHERE code = 'F_MMIA'), (SELECT id FROM programs WHERE code = 'NUTRITION'),TRUE,'1/21/2016');
+((SELECT id FROM facilities WHERE code = 'F_MMIA'), (SELECT id FROM programs WHERE code = 'NUTRITION'),TRUE,'1/21/2016'),
+
+((SELECT id FROM facilities WHERE code = 'F_CORE'), (SELECT id FROM programs WHERE code = 'MMIA'),TRUE,'1/21/2016'),
+((SELECT id FROM facilities WHERE code = 'F_CORE'), (SELECT id FROM programs WHERE code = 'VIA'),TRUE,'1/21/2016'),
+((SELECT id FROM facilities WHERE code = 'F_CORE'), (SELECT id FROM programs WHERE code = 'ESS_MEDS'),TRUE,'1/21/2016'),
+((SELECT id FROM facilities WHERE code = 'F_CORE'), (SELECT id FROM programs WHERE code = 'TB'),TRUE,'1/21/2016'),
+((SELECT id FROM facilities WHERE code = 'F_CORE'), (SELECT id FROM programs WHERE code = 'NUTRITION'),TRUE,'1/21/2016');
