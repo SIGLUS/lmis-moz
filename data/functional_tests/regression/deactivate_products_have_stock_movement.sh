@@ -1,0 +1,1 @@
+psql -U postgres --file data/functional_tests/sql/deactivate_product_have_stock_movement.sql -w open_lmis -h 52.193.34.16
