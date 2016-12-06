@@ -34,6 +34,10 @@ DELETE FROM requisitions;
 DELETE FROM program_regimen_columns;
 DELETE FROM regimens;
 
+DELETE FROM program_data_items;
+DELETE FROM program_data_forms;
+DELETE FROM program_data_columns;
+
 DELETE FROM requisition_group_program_schedules;
 DELETE FROM requisition_group_members;
 DELETE FROM requisition_groups;
@@ -76,7 +80,4 @@ DELETE FROM email_attachments;
 DELETE FROM email_notifications;
 DELETE FROM sync_up_hashes;
 
-DELETE FROM program_data_forms;
-DELETE FROM program_data_items;
-DELETE FROM program_data_columns;
 DELETE FROM supplemental_programs;
