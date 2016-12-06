@@ -13,3 +13,5 @@
 \i data/setup/dev/V12__regimens.sql
 \i data/setup/dev/V13__adjustment_reasons.sql
 \i data/setup/dev/V14__create_kits.sql
+\i data/setup/dev/V15__create_malaria_kits.sql
+\i data/setup/dev/V16__add_rapid_test_template.sql

@@ -75,3 +75,8 @@ DELETE FROM email_attachments_relation;
 DELETE FROM email_attachments;
 DELETE FROM email_notifications;
 DELETE FROM sync_up_hashes;
+
+DELETE FROM program_data_forms;
+DELETE FROM program_data_items;
+DELETE FROM program_data_columns;
+DELETE FROM supplemental_programs;
