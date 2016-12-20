@@ -14,6 +14,7 @@ DELETE FROM lots_on_hand;
 DELETE FROM lots;
 DELETE FROM stock_cards;
 
+DELETE FROM program_data_form_signatures;
 DELETE FROM requisition_signatures;
 DELETE FROM signatures;
 DELETE FROM requisition_periods;
@@ -34,7 +35,7 @@ DELETE FROM requisitions;
 DELETE FROM program_regimen_columns;
 DELETE FROM regimens;
 
-DELETE FROM program_data_form_signatures;
+
 DELETE FROM program_data_items;
 DELETE FROM program_data_forms;
 DELETE FROM program_data_columns;
