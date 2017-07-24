@@ -13,7 +13,7 @@ def update_openlmis(branch)
 end
 
 def openlmis_setup(branch)
-  result1 = system("git clone https://github.com/clintonhealthaccess/open-lmis.git #{OPENLMIS_DIR} && cd #{OPENLMIS_DIR} && git checkout #{branch}")
+  result1 = system("git clone https://github.com/SIGLUS/open-lmis.git #{OPENLMIS_DIR} && cd #{OPENLMIS_DIR} && git checkout #{branch}")
   return result1 if !result1
   puts "initing submodule"
   result2 = system("cd #{OPENLMIS_DIR} && git submodule init && git submodule update")
