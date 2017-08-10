@@ -57,22 +57,22 @@ def remove_openlmis_properties_files
 end
 
 def build_project
-  system("cd #{OPENLMIS_DIR} && gradle clean setupdb setupExtensions seed build")
+  system("cd #{OPENLMIS_DIR} && ./gradlew clean setupdb setupExtensions seed build")
 end
 
 def build_slave_project
   system("rm #{OPENLMIS_DIR}/modules/report/src/main/resources/applicationContext-report.xml && cp #{MOZ_DIR}/applicationContext-report.xml #{OPENLMIS_DIR}/modules/report/src/main/resources/applicationContext-report.xml")
   system("rm #{OPENLMIS_DIR}/modules/email/src/main/resources/applicationContext-email.xml && cp #{MOZ_DIR}/applicationContext-email.xml #{OPENLMIS_DIR}/modules/email/src/main/resources/applicationContext-email.xml")
-  system("cd #{OPENLMIS_DIR} && gradle war -PwarName=openlmis-web-slave.war")
+  system("cd #{OPENLMIS_DIR} && ./gradlew war -PwarName=openlmis-web-slave.war")
 end
 
 def setup_db
-  system("cd #{OPENLMIS_DIR} && gradle setupdb setupExtensions seed")
+  system("cd #{OPENLMIS_DIR} && ./gradlew setupdb setupExtensions seed")
 end
 
 def start_jetty
-  t = Thread.start do
-    system "cd #{OPENLMIS_DIR} && gradle run > startjetty.log"
+  Thread.start do
+    system "cd #{OPENLMIS_DIR} && ./gradlew run > startjetty.log"
   end
   wait_for_jetty
 end
