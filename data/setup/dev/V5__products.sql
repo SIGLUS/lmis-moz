@@ -1255,3 +1255,9 @@ INSERT INTO products (code, primaryName, dispensingUnit, dosesPerDispensingUnit,
 ('26B07', 'Rede Mosquiteiras unidade ', '1', 1,1,TRUE,TRUE,FALSE,0,FALSE, 'unidade', (SELECT id from product_forms where code='Rede')),
 ('FC001', 'Produto FC001  50ML (10MG/ML) Xpe', '1', 1,1,TRUE,TRUE,FALSE,0,FALSE, '50ML (10MG/ML)', (SELECT id from product_forms where code='Xarope')),
 ('FC0015', 'Teste  do SIMAM 2015 unidade Tratamento', '1', 1,1,TRUE,TRUE,FALSE,0,FALSE, 'unidade', (SELECT id from product_forms where code='Tratamento'));
+
+UPDATE products SET isBasic = TRUE WHERE code = '08S42';
+UPDATE products SET isBasic = TRUE WHERE code = '01A01';
+UPDATE products SET isBasic = TRUE WHERE code = '02A01';
+UPDATE products SET isBasic = TRUE WHERE code = '08S42';
+UPDATE products SET isBasic = TRUE WHERE code = '15E01';
