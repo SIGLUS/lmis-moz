@@ -83,7 +83,7 @@ end
 
 def wait_for_jetty
   loop {
-    break if (TCPSocket.open("localhost", 9091) rescue nil)
+    break if (TCPSocket.open("localhost", 8080) rescue nil)
     puts "Waitting for jetty..."
     sleep 1
   }
